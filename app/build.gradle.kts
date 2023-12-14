@@ -41,4 +41,7 @@ dependencies {
     implementation("com.airbnb.android:lottie:4.0.0")
     implementation("com.github.bumptech.glide:glide:4.16.0")
     annotationProcessor("com.github.bumptech.glide:compiler:4.16.0")
+    //para el gif
+    implementation ("pl.droidsonroids.gif:android-gif-drawable:1.2.17")
+
 }
