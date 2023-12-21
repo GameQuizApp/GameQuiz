@@ -16,12 +16,13 @@ public class Splash extends AppCompatActivity {
         openApp();
         
     }
+
     private void openApp(){
         Handler handler = new Handler();
         handler.postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent intent = new Intent(Splash.this, MainActivity.class);
+                Intent intent = new Intent(Splash.this, Login.class);
                 intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
                 startActivity(intent);
