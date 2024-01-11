@@ -6,6 +6,16 @@
     android:layout_height="match_parent"
     tools:context=".Welcome" android:background="@color/purple_200">
 
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/chica"
+        android:layout_width="409dp"
+        android:layout_height="321dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/animation1" />
     <TextView
         android:id="@+id/textView_prueba"
         android:layout_width="wrap_content"
