@@ -15,10 +15,7 @@
         android:theme="@style/Theme.GameQuiz"
         tools:targetApi="31">
         <activity
-            android:name=".Register"
-            android:exported="false" />
-        <activity
-            android:name=".Login"
+            android:name=".Main"
             android:exported="false" />
         <activity
             android:name=".Splash"
@@ -30,7 +27,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".MainActivity"
+            android:name=".Welcome"
             android:exported="true" />
 
         <meta-data
