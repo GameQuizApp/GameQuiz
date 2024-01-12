@@ -23,5 +23,4 @@ public class Welcome extends AppCompatActivity {
         Intent intent = new Intent(Welcome.this, Register.class);
         startActivity(intent);
     }
-
 }
