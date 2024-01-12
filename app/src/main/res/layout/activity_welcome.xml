@@ -16,6 +16,7 @@
         app:lottie_autoPlay="true"
         app:lottie_loop="true"
         app:lottie_rawRes="@raw/animation1" />
+
     <TextView
         android:id="@+id/textView_prueba"
         android:layout_width="wrap_content"
@@ -41,29 +42,33 @@
         app:layout_constraintTop_toBottomOf="@+id/textView_prueba" />
 
     <Button
-        android:id="@+id/button1"
+        android:id="@+id/boton_login"
         style="@style/buttonflat"
+        android:onClick="openLogin"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="78dp"
         android:fontFamily="@font/eb_garamond"
         android:textSize="18sp"
-        android:text="Crear cuenta"
+        android:text="Iniciar Sesión"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
         app:layout_constraintStart_toStartOf="@id/guidelineStart"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/boton_registro"
         style="@style/buttonoutlined"
+        android:onClick="openRegister"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:fontFamily="@font/eb_garamond"
         android:textSize="18sp"
-        android:text="Iniciar Sesión"
+        android:text="Crear cuenta"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
         app:layout_constraintStart_toStartOf="@id/guidelineStart"
-        app:layout_constraintTop_toBottomOf="@+id/button1" />
+        app:layout_constraintTop_toBottomOf="@+id/boton_login" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guidelineStart"
