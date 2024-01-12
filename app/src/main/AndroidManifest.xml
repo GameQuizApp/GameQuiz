@@ -15,7 +15,10 @@
         android:theme="@style/Theme.GameQuiz"
         tools:targetApi="31">
         <activity
-            android:name=".Main"
+            android:name=".Login"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
             android:exported="false" />
         <activity
             android:name=".Splash"
