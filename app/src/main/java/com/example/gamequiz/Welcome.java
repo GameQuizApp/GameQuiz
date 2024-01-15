@@ -3,6 +3,7 @@ package com.example.gamequiz;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
@@ -29,5 +30,15 @@ public class Welcome extends AppCompatActivity {
         CardView loginCardView = findViewById(R.id.loginCV);
 
         loginCardView.setVisibility(View.VISIBLE);
+    }
+
+    public void openLogin(View v) {
+        Intent intent = new Intent(Welcome.this, Login.class);
+        startActivity(intent);
+    }
+
+    public void openRegister(View v) {
+        Intent intent = new Intent(Welcome.this, Register.class);
+        startActivity(intent);
     }
 }

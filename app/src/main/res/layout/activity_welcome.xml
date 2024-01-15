@@ -6,6 +6,17 @@
     android:layout_height="match_parent"
     tools:context=".Welcome" android:background="@color/purple_200">
 
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/chica"
+        android:layout_width="409dp"
+        android:layout_height="321dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/animation1" />
+
     <TextView
         android:id="@+id/textView_prueba"
         android:layout_width="wrap_content"
@@ -31,7 +42,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView_prueba" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/boton_registro"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="78dp"
@@ -43,7 +54,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/boton_login"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:backgroundTint="@color/naranja_fuerte"
@@ -51,7 +62,7 @@
         android:onClick="openLogin"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button2" />
+        app:layout_constraintTop_toBottomOf="@+id/boton_registro" />
 
     <androidx.cardview.widget.CardView
         android:id="@+id/registerCV"

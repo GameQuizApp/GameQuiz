@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="buttonflat">
+        <item name="android:layout_height">60dp</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="cornerRadius">8dp</item>
+        <item name="android:backgroundTint">@color/naranja_fuerte</item>
+        <item name="android:textColor">@color/blanco_amarillo</item>
+    </style>
+
+    <style name="buttonoutlined">
+        <item name="android:layout_height">60dp</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="cornerRadius">8dp</item>
+        <item name="android:backgroundTint">@color/button_custom</item>
+        <item name="android:textColor">@color/naranja_fuerte</item>
+        <item name="strokeColor">@color/naranja_fuerte</item>
+        <item name="strokeWidth">2dp</item>
+    </style>
+</resources>

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "177132210684",
+    "project_id": "gamequiz-2024",
+    "storage_bucket": "gamequiz-2024.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:177132210684:android:dbadbc33e0cc2c3494ca79",
+        "android_client_info": {
+          "package_name": "com.example.gamequiz"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDzSWcsFjri2i_ll5uzEoz0dZqdO1olHJQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
