@@ -37,6 +37,7 @@
         android:layout_marginTop="78dp"
         android:backgroundTint="@color/naranja_fuerte"
         android:text="Crear cuenta"
+        android:onClick="openRegister"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
@@ -47,9 +48,24 @@
         android:layout_height="wrap_content"
         android:backgroundTint="@color/naranja_fuerte"
         android:text="Iniciar Sesión"
+        android:onClick="openLogin"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button2" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/registerCV"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:cardCornerRadius="12dp"/>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/loginCV"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:cardCornerRadius="12dp"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
