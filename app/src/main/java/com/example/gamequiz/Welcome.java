@@ -2,43 +2,57 @@ package com.example.gamequiz;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
+import androidx.constraintlayout.widget.ConstraintLayout;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.Button;
+
+import com.google.android.material.bottomsheet.BottomSheetDialog;
 
 public class Welcome extends AppCompatActivity {
+
+    Button loginbutton;
+    Button registerbutton;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_welcome);
 
-        CardView registerCardView = findViewById(R.id.registerCV);
-        CardView loginCardView = findViewById(R.id.loginCV);
+        loginbutton = findViewById(R.id.loginbutton);
+        registerbutton = findViewById(R.id.signupbutton);
 
-        registerCardView.setVisibility(View.INVISIBLE);
-        loginCardView.setVisibility(View.INVISIBLE);
-    }
+        loginbutton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
 
-    public void openRegister() {
-        CardView registerCardView = findViewById(R.id.registerCV);
+                BottomSheetDialog logindialog = new BottomSheetDialog(Welcome.this);
 
-        registerCardView.setVisibility(View.VISIBLE);
-    }
+                View vista = LayoutInflater.from(getApplicationContext()).inflate(R.layout.bottom_sheet_login, null);
 
-    public void openLogin() {
-        CardView loginCardView = findViewById(R.id.loginCV);
+                logindialog.setCancelable(true);
+                logindialog.setContentView(vista);
 
-        loginCardView.setVisibility(View.VISIBLE);
-    }
+                logindialog.show();
+            }
+        });
 
-    public void openLogin(View v) {
-        Intent intent = new Intent(Welcome.this, Login.class);
-        startActivity(intent);
-    }
+        registerbutton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
 
-    public void openRegister(View v) {
-        Intent intent = new Intent(Welcome.this, Register.class);
-        startActivity(intent);
+                BottomSheetDialog registerdialog = new BottomSheetDialog(Welcome.this);
+
+                View vista = LayoutInflater.from(getApplicationContext()).inflate(R.layout.bottom_sheet_signup, null);
+
+                registerdialog.setCancelable(true);
+                registerdialog.setContentView(vista);
+
+                registerdialog.show();
+            }
+        });
     }
 }

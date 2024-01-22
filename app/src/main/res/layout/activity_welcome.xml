@@ -1,82 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Welcome" android:background="@color/purple_200">
-
-    <com.airbnb.lottie.LottieAnimationView
-        android:id="@+id/chica"
-        android:layout_width="409dp"
-        android:layout_height="321dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:lottie_autoPlay="true"
-        app:lottie_loop="true"
-        app:lottie_rawRes="@raw/animation1" />
-
-    <TextView
-        android:id="@+id/textView_prueba"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/eb_garamond"
-        android:text="Bienvenido"
-        android:textSize="50sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.455" />
-
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="150dp"
-        android:layout_height="wrap_content"
-        android:text="Para poder jugar necesitas una cuenta,inicia sesión o registrate para poder avanzar."
-        android:textAlignment="center"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView_prueba" />
+    tools:context=".Welcome">
 
     <Button
-        android:id="@+id/boton_registro"
+        android:id="@+id/signupbutton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="78dp"
-        android:backgroundTint="@color/naranja_fuerte"
-        android:text="Crear cuenta"
-        android:onClick="openRegister"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="157dp"
+        android:layout_marginEnd="156dp"
+        android:layout_marginBottom="399dp"
+        android:text="Sign Up"
+        app:cornerRadius="5dp" />
 
     <Button
-        android:id="@+id/boton_login"
+        android:id="@+id/loginbutton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:backgroundTint="@color/naranja_fuerte"
-        android:text="Iniciar Sesión"
-        android:onClick="openLogin"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/boton_registro" />
+        android:layout_above="@+id/signupbutton"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="161dp"
+        android:layout_marginTop="236dp"
+        android:layout_marginEnd="162dp"
+        android:layout_marginBottom="1dp"
+        android:text="Login"
+        app:cornerRadius="5dp" />
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/registerCV"
-        android:layout_width="match_parent"
-        android:layout_height="300dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:cardCornerRadius="12dp"/>
-
-    <androidx.cardview.widget.CardView
-        android:id="@+id/loginCV"
-        android:layout_width="match_parent"
-        android:layout_height="300dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:cardCornerRadius="12dp"/>
-
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>
