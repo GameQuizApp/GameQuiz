@@ -12,4 +12,6 @@
     <string name="welcome">Welcome!!</string>
     <string name="login_again">Already have an account?</string>
     <string name="app_logo">App logo</string>
+    <string name="welcome_text">You need an account to play, log in or sign up now.</string>
+    <string name="welcome_simple">Welcome</string>
 </resources>
