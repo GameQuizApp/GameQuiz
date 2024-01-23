@@ -17,7 +17,7 @@
         android:layout_marginStart="157dp"
         android:layout_marginEnd="156dp"
         android:layout_marginBottom="399dp"
-        android:text="Sign Up"
+        android:text="@string/signup"
         app:cornerRadius="5dp" />
 
     <Button
@@ -32,7 +32,7 @@
         android:layout_marginTop="236dp"
         android:layout_marginEnd="162dp"
         android:layout_marginBottom="1dp"
-        android:text="Login"
+        android:text="@string/login"
         app:cornerRadius="5dp" />
 
 </RelativeLayout>

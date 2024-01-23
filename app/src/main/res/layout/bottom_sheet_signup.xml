@@ -25,7 +25,7 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/eb_garamond"
             android:textStyle="bold"
-            android:text="Bienvenido!!"
+            android:text="@string/welcome"
             android:textColor="@android:color/black"
             android:textSize="13sp" />
 
@@ -34,9 +34,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="20dp"
-            android:drawableRight="@drawable/equis"
+            android:drawableEnd="@drawable/equis"
             android:fontFamily="@font/eb_garamond"
-            android:text="Regístrate"
+            android:text="@string/signup"
             android:textColor="@android:color/black"
             android:textSize="25sp"
             android:textStyle="bold" />
@@ -46,20 +46,20 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/eb_garamond"
-            android:text="Usuario/correo"
+            android:text="@string/mail"
             android:textStyle="bold"
             android:textColor="@color/black"
             android:textSize="18sp" />
 
         <EditText
-            android:id="@+id/editTextPassword"
+            android:id="@+id/editTextMail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
             android:background="@drawable/background_edittext"
-            android:drawableRight="@drawable/ojo"
+            android:drawableEnd="@drawable/ojo"
             android:fontFamily="@font/eb_garamond"
-            android:hint="info@example.com"
+            android:hint="@string/mail_example"
             android:inputType="textEmailAddress"
             android:padding="10dp"
             android:textSize="20sp"
@@ -67,14 +67,14 @@
             tools:layout_editor_absoluteY="473dp" />
 
         <EditText
-            android:id="@+id/editTextPassword2"
+            android:id="@+id/editTextPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:alpha="0.6"
             android:background="@drawable/background_edittext"
-            android:drawableRight="@drawable/candado"
+            android:drawableEnd="@drawable/candado"
             android:fontFamily="@font/eb_garamond"
-            android:hint="contraseña"
+            android:hint="@string/password"
             android:inputType="textPassword"
             android:padding="10dp"
             android:textSize="20sp"
@@ -86,7 +86,7 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/eb_garamond"
             android:padding="10dp"
-            android:text="Regístrate"
+            android:text="@string/signup"
             android:layout_marginTop="5dp"
             android:textColor="@color/white"
             android:textSize="20sp"
@@ -97,22 +97,24 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="15dp"
-            android:orientation="horizontal" />
+            android:orientation="horizontal">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="50dp"
                 android:fontFamily="@font/eb_garamond"
-                android:text="¿Ya tienes una cuenta?" />
+                android:text="@string/login_again" />
 
             <TextView
                 android:id="@+id/logeate"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Inicia sesión"
-                android:paddingLeft="3dp"
+                android:text="@string/login"
+                android:paddingStart="3dp"
+                android:paddingEnd="3dp"
                 android:fontFamily="@font/eb_garamond"
                 android:textColor="@color/naranja_fuerte" />
         </LinearLayout>
+    </LinearLayout>
 </androidx.cardview.widget.CardView>

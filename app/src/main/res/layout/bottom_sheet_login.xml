@@ -24,7 +24,7 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/eb_garamond"
             android:textStyle="bold"
-            android:text="Bienvenido de vuelta!!"
+            android:text="@string/welcome_back"
             android:textColor="@android:color/black"
             android:textSize="13sp" />
 
@@ -33,9 +33,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="20dp"
-            android:drawableRight="@drawable/equis"
+            android:drawableEnd="@drawable/equis"
             android:fontFamily="@font/eb_garamond"
-            android:text="Inicia Sesión"
+            android:text="@string/login"
             android:textColor="@android:color/black"
             android:textSize="25sp"
             android:textStyle="bold" />
@@ -45,38 +45,40 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/eb_garamond"
-            android:text="Usuario/correo"
+            android:text="@string/mail"
             android:textStyle="bold"
             android:textColor="@color/black"
             android:textSize="18sp" />
 
         <EditText
-            android:id="@+id/editTextPassword"
+            android:id="@+id/editTextMail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
             android:background="@drawable/background_edittext"
-            android:drawableRight="@drawable/ojo"
+            android:drawableEnd="@drawable/ojo"
             android:fontFamily="@font/eb_garamond"
-            android:hint="info@example.com"
+            android:hint="@string/mail_example"
             android:inputType="textEmailAddress"
             android:padding="10dp"
             android:textSize="20sp"
+            android:autofillHints="emailAddress"
             tools:layout_editor_absoluteX="-16dp"
             tools:layout_editor_absoluteY="473dp" />
 
         <EditText
-            android:id="@+id/editTextPassword2"
+            android:id="@+id/editTextPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:alpha="0.6"
             android:background="@drawable/background_edittext"
-            android:drawableRight="@drawable/candado"
+            android:drawableEnd="@drawable/candado"
             android:fontFamily="@font/eb_garamond"
-            android:hint="contraseña"
+            android:hint="@string/password"
             android:inputType="textPassword"
             android:padding="10dp"
             android:textSize="20sp"
+            android:autofillHints="password"
             tools:layout_editor_absoluteX="-16dp"
             tools:layout_editor_absoluteY="473dp" />
 
@@ -85,13 +87,12 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
-
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/eb_garamond"
                 android:textStyle="bold"
-                android:text="Remember me " />
+                android:text="@string/remember" />
 
             <TextView
                 android:layout_width="165dp"
@@ -100,7 +101,7 @@
                 android:fontFamily="@font/eb_garamond"
                 android:textSize="14sp"
                 android:textStyle="bold"
-                android:text="¿Has olvidado la contraseña?" />
+                android:text="@string/forgot_password" />
         </LinearLayout>
 
         <Button
@@ -108,7 +109,7 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/eb_garamond"
             android:padding="10dp"
-            android:text="Iniciar Sesión"
+            android:text="@string/login"
             android:textColor="@color/white"
             android:textSize="20sp"
             android:textStyle="bold" />
@@ -125,17 +126,17 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="50dp"
                 android:fontFamily="@font/eb_garamond"
-                android:text="¿No tienes una cuenta?" />
+                android:text="@string/create_account" />
 
             <TextView
                 android:id="@+id/Registrarse"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Regístrate"
-                android:paddingLeft="3dp"
+                android:text="@string/signup"
+                android:paddingStart="3dp"
+                android:paddingEnd="3dp"
                 android:fontFamily="@font/eb_garamond"
                 android:textColor="@color/naranja_fuerte" />
         </LinearLayout>
     </LinearLayout>
-
 </androidx.cardview.widget.CardView>
