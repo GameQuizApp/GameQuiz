@@ -1,0 +1,119 @@
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cardView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="8dp"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toStartOf="@+id/view"
+    app:layout_constraintStart_toEndOf="@+id/view" >
+
+    <!-- Contenido de la tarjeta -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/text1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/eb_garamond"
+            android:textStyle="bold"
+            android:text="@string/welcome"
+            android:textColor="@android:color/black"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/registrate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:drawableEnd="@drawable/equis"
+            android:fontFamily="@font/eb_garamond"
+            android:text="@string/signup"
+            android:textColor="@android:color/black"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/eb_garamond"
+            android:text="@string/mail"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/editTextMail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/background_edittext"
+            android:drawableEnd="@drawable/ojo"
+            android:fontFamily="@font/eb_garamond"
+            android:hint="@string/mail_example"
+            android:inputType="textEmailAddress"
+            android:padding="10dp"
+            android:textSize="20sp"
+            tools:layout_editor_absoluteX="-16dp"
+            tools:layout_editor_absoluteY="473dp" />
+
+        <EditText
+            android:id="@+id/editTextPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:alpha="0.6"
+            android:background="@drawable/background_edittext"
+            android:drawableEnd="@drawable/candado"
+            android:fontFamily="@font/eb_garamond"
+            android:hint="@string/password"
+            android:inputType="textPassword"
+            android:padding="10dp"
+            android:textSize="20sp"
+            tools:layout_editor_absoluteX="-16dp"
+            tools:layout_editor_absoluteY="473dp" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/eb_garamond"
+            android:padding="10dp"
+            android:text="@string/signup"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:id="@+id/linear3"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="50dp"
+                android:fontFamily="@font/eb_garamond"
+                android:text="@string/login_again" />
+
+            <TextView
+                android:id="@+id/logeate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/login"
+                android:paddingStart="3dp"
+                android:paddingEnd="3dp"
+                android:fontFamily="@font/eb_garamond"
+                android:textColor="@color/naranja_fuerte" />
+        </LinearLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

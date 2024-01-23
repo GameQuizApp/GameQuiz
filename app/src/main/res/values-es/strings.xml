@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="welcome_back">¡Bienvenido de nuevo!</string>
+    <string name="login">Inicia Sesión</string>
+    <string name="mail">Usuario/correo</string>
+    <string name="password">contraseña</string>
+    <string name="remember">Recordar sesión</string>
+    <string name="forgot_password">¿Has olvidado la contraseña?</string>
+    <string name="create_account">Create una cuenta</string>
+    <string name="signup">Regístrate</string>
+    <string name="welcome">¡Bienvenido!</string>
+    <string name="login_again">¿Ya tienes una cuenta?</string>
+    <string name="app_logo">Logo de la aplicación</string>
+</resources>
