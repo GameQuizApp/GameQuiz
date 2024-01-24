@@ -1,15 +1,5 @@
 <resources>
-    <string name="app_name" translatable="false">GameQuiz</string>
-    <string name="welcome_back">Welcome back!!</string>
-    <string name="login">Log In</string>
-    <string name="mail">Username/email</string>
-    <string name="mail_example" translatable="false">info@example.com</string>
-    <string name="password">password</string>
-    <string name="remember">Remember me</string>
-    <string name="forgot_password">Forgot password?</string>
-    <string name="create_account">Create an account</string>
-    <string name="signup">Sign Up</string>
-    <string name="welcome">Welcome!!</string>
-    <string name="login_again">Already have an account?</string>
-    <string name="app_logo">App logo</string>
+    <string name="app_name">GameQuiz</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
