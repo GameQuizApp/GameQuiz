@@ -12,12 +12,18 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.GameQuiz.NoActionBar"
+        android:theme="@style/Theme.GameQuiz"
         tools:targetApi="31">
         <activity
-            android:name=".MainActivity"
+            android:name=".Signup"
             android:exported="true"
-            android:theme="@style/Theme.GameQuiz.DarkActionBar" />
+            android:theme="@style/Theme.GameQuiz.DarkActionBar" /> />
+        <activity
+            android:name=".Login"
+            android:exported="true" />
+        <activity
+            android:name=".Main"
+            android:exported="true" />
         <activity
             android:name=".Splash"
             android:exported="true">
