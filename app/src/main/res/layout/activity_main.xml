@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:id="@+id/myMainConstraint"
     tools:context="com.example.gamequiz.MainActivity"
     >
 
@@ -29,6 +30,14 @@
    <!-            android:visibility="gone" /> ->
 
 </com.google.android.material.appbar.AppBarLayout> -->
+
+    <FrameLayout
+        android:id="@+id/frame_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+
 
     <androidx.viewpager.widget.ViewPager
         android:id="@+id/view_pager"
