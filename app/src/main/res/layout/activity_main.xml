@@ -40,10 +40,10 @@
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom_navigation"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="70dp"
         android:layout_gravity="bottom"
-        app:labelVisibilityMode="selected"
         app:itemTextColor="#673AB7"
+        app:labelVisibilityMode="selected"
         app:menu="@menu/bottom_navigation_menu" />
 
     <!--        android:foregroundTint="@color/bottomselector"-->
