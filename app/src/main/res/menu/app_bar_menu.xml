@@ -1,0 +1,28 @@
+<menu
+xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+tools:context="com.rcl.appuem.MainActivity">
+
+    <item
+        android:id="@+id/action_notis"
+        android:icon="@drawable/ic_notis_filled"
+        android:title="Notifications"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/action_help"
+        android:orderInCategory="100"
+        android:title="Help"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_settings"
+        android:orderInCategory="100"
+        android:title="Settings"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_login"
+        android:orderInCategory="100"
+        android:title="Log in"
+        app:showAsAction="never" />
+
+</menu>

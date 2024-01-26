@@ -13,4 +13,5 @@
     <string name="app_logo">Logo de la aplicación</string>
     <string name="welcome_text">Para poder jugar necesitas una cuenta. Inicia sesión o regístrate para poder avanzar</string>
     <string name="welcome_simple">Bienvenido</string>
+    <string name="result">Resultado</string>
 </resources>
