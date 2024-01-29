@@ -17,4 +17,12 @@
         <item name="strokeColor">@color/naranja_fuerte</item>
         <item name="strokeWidth">2dp</item>
     </style>
+    <style name="buttonflat2">
+        <item name="android:layout_height">60dp</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="cornerRadius">8dp</item>
+        <item name="android:backgroundTint">#FF6666</item>
+        <item name="android:textColor">@color/blanco_amarillo</item>
+    </style>
+
 </resources>
