@@ -1,5 +1,4 @@
-# GameQuiz App 🎮 ![CodeQL](https://github.com/nasa/openmct/workflows/CodeQL/badge.svg)
-![GitHub Release Date](https://img.shields.io/github/release-date/dropbox/dropbox-sdk-java)
+# GameQuiz App 🎮 ![CodeQL](https://github.com/nasa/openmct/workflows/CodeQL/badge.svg)![GitHub Release Date](https://img.shields.io/github/release-date/dropbox/dropbox-sdk-java)
 
 ¡Bienvenido al repositorio oficial de GameQuiz! 🚀
 
@@ -47,7 +46,7 @@ Para preguntas, sugerencias o colaboraciones, no dudes en ponerte en contacto co
 
 Primera muestra de nuestro trabajo,este sería el Splash de la aplicación.
 
-### Splash
+## Splash
 
 ![splash activity](img/animacion_splash.gif)
 
@@ -101,5 +100,5 @@ dependencies {
 
 | Componentes       | Descripción                                                                                                                                                                                                                                                                                     |
 |-------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Cardview          | es la implementación que nos proporciona Google del elemento visual en forma de tarjetas de información que tanto utiliza en muchas de sus aplicaciones.                                                                                                                                        |
+| Cardview          | Es la implementación que nos proporciona Google del elemento visual en forma de tarjetas de información que tanto utiliza en muchas de sus aplicaciones.                                                                                                                                        |
 | Bottom Navigation | Las barras de navegación de Android o Bottom Bar es un menú secundario situado encima de la barra de navegación de Android que se utiliza para proporcionar una navegación rápida al usuario a las páginas o secciones más utilizadas de una aplicación, como puedes ver en la imagen de abajo. |
