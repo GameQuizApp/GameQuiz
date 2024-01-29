@@ -32,4 +32,5 @@ Para preguntas, sugerencias o colaboraciones, no dudes en ponerte en contacto co
 ¡Gracias por tu interés en nuestro proyecto! Esperamos que disfrutes con GameQuiz.
 
 Primera muestra de nuestro trabajo,este sería el Splash de la aplicación.
+
 ![splash activity](img/animacion_splash.gif)
