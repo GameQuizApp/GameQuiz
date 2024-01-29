@@ -1,5 +1,5 @@
-# GameQuiz App 🎮 ![CodeQL](https://github.com/nasa/openmct/workflows/CodeQL/badge.svg)![GitHub Release Date](https://img.shields.io/github/release-date/dropbox/dropbox-sdk-java)
-
+# GameQuiz App 🎮 ![GitHub Release Date](https://img.shields.io/github/release-date/dropbox/dropbox-sdk-java)
+<!--![CodeQL](https://github.com/nasa/openmct/workflows/CodeQL/badge.svg)-->
 ¡Bienvenido al repositorio oficial de GameQuiz! 🚀
 
 ## Descripción del Proyecto:
