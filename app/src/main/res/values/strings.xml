@@ -15,4 +15,6 @@
     <string name="welcome_text">You need an account to play, log in or sign up now.</string>
     <string name="welcome_simple">Welcome</string>
     <string name="result">Result</string>
+    <string name="aciertos">0 points</string>
+    <string name="username">Username</string>
 </resources>

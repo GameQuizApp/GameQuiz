@@ -18,10 +18,10 @@ import com.google.firebase.firestore.FirebaseFirestore;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Objects;
 
 public class Signup extends AppCompatActivity {
 
-    private Button btnSignup;
     private EditText txtName, txtEmail, txtPassword;
     FirebaseFirestore mFirestore;
     FirebaseAuth mAuth;
@@ -36,7 +36,7 @@ public class Signup extends AppCompatActivity {
         txtName = findViewById(R.id.txt_name);
         txtEmail = findViewById(R.id.txt_email);
         txtPassword = findViewById(R.id.txt_password);
-        btnSignup = findViewById(R.id.btn_signup);
+        Button btnSignup = findViewById(R.id.btn_signup);
 
         btnSignup.setOnClickListener(v -> clickSignup());
     }
@@ -55,7 +55,7 @@ public class Signup extends AppCompatActivity {
         mAuth.createUserWithEmailAndPassword(emailUser, passwordUser).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
-                String id = mAuth.getCurrentUser().getUid();
+                String id = Objects.requireNonNull(mAuth.getCurrentUser()).getUid();
 
                 Map<String, Object> map = new HashMap<>();
                 map.put("id", id);
@@ -71,10 +71,6 @@ public class Signup extends AppCompatActivity {
                             finish();
                             startActivity(new Intent(Signup.this, Main.class));
                             Toast.makeText(Signup.this, "Usuario registrado con éxito", Toast.LENGTH_LONG).show();
-                        } else {
-                            // Manejar errores si la tarea no se completó con éxito
-                            Exception exception = task.getException();
-                            // Haz algo con la excepción, como imprimir un mensaje de error o mostrar un Toast
                         }
                     }
                 }).addOnFailureListener(new OnFailureListener() {
