@@ -14,4 +14,5 @@
     <string name="welcome_text">Para poder jugar necesitas una cuenta. Inicia sesión o regístrate para poder avanzar</string>
     <string name="welcome_simple">Bienvenido</string>
     <string name="result">Resultado</string>
+    <string name="aciertos">0 puntos</string>
 </resources>
