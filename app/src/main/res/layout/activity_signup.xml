@@ -14,6 +14,7 @@
         android:inputType="text"
         android:hint="@string/username"
         android:layout_marginTop="32dp"
+        android:autofillHints="username"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -25,6 +26,7 @@
         android:ems="10"
         android:inputType="textEmailAddress"
         android:hint="@string/mail_example"
+        android:autofillHints="emailAddress"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txt_name" />
@@ -36,6 +38,7 @@
         android:ems="10"
         android:inputType="textPassword"
         android:hint="@string/password"
+        android:autofillHints="password"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txt_email" />
@@ -48,4 +51,5 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txt_password" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,4 +1,4 @@
-package com.example.gamequiz;
+package com.kevmartal.gamequiz;
 
 import androidx.appcompat.app.AppCompatActivity;
 
