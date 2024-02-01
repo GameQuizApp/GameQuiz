@@ -48,6 +48,9 @@ Primera muestra de nuestro trabajo,este sería el Splash de la aplicación.
 
 ![splash activity](img/animacion_splash.gif)
 
+## Login and Register
+[register_login.gif](img/register_login.gif)
+
 ### Bottom Navigation
 
 [bottom_navigation_menu.xml](app%2Fsrc%2Fmain%2Fres%2Fmenu%2Fbottom_navigation_menu.xml)
