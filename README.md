@@ -50,7 +50,7 @@ Primera muestra de nuestro trabajo,este sería el Splash de la aplicación.
 
 ## Login and Register
 
-[register_login](img/register_login.gif)
+![Register|login](img/register_login.gif)
 
 ### Bottom Navigation
 
