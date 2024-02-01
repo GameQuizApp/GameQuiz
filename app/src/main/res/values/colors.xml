@@ -6,7 +6,7 @@
     <color name="turquesa">#45C4B0</color>
     <color name="vino">#590414</color>
     <color name="rosa_gris">#D92B6B</color>
-    <color name="rojo_claro">#A60832</color>
+    <color name="rojo2">#A60832</color>
     <color name="verde">#13872B</color>
     <color name="blanco_amarillo">#FFECAA</color>
     <color name="purple_200">#FFBB86FC</color>
@@ -20,5 +20,8 @@
     <color name="verde_gris">#575943</color>
     <color name="naranja">#F2BB13</color>
     <color name="naranja_fuerte">#F26e22</color>
-    <color name="azul_claro">#0BC4D9</color>
+    <color name="azul_claro">#CCE5FF</color>
+    <color name="azul_sign">#99CCFF</color>
+    <color name="rojo_login">#FF9999</color>
+    <color name="rojo_claro">#FFCCCC</color>
 </resources>

@@ -18,7 +18,7 @@
         <activity
             android:name="com.kevmartal.gamequiz.Signup"
             android:exported="true"
-            android:theme="@style/Theme.GameQuiz.DarkActionBar" />
+             />
         <activity
             android:name="com.kevmartal.gamequiz.Login"
             android:exported="true" />

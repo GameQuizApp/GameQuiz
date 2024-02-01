@@ -1,17 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".Login"
-    android:background="#FF9999">
+    android:background="@color/rojo_login"
+    tools:context=".Login">
 
     <com.airbnb.lottie.LottieAnimationView
-        android:id="@+id/boy"
+        android:id="@+id/init"
         android:layout_width="417dp"
         android:layout_height="366dp"
-        android:layout_marginTop="5dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -24,8 +23,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="8dp"
-        android:elevation="200dp"
         android:alpha="0.8"
+        android:elevation="20dp"
+        android:backgroundTint="@color/rojo_claro"
         app:cardCornerRadius="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -39,30 +39,22 @@
             android:padding="16dp">
 
             <TextView
-                android:id="@+id/text1"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Bienvenido de vuelta!!"
-                android:textColor="@android:color/black"
-                android:textSize="13dp" />
-
-            <TextView
                 android:id="@+id/iniciaSesion"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="20dp"
                 android:text="Inicia Sesión"
-                android:textColor="@color/rojo_claro"
+                android:textColor="@color/vino"
                 android:textSize="22dp"
                 android:textStyle="bold" />
-                <!--android:drawableRight="@drawable/equis"-->
+        <!--android:drawableRight="@drawable/x"-->
             <TextView
                 android:id="@+id/textDescription"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Usuario/correo"
-                android:textColor="@color/black"
                 android:textStyle="bold"
+                android:textColor="@color/black"
                 android:textSize="14sp" />
 
             <EditText
@@ -96,18 +88,16 @@
             <LinearLayout
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:elevation="5dp">
+                android:orientation="horizontal">
 
                 <CheckBox
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="25dp"
-                    android:buttonTint="#FE9898"
+                    android:buttonTint="@color/rojo_login"
                     android:text="Remember me " />
 
                 <TextView
-                    android:id="@+id/forgot"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="¿Has olvidado la contraseña?" />
@@ -117,9 +107,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="15dp"
-                style="@style/buttonflat2"
                 android:text="Iniciar Sesión"
-                 />
+                android:backgroundTint="@color/rojo_login"
+                android:textColor="@color/vino"
+                android:textStyle="bold"/>
 
             <LinearLayout
                 android:id="@+id/linear3"
@@ -135,17 +126,17 @@
                     android:text="¿No tienes una cuenta?" />
 
                 <TextView
-                    android:id="@+id/register"
+                    android:id="@+id/Registrarse"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:onClick="open_register"
                     android:text="Regístrate"
                     android:textColor="@color/naranja_fuerte"
-
+                    android:onClick="openRegister"
                     />
             </LinearLayout>
 
 
         </LinearLayout>
     </androidx.cardview.widget.CardView>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
