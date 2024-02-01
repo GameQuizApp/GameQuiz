@@ -44,7 +44,7 @@ Para preguntas, sugerencias o colaboraciones, no dudes en ponerte en contacto co
 Primera muestra de nuestro trabajo,este sería el Splash de la aplicación.
 
 ## Iframe
-<iframe src="file:///E:/1DAM/HTML/Practica%20html%20tablas%20anidadas/eJ1.pdf" width="100%" height="500px">
+<iframe src="https://www.figma.com/proto/ugUAnuVYLh3nyYM3Uc8jte/Prototipo-KevinB?type=design&node-id=0-1&t=4JOjUU9hMBau0ia4-0&scaling=min-zoom&page-id=0%3A1&starting-point-node-id=3%3A841" width="100%" height="500px">
 </iframe>
 
 
