@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/rojo_login"
-    tools:context=".Login">
+    tools:context="com.kevmartal.gamequiz.Login">
 
     <com.airbnb.lottie.LottieAnimationView
         android:id="@+id/init"
