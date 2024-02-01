@@ -1,4 +1,4 @@
-package com.example.gamequiz;
+package com.kevmartal.gamequiz;
 
 import android.os.Bundle;
 
@@ -10,10 +10,10 @@ import android.view.ViewGroup;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link Hoja2#newInstance} factory method to
+ * Use the {@link Hoja3#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class Hoja2 extends Fragment {
+public class Hoja3 extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -24,7 +24,7 @@ public class Hoja2 extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    public Hoja2() {
+    public Hoja3() {
         // Required empty public constructor
     }
 
@@ -34,11 +34,11 @@ public class Hoja2 extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment Hoja2.
+     * @return A new instance of fragment Hoja3.
      */
     // TODO: Rename and change types and number of parameters
-    public static Hoja2 newInstance(String param1, String param2) {
-        Hoja2 fragment = new Hoja2();
+    public static Hoja3 newInstance(String param1, String param2) {
+        Hoja3 fragment = new Hoja3();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -59,6 +59,6 @@ public class Hoja2 extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_hoja2, container, false);
+        return inflater.inflate(R.layout.fragment_hoja3, container, false);
     }
 }

@@ -3,7 +3,7 @@
     <string name="welcome_back">¡Bienvenido de nuevo!</string>
     <string name="login">Inicia Sesión</string>
     <string name="mail">Usuario/correo</string>
-    <string name="password">contraseña</string>
+    <string name="password">Contraseña</string>
     <string name="remember">Recordar sesión</string>
     <string name="forgot_password">¿Has olvidado la contraseña?</string>
     <string name="create_account">Create una cuenta</string>
@@ -15,4 +15,5 @@
     <string name="welcome_simple">Bienvenido</string>
     <string name="result">Resultado</string>
     <string name="aciertos">0 puntos</string>
+    <string name="username">Nombre de usuario</string>
 </resources>

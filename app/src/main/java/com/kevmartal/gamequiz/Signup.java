@@ -1,4 +1,4 @@
-package com.example.gamequiz;
+package com.kevmartal.gamequiz;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -46,9 +46,10 @@ public class Signup extends AppCompatActivity {
         String emailUser = txtEmail.getText().toString().trim();
         String passwordUser = txtPassword.getText().toString().trim();
 
-        if (nameUser.isEmpty() && emailUser.isEmpty() && passwordUser.isEmpty()) {
+        if (nameUser.isEmpty() && emailUser.isEmpty() && passwordUser.isEmpty())
             Toast.makeText(Signup.this, "Los campos no pueden estar vacíos", Toast.LENGTH_LONG).show();
-        } else {signupUser(nameUser, emailUser, passwordUser);}
+        else
+            signupUser(nameUser, emailUser, passwordUser);
     }
 
     protected void signupUser(String nameUser, String emailUser, String passwordUser) {

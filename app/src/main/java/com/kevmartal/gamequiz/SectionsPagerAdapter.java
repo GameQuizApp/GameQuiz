@@ -1,4 +1,4 @@
-package com.example.gamequiz;
+package com.kevmartal.gamequiz;
 
 import android.content.Context;
 
@@ -6,20 +6,13 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
 
-import com.example.gamequiz.Hoja3;
-
-
-/**
- * A [FragmentPagerAdapter] that returns a fragment corresponding to
- * one of the sections/tabs/pages.
- */
-public class HelpSectionsPagerAdapter extends FragmentPagerAdapter {
+public class SectionsPagerAdapter extends FragmentPagerAdapter {
 
     //    @StringRes
-//    private static final int[] TAB_TITLES = new int[]{R.string.tab_text_1, R.string.tab_text_2,R.string.tab_text_3};
+//    private static final int[] TAB_TITLES = new int[]{R.string.tab_text_1, R.string.tab_text_2, R.string.tab_text_1, R.string.tab_text_2};
     private final Context mContext;
 
-    public HelpSectionsPagerAdapter(Context context, FragmentManager fm) {
+    public SectionsPagerAdapter(Context context, FragmentManager fm) {
         super(fm);
         mContext = context;
     }
@@ -28,7 +21,12 @@ public class HelpSectionsPagerAdapter extends FragmentPagerAdapter {
     public Fragment getItem(int position) {
         // getItem is called to instantiate the fragment for the given page.
         // Return a PlaceholderFragment (defined as a static inner class below).
+
 //        return PlaceholderFragment.newInstance(position + 1);
+
+        //sustituimos el fragmento único por nuestros cuatro fragmentos, así, el método getItem devuelve el fragmento
+        // que corresponde a la posición que se le pasa a la clase Fragment como argumento
+
         switch (position) {
             case 0:
                 return new Hoja1();
@@ -36,7 +34,6 @@ public class HelpSectionsPagerAdapter extends FragmentPagerAdapter {
                 return new Hoja2();
             case 2:
                 return new Hoja3();
-
             default:
                 return null;
 
@@ -44,13 +41,13 @@ public class HelpSectionsPagerAdapter extends FragmentPagerAdapter {
 //                return new PlaceholderFragment();
 
         }
-    }
 
+    }
 
 //    @Nullable
 //    @Override
 //    public CharSequence getPageTitle(int position) {
-////        return mContext.getResources().getString(TAB_TITLES[position]);
+//        return mContext.getResources().getString(TAB_TITLES[position]);
 //    }
 
     @Override

@@ -1,4 +1,4 @@
-package com.example.gamequiz;
+package com.kevmartal.gamequiz;
 
 import org.junit.Test;
 

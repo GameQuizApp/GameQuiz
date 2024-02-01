@@ -4,7 +4,7 @@
     <string name="login">Log In</string>
     <string name="mail">Username/email</string>
     <string name="mail_example" translatable="false">info@example.com</string>
-    <string name="password">password</string>
+    <string name="password">Password</string>
     <string name="remember">Remember me</string>
     <string name="forgot_password">Forgot password?</string>
     <string name="create_account">Create an account</string>
