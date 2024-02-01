@@ -4,48 +4,165 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/azul_sign"
     tools:context=".Signup">
 
-    <EditText
-        android:id="@+id/txt_name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="text"
-        android:hint="Username"
-        android:layout_marginTop="32dp"
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/registra"
+        android:layout_width="417dp"
+        android:layout_height="366dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/animation1" />
 
-    <EditText
-        android:id="@+id/txt_email"
-        android:layout_width="wrap_content"
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textEmailAddress"
-        android:hint="@string/mail_example"
+        android:layout_margin="8dp"
+        android:alpha="0.8"
+        android:elevation="20dp"
+        android:backgroundTint="@color/azul_claro"
+        app:cardCornerRadius="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_name" />
+        app:layout_constraintStart_toStartOf="parent">
 
-    <EditText
-        android:id="@+id/txt_password"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPassword"
-        android:hint="@string/password"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_email" />
+        <!-- Contenido de la tarjeta -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="16dp">
 
-    <Button
-        android:id="@+id/btn_signup"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/signup"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_password" />
+            <TextView
+                android:id="@+id/iniciaSesion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:text="Regístrate"
+                android:textColor="@color/naranja_fuerte"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+            <!--android:drawableRight="@drawable/x"-->
+            <TextView
+                android:id="@+id/textDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Nombre y Apellidos"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+            <EditText
+                android:id="@+id/editTextPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/background_edittext"
+                android:drawableRight="@drawable/usericon"
+                android:hint="Gustavo..."
+                android:inputType="text"
+                android:padding="15dp"
+                android:textSize="20sp"
+                tools:layout_editor_absoluteX="-16dp"
+                tools:layout_editor_absoluteY="473dp" />
+            <TextView
+                android:id="@+id/textCorreo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Email"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+            <EditText
+                android:id="@+id/email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/background_edittext"
+                android:drawableRight="@drawable/ojo"
+                android:hint="info@example.com"
+                android:inputType="textEmailAddress"
+                android:padding="15dp"
+                android:textSize="20sp"
+                tools:layout_editor_absoluteX="-16dp"
+                tools:layout_editor_absoluteY="473dp" />
+            <TextView
+                android:id="@+id/textPasswd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Contraseña:"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/editTextPassword2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:alpha="0.6"
+                android:background="@drawable/background_edittext"
+                android:drawableEnd="@drawable/candado"
+                android:hint="contraseña"
+                android:inputType="textPassword"
+                android:padding="15dp"
+                android:textSize="20sp"
+                tools:layout_editor_absoluteX="-16dp"
+                android:layout_marginBottom="10dp"
+                tools:layout_editor_absoluteY="473dp" />
+            <EditText
+                android:id="@+id/ConfirmPasswd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:alpha="0.6"
+                android:background="@drawable/background_edittext"
+                android:drawableEnd="@drawable/candado"
+                android:hint=" confirmar contraseña"
+                android:inputType="textPassword"
+                android:padding="15dp"
+                android:textSize="20sp"
+                tools:layout_editor_absoluteX="-16dp"
+                tools:layout_editor_absoluteY="473dp" />
+
+
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="15dp"
+                android:text="Registrarme"
+                android:backgroundTint="@color/azul_sign"
+                android:textColor="@color/naranja_fuerte"
+                android:textStyle="bold"/>
+
+            <LinearLayout
+                android:id="@+id/linear3"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="50dp"
+                    android:text="¿Ya tienes una cuenta?" />
+
+                <TextView
+                    android:id="@+id/Registrarse"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Inicia Sesión"
+                    android:textColor="@color/naranja_fuerte"
+                    android:onClick="openLogin"
+                    />
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

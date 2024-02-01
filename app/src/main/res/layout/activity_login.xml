@@ -4,11 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FF9999"
+    android:background="@color/rojo_login"
     tools:context=".Login">
 
     <com.airbnb.lottie.LottieAnimationView
-        android:id="@+id/boy"
+        android:id="@+id/init"
         android:layout_width="417dp"
         android:layout_height="366dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -24,7 +24,8 @@
         android:layout_height="wrap_content"
         android:layout_margin="8dp"
         android:alpha="0.8"
-        android:backgroundTint="#FFCCCC"
+        android:elevation="20dp"
+        android:backgroundTint="@color/rojo_claro"
         app:cardCornerRadius="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -93,8 +94,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="25dp"
-                    android:backgroundTint="#FF9999"
-                    android:buttonTint="#FE9898"
+                    android:buttonTint="@color/rojo_login"
                     android:text="Remember me " />
 
                 <TextView
@@ -108,7 +108,7 @@
                 android:layout_height="wrap_content"
                 android:padding="15dp"
                 android:text="Iniciar Sesión"
-                android:backgroundTint="#FF9999"
+                android:backgroundTint="@color/rojo_login"
                 android:textColor="@color/vino"
                 android:textStyle="bold"/>
 
