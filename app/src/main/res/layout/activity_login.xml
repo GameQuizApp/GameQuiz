@@ -4,6 +4,139 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FF9999"
     tools:context=".Login">
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/boy"
+        android:layout_width="417dp"
+        android:layout_height="366dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/animation1" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:alpha="0.8"
+        android:backgroundTint="#FFCCCC"
+        app:cardCornerRadius="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <!-- Contenido de la tarjeta -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/iniciaSesion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:text="Inicia Sesión"
+                android:textColor="@color/vino"
+                android:textSize="22dp"
+                android:textStyle="bold" />
+        <!--android:drawableRight="@drawable/x"-->
+            <TextView
+                android:id="@+id/textDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Usuario/correo"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/editTextPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/background_edittext"
+                android:drawableRight="@drawable/ojo"
+                android:hint="info@example.com"
+                android:inputType="textEmailAddress"
+                android:padding="15dp"
+                android:textSize="20dp"
+                tools:layout_editor_absoluteX="-16dp"
+                tools:layout_editor_absoluteY="473dp" />
+
+            <EditText
+                android:id="@+id/editTextPassword2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:alpha="0.6"
+                android:background="@drawable/background_edittext"
+                android:drawableRight="@drawable/candado"
+                android:hint="contraseña"
+                android:inputType="textPassword"
+                android:padding="15dp"
+                android:textSize="20dp"
+                tools:layout_editor_absoluteX="-16dp"
+                tools:layout_editor_absoluteY="473dp" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="25dp"
+                    android:backgroundTint="#FF9999"
+                    android:buttonTint="#FE9898"
+                    android:text="Remember me " />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="¿Has olvidado la contraseña?" />
+            </LinearLayout>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="15dp"
+                android:text="Iniciar Sesión"
+                android:backgroundTint="#FF9999"
+                android:textColor="@color/vino"
+                android:textStyle="bold"/>
+
+            <LinearLayout
+                android:id="@+id/linear3"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="50dp"
+                    android:text="¿No tienes una cuenta?" />
+
+                <TextView
+                    android:id="@+id/Registrarse"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Regístrate"
+                    android:textColor="@color/naranja_fuerte"
+                    android:onClick="openRegister"
+                    />
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
