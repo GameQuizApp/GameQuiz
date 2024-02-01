@@ -43,6 +43,11 @@ Para preguntas, sugerencias o colaboraciones, no dudes en ponerte en contacto co
 
 Primera muestra de nuestro trabajo,este sería el Splash de la aplicación.
 
+## Iframe
+<iframe src="file:///E:/1DAM/HTML/Practica%20html%20tablas%20anidadas/eJ1.pdf" width="100%" height="500px">
+</iframe>
+
+
 ## Splash
 
 ![splash activity](img/animacion_splash.gif)
