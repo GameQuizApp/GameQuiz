@@ -43,45 +43,47 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="20dp"
-                android:text="Inicia Sesión"
+                android:text="@string/login"
                 android:textColor="@color/vino"
-                android:textSize="22dp"
+                android:textSize="22sp"
                 android:textStyle="bold" />
-        <!--android:drawableRight="@drawable/x"-->
+                <!--android:drawableEnd="@drawable/x"-->
             <TextView
                 android:id="@+id/textDescription"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Usuario/correo"
+                android:text="@string/mail"
                 android:textStyle="bold"
                 android:textColor="@color/black"
                 android:textSize="14sp" />
 
             <EditText
-                android:id="@+id/editTextPassword"
+                android:id="@+id/editTextMail"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10dp"
                 android:background="@drawable/background_edittext"
-                android:drawableRight="@drawable/ojo"
-                android:hint="info@example.com"
+                android:drawableEnd="@drawable/ojo"
+                android:hint="@string/mail_example"
+                android:autofillHints="emailAddress"
                 android:inputType="textEmailAddress"
                 android:padding="15dp"
-                android:textSize="20dp"
+                android:textSize="20sp"
                 tools:layout_editor_absoluteX="-16dp"
                 tools:layout_editor_absoluteY="473dp" />
 
             <EditText
-                android:id="@+id/editTextPassword2"
+                android:id="@+id/editTextPassword"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:alpha="0.6"
                 android:background="@drawable/background_edittext"
-                android:drawableRight="@drawable/candado"
-                android:hint="contraseña"
+                android:drawableEnd="@drawable/candado"
+                android:hint="@string/password"
+                android:autofillHints="password"
                 android:inputType="textPassword"
                 android:padding="15dp"
-                android:textSize="20dp"
+                android:textSize="20sp"
                 tools:layout_editor_absoluteX="-16dp"
                 tools:layout_editor_absoluteY="473dp" />
 
@@ -95,19 +97,19 @@
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="25dp"
                     android:buttonTint="@color/rojo_login"
-                    android:text="Remember me " />
+                    android:text="@string/remember" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="¿Has olvidado la contraseña?" />
+                    android:text="@string/forgot_password" />
             </LinearLayout>
 
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="15dp"
-                android:text="Iniciar Sesión"
+                android:text="@string/login"
                 android:backgroundTint="@color/rojo_login"
                 android:textColor="@color/vino"
                 android:textStyle="bold"/>
@@ -123,15 +125,16 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="50dp"
-                    android:text="¿No tienes una cuenta?" />
+                    android:text="@string/not_have_account" />
 
                 <TextView
                     android:id="@+id/Registrarse"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Regístrate"
+                    android:text="@string/signup"
                     android:textColor="@color/naranja_fuerte"
                     android:onClick="openRegister"
+                    android:layout_marginStart="8dp"
                     />
             </LinearLayout>
 

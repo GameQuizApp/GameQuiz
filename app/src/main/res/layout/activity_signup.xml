@@ -43,27 +43,28 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="20dp"
-                android:text="Regístrate"
+                android:text="@string/signup"
                 android:textColor="@color/naranja_fuerte"
                 android:textSize="22sp"
                 android:textStyle="bold" />
-            <!--android:drawableRight="@drawable/x"-->
+                <!--android:drawableRight="@drawable/x"-->
             <TextView
                 android:id="@+id/textDescription"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Nombre y Apellidos"
+                android:text="@string/username"
                 android:textStyle="bold"
                 android:textColor="@color/black"
                 android:textSize="14sp" />
             <EditText
-                android:id="@+id/editTextPassword"
+                android:id="@+id/editTextUsername"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10dp"
                 android:background="@drawable/background_edittext"
-                android:drawableRight="@drawable/usericon"
-                android:hint="Gustavo..."
+                android:drawableEnd="@drawable/usericon"
+                android:hint="@string/username_example"
+                android:autofillHints="username"
                 android:inputType="text"
                 android:padding="15dp"
                 android:textSize="20sp"
@@ -73,40 +74,42 @@
                 android:id="@+id/textCorreo"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Email"
+                android:text="@string/mail"
                 android:textStyle="bold"
                 android:textColor="@color/black"
                 android:textSize="14sp" />
             <EditText
-                android:id="@+id/email"
+                android:id="@+id/editTextMail"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10dp"
                 android:background="@drawable/background_edittext"
-                android:drawableRight="@drawable/ojo"
-                android:hint="info@example.com"
+                android:drawableEnd="@drawable/ojo"
+                android:hint="@string/mail_example"
+                android:autofillHints="emailAddress"
                 android:inputType="textEmailAddress"
                 android:padding="15dp"
                 android:textSize="20sp"
                 tools:layout_editor_absoluteX="-16dp"
                 tools:layout_editor_absoluteY="473dp" />
             <TextView
-                android:id="@+id/textPasswd"
+                android:id="@+id/textPassword"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Contraseña:"
+                android:text="@string/password"
                 android:textStyle="bold"
                 android:textColor="@color/black"
                 android:textSize="14sp" />
 
             <EditText
-                android:id="@+id/editTextPassword2"
+                android:id="@+id/editTextPassword"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:alpha="0.6"
                 android:background="@drawable/background_edittext"
                 android:drawableEnd="@drawable/candado"
-                android:hint="contraseña"
+                android:hint="@string/password"
+                android:autofillHints="password"
                 android:inputType="textPassword"
                 android:padding="15dp"
                 android:textSize="20sp"
@@ -114,13 +117,14 @@
                 android:layout_marginBottom="10dp"
                 tools:layout_editor_absoluteY="473dp" />
             <EditText
-                android:id="@+id/ConfirmPasswd"
+                android:id="@+id/editTextPasswordRepeat"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:alpha="0.6"
                 android:background="@drawable/background_edittext"
                 android:drawableEnd="@drawable/candado"
-                android:hint=" confirmar contraseña"
+                android:hint="@string/confirm_password"
+                android:autofillHints="password"
                 android:inputType="textPassword"
                 android:padding="15dp"
                 android:textSize="20sp"
@@ -133,7 +137,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="15dp"
-                android:text="Registrarme"
+                android:text="@string/signup"
                 android:backgroundTint="@color/azul_sign"
                 android:textColor="@color/naranja_fuerte"
                 android:textStyle="bold"/>
@@ -149,15 +153,16 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="50dp"
-                    android:text="¿Ya tienes una cuenta?" />
+                    android:text="@string/login_again" />
 
                 <TextView
                     android:id="@+id/Registrarse"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Inicia Sesión"
+                    android:text="@string/login"
                     android:textColor="@color/naranja_fuerte"
                     android:onClick="openLogin"
+                    android:layout_marginStart="8dp"
                     />
             </LinearLayout>
 
