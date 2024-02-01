@@ -49,6 +49,7 @@ Primera muestra de nuestro trabajo,este sería el Splash de la aplicación.
 ![splash activity](img/animacion_splash.gif)
 
 ## Login and Register
+
 [register_login.gif](img/register_login.gif)
 
 ### Bottom Navigation
