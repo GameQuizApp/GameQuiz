@@ -57,7 +57,7 @@
                 android:textColor="@color/black"
                 android:textSize="14sp" />
             <EditText
-                android:id="@+id/editTextUsername"
+                android:id="@+id/txt_name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10dp"
@@ -79,7 +79,7 @@
                 android:textColor="@color/black"
                 android:textSize="14sp" />
             <EditText
-                android:id="@+id/editTextMail"
+                android:id="@+id/txt_email"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10dp"
@@ -102,7 +102,7 @@
                 android:textSize="14sp" />
 
             <EditText
-                android:id="@+id/editTextPassword"
+                android:id="@+id/txt_passwd"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:alpha="0.6"
@@ -117,7 +117,7 @@
                 android:layout_marginBottom="10dp"
                 tools:layout_editor_absoluteY="473dp" />
             <EditText
-                android:id="@+id/editTextPasswordRepeat"
+                android:id="@+id/txt_passwd_repeat"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:alpha="0.6"
@@ -134,6 +134,7 @@
 
 
             <Button
+                android:id="@+id/btn_signup"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="15dp"
