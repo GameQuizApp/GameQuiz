@@ -2,6 +2,7 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="gris_claro">#C0C0C0</color>
     <color name="azul_gris">#13678A</color>
     <color name="turquesa">#45C4B0</color>
     <color name="vino">#590414</color>
@@ -19,6 +20,7 @@
     <color name="fucsia_700">#4D0A20</color>
     <color name="verde_gris">#575943</color>
     <color name="naranja">#F2BB13</color>
+    <color name="amarillo_neón">#FFD700</color>
     <color name="naranja_fuerte">#F26e22</color>
     <color name="azul_claro">#CCE5FF</color>
     <color name="azul_sign">#99CCFF</color>
