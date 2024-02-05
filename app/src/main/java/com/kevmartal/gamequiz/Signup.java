@@ -50,16 +50,21 @@ public class Signup extends AppCompatActivity {
         String emailUser = email.getText().toString().trim();
         String passwdUser = passwd.getText().toString().trim();
 
-        if (nameUser.isEmpty() && emailUser.isEmpty() && passwdUser.isEmpty()) {
-            String toastTxt = getString(R.string.complete_signup);
-            Toast.makeText(this, toastTxt, Toast.LENGTH_SHORT).show();
-        } else {
-            if (passwdUser.equals(passwdRepeat.getText().toString().trim()))
-                registerUser(nameUser, emailUser, passwdUser);
-            else {
-                String toastTxt = getString(R.string.error_passwd);
-                Toast.makeText(this, toastTxt, Toast.LENGTH_LONG).show();
+        try {
+            if (nameUser.isEmpty() && emailUser.isEmpty() && passwdUser.isEmpty()) {
+                String toastTxt = getString(R.string.complete_signup);
+                Toast.makeText(this, toastTxt, Toast.LENGTH_SHORT).show();
+            } else {
+                if (passwdUser.equals(passwdRepeat.getText().toString().trim()))
+                    registerUser(nameUser, emailUser, passwdUser);
+                else {
+                    String toastTxt = getString(R.string.error_passwd);
+                    Toast.makeText(this, toastTxt, Toast.LENGTH_LONG).show();
+                }
             }
+        } catch (Exception e) {
+            String toastTxt = "ERROR";
+            Toast.makeText(this, toastTxt, Toast.LENGTH_SHORT).show();
         }
     }
 
