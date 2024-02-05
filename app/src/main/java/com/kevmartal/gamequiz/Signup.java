@@ -72,7 +72,6 @@ public class Signup extends AppCompatActivity {
                 map.put("id", id);
                 map.put("name", nameUser);
                 map.put("email", emailUser);
-                map.put("password", passwdUser);
 
                 mFirestore.collection("user").document(id).set(map).addOnSuccessListener(new OnSuccessListener<Void>() {
                     @Override
