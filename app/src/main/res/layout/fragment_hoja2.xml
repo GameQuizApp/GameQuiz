@@ -7,7 +7,15 @@
     android:background="@color/morado"
     tools:context=".Hoja2">
 
-
+    <TextView
+        android:id="@+id/catego"
+        style="@style/Titulos_grandes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:text="Categorías"
+        app:layout_constraintBottom_toTopOf="@+id/startHorizontal"
+        app:layout_constraintStart_toStartOf="@+id/guideline2" />
     <!--Más populares + carvdiews de los juegos-->
     <HorizontalScrollView
         android:id="@+id/startHorizontal"
@@ -70,14 +78,14 @@
                     <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:src="@drawable/ic_heart" />
+                        android:src="@drawable/balon" />
 
                     <TextView
-                        android:id="@+id/Todos"
+                        android:id="@+id/Deportes"
                         style="@style/Buscar_cat"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Todos" />
+                        android:text="Deportes" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
@@ -99,14 +107,16 @@
                     <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:src="@drawable/ic_heart" />
+                        android:src="@drawable/cyberico"
+                        android:scaleType="centerCrop"
+                        />
 
                     <TextView
-                        android:id="@+id/Todos"
+                        android:id="@+id/Accion"
                         style="@style/Buscar_cat"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Todos" />
+                        android:text="Acción" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
@@ -128,14 +138,43 @@
                     <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:src="@drawable/ic_heart" />
+                        android:src="@drawable/asesino" />
 
                     <TextView
-                        android:id="@+id/Todos"
+                        android:id="@+id/Terror"
                         style="@style/Buscar_cat"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Todos" />
+                        android:text="Terror" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:elevation="10dp"
+                app:cardCornerRadius="20dp"
+                android:backgroundTint="@color/neg_busc"
+                android:layout_marginEnd="20dp"
+                >
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="8dp">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/retro" />
+
+                    <TextView
+                        android:id="@+id/Retro"
+                        style="@style/Buscar_cat"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Retro" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
@@ -230,7 +269,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="140dp"
                         android:scaleType="centerCrop"
-                        android:src="@drawable/cyberpunk" />
+                        android:src="@drawable/twd" />
 
                     <TextView
                         style="@style/Titulo"
