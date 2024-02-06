@@ -22,4 +22,6 @@
     <string name="error_passwd">ERROR. Los campos de contraseña no coinciden.</string>
     <string name="complete_signup">Por favor, complete todos los campos.</string>
     <string name="error_signup">Error en el registro</string>
+    <string name="yes">Sí</string>
+    <string name="no">No</string>
 </resources>

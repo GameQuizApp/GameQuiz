@@ -32,8 +32,6 @@ public class HelpSectionsPagerAdapter extends FragmentPagerAdapter {
                 return new Hoja1();
             case 1:
                 return new Hoja2();
-            case 2:
-                return new Hoja3();
 
             default:
                 return null;
@@ -54,6 +52,6 @@ public class HelpSectionsPagerAdapter extends FragmentPagerAdapter {
     @Override
     public int getCount() {
         // Show 2 total pages.
-        return 3;
+        return 2;
     }
 }
