@@ -39,16 +39,17 @@ Para preguntas, sugerencias o colaboraciones, no dudes en ponerte en contacto co
 
 <a href="https://www.java.com" target="_blank"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg" alt="java" width="40" height="40"/> </a><a href="https://developer.android.com/studio" target="_blank"> <img src="https://developer.android.com/images/logos/android.svg" alt="androidStudio" width="40" height="40"/> </a> <a href="https://firebase.google.com/?hl=pt" target="_blank"> <img src="https://www.gstatic.com/mobilesdk/160503_mobilesdk/logo/2x/firebase_96dp.png" alt="firebase" width="40" height="40"/> </a>
 
-## Pruebas ⚙️
-
-Primera muestra de nuestro trabajo,este sería el Splash de la aplicación.
-
 ## Figma
 > [!NOTE]
 > Antes que nada nos gustaría informar que esta foto es solo una idea,obviamente se harán varios cambios
 > Aquí esta el enlace a figma por si os interesa el modelo(prototipo). [Figma](https://www.figma.com/file/ugUAnuVYLh3nyYM3Uc8jte/Prototipo-KevinB?type=design&node-id=0-1&mode=design&t=O5PTD1e4fypeUMza-0)
 
 ![figma](img/figma.png)
+
+## Pruebas ⚙️
+
+Primera muestra de nuestro trabajo,este sería el Splash de la aplicación.
+
 
 ## Splash
 
