@@ -43,6 +43,12 @@ Para preguntas, sugerencias o colaboraciones, no dudes en ponerte en contacto co
 
 Primera muestra de nuestro trabajo,este sería el Splash de la aplicación.
 
+## Figma
+> [!NOTE]
+> Antes que nada nos gustaría informar que esta foto es solo una idea,obviamente se harán varios cambios
+> Aquí esta el enlace a figma por si os interesa el modelo. [Figma](https://www.figma.com/file/ugUAnuVYLh3nyYM3Uc8jte/Prototipo-KevinB?type=design&node-id=0-1&mode=design&t=O5PTD1e4fypeUMza-0)
+
+![figma](img/figma.png)
 
 ## Splash
 
