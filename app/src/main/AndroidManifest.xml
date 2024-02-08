@@ -16,17 +16,19 @@
         android:theme="@style/Theme.GameQuiz.NoActionBar"
         tools:targetApi="31">
         <activity
-            android:name="com.kevmartal.gamequiz.Signup"
-            android:exported="true"
-             />
-        <activity
-            android:name="com.kevmartal.gamequiz.Login"
+            android:name=".PruebaImagenes"
             android:exported="true" />
         <activity
-            android:name="com.kevmartal.gamequiz.Main"
+            android:name=".Signup"
             android:exported="true" />
         <activity
-            android:name="com.kevmartal.gamequiz.Splash"
+            android:name=".Login"
+            android:exported="true" />
+        <activity
+            android:name=".Main"
+            android:exported="true" />
+        <activity
+            android:name=".Splash"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -34,6 +36,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
