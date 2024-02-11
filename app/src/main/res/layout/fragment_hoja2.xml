@@ -253,12 +253,12 @@
                                 style="@style/Visitas"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
-                                android:text="  1.9k visitas" />
+                                android:text="  4.9k visitas" />
                         </LinearLayout>
                     </androidx.cardview.widget.CardView>
                     <!--HORIZONTALSCROLLVIEW-->
                     <androidx.cardview.widget.CardView
-                        android:id="@+id/cardView2"
+                        android:id="@+id/cardViewRockstar"
                         android:layout_width="200dp"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="20dp"
@@ -273,34 +273,34 @@
                             android:orientation="vertical">
 
                             <ImageView
-                                android:id="@+id/acción2"
+                                android:id="@+id/rockstarimg"
                                 android:layout_width="wrap_content"
                                 android:layout_height="140dp"
                                 android:scaleType="centerCrop"
-                                android:src="@drawable/twd" />
+                                android:src="@drawable/rockstar" />
 
                             <TextView
                                 style="@style/Titulo"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
-                                android:text="  Todos" />
+                                android:text="  Videojuegos" />
                             <!--android:drawableEnd="@drawable/ic_heart"-->
                             <TextView
                                 style="@style/Categoria"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
-                                android:text=" Acción" />
+                                android:text=" Rockstar Games" />
 
                             <TextView
                                 style="@style/Visitas"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
-                                android:text="  1.9k visitas" />
+                                android:text="  4.1k visitas" />
                         </LinearLayout>
                     </androidx.cardview.widget.CardView>
                     <!---->
                     <androidx.cardview.widget.CardView
-                        android:id="@+id/cardView3"
+                        android:id="@+id/cardViewUbisoft"
                         android:layout_width="200dp"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="20dp"
@@ -315,11 +315,11 @@
                             android:orientation="vertical">
 
                             <ImageView
-                                android:id="@+id/acción3"
+                                android:id="@+id/ubisoftimg"
                                 android:layout_width="wrap_content"
                                 android:layout_height="140dp"
                                 android:scaleType="centerCrop"
-                                android:src="@drawable/cyberpunk" />
+                                android:src="@drawable/ubisoft" />
 
                             <TextView
                                 style="@style/Titulo"
@@ -331,13 +331,13 @@
                                 style="@style/Categoria"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
-                                android:text=" Acción" />
+                                android:text=" Ubisoft" />
 
                             <TextView
                                 style="@style/Visitas"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
-                                android:text="  1.9k visitas" />
+                                android:text="  5k visitas" />
                         </LinearLayout>
                     </androidx.cardview.widget.CardView>
                 </LinearLayout>
@@ -389,25 +389,25 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="140dp"
                                 android:scaleType="centerCrop"
-                                android:src="@drawable/cyberpunk" />
+                                android:src="@drawable/twd" />
 
                             <TextView
                                 style="@style/Titulo"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
-                                android:text="  Todos" />
+                                android:text="  Telltale games" />
                             <!--android:drawableEnd="@drawable/ic_heart"-->
                             <TextView
                                 style="@style/Categoria"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
-                                android:text=" Acción" />
+                                android:text=" The walking Dead" />
 
                             <TextView
                                 style="@style/Visitas"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
-                                android:text="  1.9k visitas" />
+                                android:text="  900 visitas" />
                         </LinearLayout>
                     </androidx.cardview.widget.CardView>
                     <!---->
@@ -431,30 +431,30 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="140dp"
                                 android:scaleType="centerCrop"
-                                android:src="@drawable/twd" />
+                                android:src="@drawable/resident7" />
 
                             <TextView
                                 style="@style/Titulo"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
-                                android:text="  Todos" />
+                                android:text="  Capcom" />
                             <!--android:drawableEnd="@drawable/ic_heart"-->
                             <TextView
                                 style="@style/Categoria"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
-                                android:text=" Acción" />
+                                android:text=" R.E. Biohazard" />
 
                             <TextView
                                 style="@style/Visitas"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
-                                android:text="  1.9k visitas" />
+                                android:text="  3.2k visitas" />
                         </LinearLayout>
                     </androidx.cardview.widget.CardView>
                     <!---->
                     <androidx.cardview.widget.CardView
-                        android:id="@+id/cardView3"
+                        android:id="@+id/cardViewGodOfWar"
                         android:layout_width="200dp"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="20dp"
@@ -469,7 +469,7 @@
                             android:orientation="vertical">
 
                             <ImageView
-                                android:id="@+id/acción3"
+                                android:id="@+id/GodOfWarimg"
                                 android:layout_width="wrap_content"
                                 android:layout_height="140dp"
                                 android:scaleType="centerCrop"
