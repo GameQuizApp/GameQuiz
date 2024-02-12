@@ -9,8 +9,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.Toast;
 
 import com.google.android.material.bottomsheet.BottomSheetDialog;
+import com.google.firebase.auth.FirebaseAuth;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -27,7 +29,8 @@ public class Hoja1 extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
-    Button loginbutton, signupbutton, resultbutton;
+    Button loginbutton, signupbutton, resultbutton, logoutbutton;
+    FirebaseAuth mAuth;
 
     public Hoja1() {
         // Required empty public constructor
@@ -64,6 +67,8 @@ public class Hoja1 extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
+        mAuth = FirebaseAuth.getInstance();
+
         // Inflar el diseño del fragmento
         View view = inflater.inflate(R.layout.fragment_hoja1, container, false);
 
@@ -96,6 +101,16 @@ public class Hoja1 extends Fragment {
                 dialog.setContentView(vista);
 
                 dialog.show();
+            }
+        });
+
+        logoutbutton = view.findViewById(R.id.logout_button);
+        logoutbutton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mAuth.signOut();
+                String toastTxt = getString(R.string.bye);
+                Toast.makeText(getContext(), toastTxt, Toast.LENGTH_SHORT).show();
             }
         });
 

@@ -11,7 +11,7 @@ android {
         applicationId = "com.kevmartal.gamequiz"
         minSdk = 26
         targetSdk = 34
-        versionCode = 1
+        versionCode = 2
         versionName = "0.1"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
@@ -65,7 +65,4 @@ dependencies {
     implementation("com.google.firebase:firebase-auth-ktx")
 
     implementation ("com.google.firebase:firebase-firestore:24.10.1") // La versión puede variar
-
-    // Picasso
-    implementation ("com.squareup.picasso:picasso:2.71828")
 }

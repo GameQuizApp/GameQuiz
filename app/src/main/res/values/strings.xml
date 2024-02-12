@@ -21,9 +21,11 @@
     <string name="username_example">johnny_24</string>
     <string name="confirm_password">Confirm password</string>
     <string name="error_passwd">ERROR. Password fields do not match</string>
-    <string name="complete_signup">Please, complete all the fields.</string>
+    <string name="complete_fields">Please, complete all the fields.</string>
     <string name="error_signup">Error signing in</string>
     <string name="alertdialog_question">Do you want to close the app?</string>
     <string name="yes">Yes</string>
     <string name="no">No</string>
+    <string name="error_login">Error logging in</string>
+    <string name="bye">Bye! :)</string>
 </resources>

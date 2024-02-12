@@ -25,7 +25,7 @@ import java.util.Map;
 public class Signup extends AppCompatActivity {
 
     private EditText name, email, passwd, passwdRepeat;
-    private Button btnSignup;
+    Button btnSignup;
     FirebaseFirestore mFirestore;
     FirebaseAuth mAuth;
 
@@ -52,7 +52,7 @@ public class Signup extends AppCompatActivity {
 
         try {
             if (nameUser.isEmpty() && emailUser.isEmpty() && passwdUser.isEmpty()) {
-                String toastTxt = getString(R.string.complete_signup);
+                String toastTxt = getString(R.string.complete_fields);
                 Toast.makeText(this, toastTxt, Toast.LENGTH_SHORT).show();
             } else {
                 if (passwdUser.equals(passwdRepeat.getText().toString().trim()))
