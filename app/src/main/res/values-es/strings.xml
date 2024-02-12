@@ -21,10 +21,10 @@
     <string name="confirm_password">Confirmar contraseña</string>
     <string name="error_passwd">ERROR. Los campos de contraseña no coinciden.</string>
     <string name="complete_fields">Por favor, complete todos los campos.</string>
-    <string name="error_signup">Error en el registro</string>
+    <string name="error_signup">ERROR. El correo o la contraseña no son correctos.</string>
     <string name="alertdialog_question">¿Deseas cerrar la aplicación?</string>
     <string name="yes">Sí</string>
     <string name="no">No</string>
-    <string name="error_login">Error al iniciar sesión</string>
+    <string name="error_login">ERROR. El correo o la contraseña no son correctos.</string>
     <string name="bye">¡Hasta pronto! :)</string>
 </resources>
