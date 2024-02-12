@@ -7,6 +7,11 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ScrollView;
+import android.widget.TextView;
+
+import org.checkerframework.checker.nullness.qual.NonNull;
+import org.checkerframework.checker.nullness.qual.Nullable;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -60,5 +65,76 @@ public class Hoja2 extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_hoja2, container, false);
+    }
+
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+
+        TextView deportesTextView = view.findViewById(R.id.Deportes);
+        TextView deporTextView = view.findViewById(R.id.deportes_textv);
+        ScrollView scrollView = view.findViewById(R.id.scrollviewCategorias);
+        //Link a deportes
+        deportesTextView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // Desplazar la vista hacia el TextView "tendencia"
+                scrollView.post(new Runnable() {
+                    @Override
+                    public void run() {
+                        scrollView.scrollTo(0, deporTextView.getTop());
+                    }
+                });
+            }
+        });
+        //Link a Acción
+        TextView actionTextView = view.findViewById(R.id.Accion);
+        TextView actionTxt = view.findViewById(R.id.actiontxt);
+
+        actionTextView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // Desplazar la vista hacia el TextView "tendencia"
+                scrollView.post(new Runnable() {
+                    @Override
+                    public void run() {
+                        scrollView.scrollTo(0, actionTxt.getTop());
+                    }
+                });
+            }
+        });
+        //Link a Terror
+        TextView terrorTextView = view.findViewById(R.id.Terror);
+        TextView terrorTxt = view.findViewById(R.id.Miedotxt);
+
+        terrorTextView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // Desplazar la vista hacia el TextView "tendencia"
+                scrollView.post(new Runnable() {
+                    @Override
+                    public void run() {
+                        scrollView.scrollTo(0, terrorTxt.getTop());
+                    }
+                });
+            }
+        });
+        //Link a Retro
+        TextView retroTextView = view.findViewById(R.id.Retro);
+        TextView retroTxt = view.findViewById(R.id.retrotxt);
+
+        retroTextView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // Desplazar la vista hacia el TextView "tendencia"
+                scrollView.post(new Runnable() {
+                    @Override
+                    public void run() {
+                        scrollView.scrollTo(0, retroTxt.getTop());
+                    }
+                });
+            }
+        });
+
     }
 }
