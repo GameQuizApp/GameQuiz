@@ -29,4 +29,5 @@
     <string name="bye">¡Hasta pronto! :)</string>
     <string name="play">Jugar</string>
     <string name="settings">Configuración</string>
+    <string name="logout">Cerrar sesión</string>
 </resources>

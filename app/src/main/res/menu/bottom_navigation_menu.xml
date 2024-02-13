@@ -19,7 +19,7 @@
     <item
         android:id="@+id/settings"
         android:title="@string/settings"
-        android:icon="@drawable/salida"
+        android:icon="@drawable/settings_outlined"
         app:showAsAction="ifRoom"
         />
 

@@ -1,5 +1,6 @@
 package com.kevmartal.gamequiz;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -7,6 +8,12 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.TextView;
+import android.widget.Toast;
+
+import com.google.android.material.bottomsheet.BottomSheetDialog;
+import com.google.firebase.auth.FirebaseAuth;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -23,6 +30,9 @@ public class Hoja3 extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+    Button loginbutton, logoutbutton;
+    TextView result;
+    FirebaseAuth mAuth;
 
     public Hoja3() {
         // Required empty public constructor
@@ -58,7 +68,55 @@ public class Hoja3 extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_hoja3, container, false);
+
+        mAuth = FirebaseAuth.getInstance();
+
+        // Inflar el diseño del fragmento
+        View view = inflater.inflate(R.layout.fragment_hoja3, container, false);
+
+        loginbutton = view.findViewById(R.id.login_button);
+        loginbutton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getActivity(), Login.class));
+            }
+        });
+
+        /*  signupbutton = view.findViewById(R.id.signup_button);
+         *  signupbutton.setOnClickListener(new View.OnClickListener() {
+         *      @Override
+         *      public void onClick(View v) {
+         *          startActivity(new Intent(getActivity(), Signup.class));
+         *      }
+         *  });
+         */
+
+        result = view.findViewById(R.id.result_textview);
+        result.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                BottomSheetDialog dialog = new BottomSheetDialog(getActivity());
+
+                View vista = LayoutInflater.from(getActivity().getApplicationContext()).inflate(R.layout.result_bottomsheet, null);
+
+                dialog.setCancelable(true);
+                dialog.setContentView(vista);
+
+                dialog.show();
+            }
+        });
+
+        logoutbutton = view.findViewById(R.id.logout_button);
+        logoutbutton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mAuth.signOut();
+                String toastTxt = getString(R.string.bye);
+                Toast.makeText(getContext(), toastTxt, Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        return view;
     }
 }

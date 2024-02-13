@@ -4,55 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/naranja_fuerte"
     tools:context=".Hoja1">
-
-    <Button
-        android:id="@+id/login_button"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="@string/login"
-        android:layout_marginTop="265dp"
-        android:layout_marginStart="80dp"
-        android:layout_marginEnd="80dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
-
-    <Button
-        android:id="@+id/signup_button"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="@string/signup"
-        android:layout_marginTop="8dp"
-        android:layout_marginStart="80dp"
-        android:layout_marginEnd="80dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/login_button"/>
-
-    <Button
-        android:id="@+id/result"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="@string/result"
-        android:layout_marginTop="8dp"
-        android:layout_marginStart="80dp"
-        android:layout_marginEnd="80dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/signup_button"/>
-
-    <Button
-        android:id="@+id/logout_button"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="Log out"
-        android:layout_marginTop="8dp"
-        android:layout_marginStart="80dp"
-        android:layout_marginEnd="80dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/result"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

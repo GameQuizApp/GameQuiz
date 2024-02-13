@@ -29,8 +29,6 @@ public class Hoja1 extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
-    Button loginbutton, signupbutton, resultbutton, logoutbutton;
-    FirebaseAuth mAuth;
 
     public Hoja1() {
         // Required empty public constructor
@@ -66,54 +64,7 @@ public class Hoja1 extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-
-        mAuth = FirebaseAuth.getInstance();
-
-        // Inflar el diseño del fragmento
-        View view = inflater.inflate(R.layout.fragment_hoja1, container, false);
-
-        loginbutton = view.findViewById(R.id.login_button);
-        loginbutton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(getActivity(), Login.class));
-            }
-        });
-
-        signupbutton = view.findViewById(R.id.signup_button);
-        signupbutton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(getActivity(), Signup.class));
-            }
-        });
-
-        resultbutton = view.findViewById(R.id.result);
-        resultbutton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                BottomSheetDialog dialog = new BottomSheetDialog(getActivity());
-
-                View vista = LayoutInflater.from(getActivity().getApplicationContext()).inflate(R.layout.result_bottomsheet, null);
-
-                dialog.setCancelable(true);
-                dialog.setContentView(vista);
-
-                dialog.show();
-            }
-        });
-
-        logoutbutton = view.findViewById(R.id.logout_button);
-        logoutbutton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                mAuth.signOut();
-                String toastTxt = getString(R.string.bye);
-                Toast.makeText(getContext(), toastTxt, Toast.LENGTH_SHORT).show();
-            }
-        });
-
-        return view;
+        // Inflar el diseño del fragment
+        return inflater.inflate(R.layout.fragment_hoja1, container, false);
     }
 }
