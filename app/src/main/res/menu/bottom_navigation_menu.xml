@@ -4,27 +4,23 @@
 
     <item
         android:id="@+id/home"
-        android:title="Home"
+        android:title="@string/app_name"
         android:icon="@drawable/hogar"
-        android:contentDescription="none"
-        app:showAsAction="always"
+        app:showAsAction="ifRoom"
         />
 
     <item
         android:id="@+id/play"
-        android:title="Play"
+        android:title="@string/play"
         android:icon="@drawable/play"
-        android:contentDescription="none"
-        app:showAsAction="always"
-        >
-    </item>
+        app:showAsAction="ifRoom"
+        />
 
     <item
-        android:id="@+id/exit"
-        android:title="Exit"
+        android:id="@+id/settings"
+        android:title="@string/settings"
         android:icon="@drawable/salida"
-        android:contentDescription="none"
-        app:showAsAction="always"
+        app:showAsAction="ifRoom"
         />
 
 </menu>

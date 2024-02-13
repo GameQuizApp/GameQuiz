@@ -28,4 +28,7 @@
     <string name="no">No</string>
     <string name="error_login">ERROR. Email or password is not correct.</string>
     <string name="bye">Bye! :)</string>
+    <string name="play">Play</string>
+    <string name="settings">Settings</string>
+    <!-- TODO: Remove or change this placeholder text -->
 </resources>

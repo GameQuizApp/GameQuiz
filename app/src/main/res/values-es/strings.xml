@@ -27,4 +27,6 @@
     <string name="no">No</string>
     <string name="error_login">ERROR. El correo o la contraseña no son correctos.</string>
     <string name="bye">¡Hasta pronto! :)</string>
+    <string name="play">Jugar</string>
+    <string name="settings">Configuración</string>
 </resources>

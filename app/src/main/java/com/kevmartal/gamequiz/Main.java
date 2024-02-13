@@ -49,7 +49,7 @@ public class Main extends AppCompatActivity {
 
         // Crear badges
         @SuppressLint("RestrictedApi") BottomNavigationMenuView bottomNavigationMenuView = (BottomNavigationMenuView) mybottomNavView.getChildAt(0);
-        View v = bottomNavigationMenuView.getChildAt(1);
+        View v = bottomNavigationMenuView.getChildAt(2);
         @SuppressLint("RestrictedApi") BottomNavigationItemView itemView = (BottomNavigationItemView) v;
 
         LayoutInflater.from(this).inflate(R.layout.layout_badge, itemView, true);
@@ -68,11 +68,11 @@ public class Main extends AppCompatActivity {
                     //Toast.makeText(Main.this, "Play clicked.", Toast.LENGTH_SHORT).show();
                     removeBadge(mybottomNavView,item.getItemId());
                     viewPager1.setCurrentItem(1);
-                } else if (item.getItemId() == R.id.exit) {
-                    //item.setChecked(true);
-                    //removeBadge(mybottomNavView,item.getItemId());
+                } else if (item.getItemId() == R.id.settings) {
+                    item.setChecked(true);
                     //Toast.makeText(Main.this, "Exit clicked.", Toast.LENGTH_SHORT).show();
-                    confirmExit();
+                    removeBadge(mybottomNavView,item.getItemId());
+                    viewPager1.setCurrentItem(2);
                 }
                 return false;
             }
