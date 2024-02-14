@@ -87,54 +87,6 @@ public class Hoja2 extends Fragment {
                 });
             }
         });
-        //Link a Acción
-        TextView actionTextView = view.findViewById(R.id.Accion);
-        TextView actionTxt = view.findViewById(R.id.actiontxt);
-
-        actionTextView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                // Desplazar la vista hacia el TextView "tendencia"
-                scrollView.post(new Runnable() {
-                    @Override
-                    public void run() {
-                        scrollView.scrollTo(0, actionTxt.getTop());
-                    }
-                });
-            }
-        });
-        //Link a Terror
-        TextView terrorTextView = view.findViewById(R.id.Terror);
-        TextView terrorTxt = view.findViewById(R.id.Miedotxt);
-
-        terrorTextView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                // Desplazar la vista hacia el TextView "tendencia"
-                scrollView.post(new Runnable() {
-                    @Override
-                    public void run() {
-                        scrollView.scrollTo(0, terrorTxt.getTop());
-                    }
-                });
-            }
-        });
-        //Link a Retro
-        TextView retroTextView = view.findViewById(R.id.Retro);
-        TextView retroTxt = view.findViewById(R.id.retrotxt);
-
-        retroTextView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                // Desplazar la vista hacia el TextView "tendencia"
-                scrollView.post(new Runnable() {
-                    @Override
-                    public void run() {
-                        scrollView.scrollTo(0, retroTxt.getTop());
-                    }
-                });
-            }
-        });
 
     }
 }
