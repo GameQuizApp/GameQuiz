@@ -212,7 +212,8 @@
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal">
+                    android:orientation="horizontal"
+                    android:paddingEnd="20dp">
 
                     <androidx.cardview.widget.CardView
                         android:id="@+id/cardViewCyberpunk"
@@ -366,7 +367,8 @@
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal">
+                    android:orientation="horizontal"
+                    android:paddingEnd="20dp">
 
                     <androidx.cardview.widget.CardView
                         android:id="@+id/cardViewTwd"
@@ -394,19 +396,19 @@
                                 style="@style/Titulo"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
-                                android:text="  Telltale games" />
+                                android:text="  Todos" />
                             <!--android:drawableEnd="@drawable/ic_heart"-->
                             <TextView
                                 style="@style/Categoria"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
-                                android:text=" The walking Dead" />
+                                android:text=" Zombies " />
 
                             <TextView
                                 style="@style/Visitas"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
-                                android:text="  900 visitas" />
+                                android:text="  1.8k visitas" />
                         </LinearLayout>
                     </androidx.cardview.widget.CardView>
                     <!---->
@@ -442,7 +444,7 @@
                                 style="@style/Categoria"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
-                                android:text=" R.E. Biohazard" />
+                                android:text=" Resident Evil" />
 
                             <TextView
                                 style="@style/Visitas"
@@ -472,7 +474,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="140dp"
                                 android:scaleType="centerCrop"
-                                android:src="@drawable/cyberpunk" />
+                                android:src="@drawable/god_war" />
 
                             <TextView
                                 style="@style/Titulo"
@@ -509,7 +511,7 @@
                 />
             <!--TERCERA HORIZONTALSCROLLVIEW///////////////////////////////////////////////-->
             <HorizontalScrollView
-                android:id="@+id/horizontalScrollView"
+                android:id="@+id/horizontalScrollViewDeport"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:clickable="true"
@@ -520,10 +522,11 @@
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal">
+                    android:orientation="horizontal"
+                    android:paddingEnd="20dp">
 
                     <androidx.cardview.widget.CardView
-                        android:id="@+id/cardView1"
+                        android:id="@+id/cardViewTekken"
                         android:layout_width="200dp"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="20dp"
@@ -538,11 +541,11 @@
                             android:orientation="vertical">
 
                             <ImageView
-                                android:id="@+id/acción"
+                                android:id="@+id/tekkenimg"
                                 android:layout_width="wrap_content"
                                 android:layout_height="140dp"
                                 android:scaleType="centerCrop"
-                                android:src="@drawable/cyberpunk" />
+                                android:src="@drawable/tekken" />
 
                             <TextView
                                 style="@style/Titulo"
@@ -554,18 +557,18 @@
                                 style="@style/Categoria"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
-                                android:text=" Acción" />
+                                android:text=" Tekken" />
 
                             <TextView
                                 style="@style/Visitas"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
-                                android:text="  1.9k visitas" />
+                                android:text="  2.4k visitas" />
                         </LinearLayout>
                     </androidx.cardview.widget.CardView>
                     <!--HORIZONTALSCROLLVIEW-->
                     <androidx.cardview.widget.CardView
-                        android:id="@+id/cardView2"
+                        android:id="@+id/cardViewNBA2K24"
                         android:layout_width="200dp"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="20dp"
@@ -580,11 +583,11 @@
                             android:orientation="vertical">
 
                             <ImageView
-                                android:id="@+id/acción2"
+                                android:id="@+id/nbaimg"
                                 android:layout_width="wrap_content"
                                 android:layout_height="140dp"
                                 android:scaleType="centerCrop"
-                                android:src="@drawable/twd" />
+                                android:src="@drawable/nba" />
 
                             <TextView
                                 style="@style/Titulo"
@@ -596,18 +599,18 @@
                                 style="@style/Categoria"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
-                                android:text=" Acción" />
+                                android:text=" NBA" />
 
                             <TextView
                                 style="@style/Visitas"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
-                                android:text="  1.9k visitas" />
+                                android:text="  3.1k visitas" />
                         </LinearLayout>
                     </androidx.cardview.widget.CardView>
                     <!---->
                     <androidx.cardview.widget.CardView
-                        android:id="@+id/cardView3"
+                        android:id="@+id/cardViewRacing"
                         android:layout_width="200dp"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="20dp"
@@ -622,11 +625,11 @@
                             android:orientation="vertical">
 
                             <ImageView
-                                android:id="@+id/acción3"
+                                android:id="@+id/racing_img"
                                 android:layout_width="wrap_content"
                                 android:layout_height="140dp"
                                 android:scaleType="centerCrop"
-                                android:src="@drawable/cyberpunk" />
+                                android:src="@drawable/horizon" />
 
                             <TextView
                                 style="@style/Titulo"
@@ -638,13 +641,13 @@
                                 style="@style/Categoria"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
-                                android:text=" Acción" />
+                                android:text=" Racing" />
 
                             <TextView
                                 style="@style/Visitas"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
-                                android:text="  1.9k visitas" />
+                                android:text="  2.2k visitas" />
                         </LinearLayout>
                     </androidx.cardview.widget.CardView>
                 </LinearLayout>
@@ -662,9 +665,9 @@
                 android:paddingStart="25dp"
                 />
 
-            <!--CUARTa HORIZONTALSCROLLVIEW///////////////////////////////////////////////-->
+            <!--CUARTA HORIZONTALSCROLLVIEW///////////////////////////////////////////////-->
             <HorizontalScrollView
-                android:id="@+id/horizontalScrollView"
+                android:id="@+id/horizontalScrollViewMiedo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:clickable="true"
@@ -675,10 +678,11 @@
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal">
+                    android:orientation="horizontal"
+                    android:paddingEnd="20dp">
 
                     <androidx.cardview.widget.CardView
-                        android:id="@+id/cardView1"
+                        android:id="@+id/cardViewLethalC"
                         android:layout_width="200dp"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="20dp"
@@ -693,11 +697,11 @@
                             android:orientation="vertical">
 
                             <ImageView
-                                android:id="@+id/acción"
+                                android:id="@+id/lethealc_img"
                                 android:layout_width="wrap_content"
                                 android:layout_height="140dp"
                                 android:scaleType="centerCrop"
-                                android:src="@drawable/cyberpunk" />
+                                android:src="@drawable/lethal_company" />
 
                             <TextView
                                 style="@style/Titulo"
@@ -709,18 +713,18 @@
                                 style="@style/Categoria"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
-                                android:text=" Acción" />
+                                android:text=" Terror" />
 
                             <TextView
                                 style="@style/Visitas"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
-                                android:text="  1.9k visitas" />
+                                android:text="  3.1k visitas" />
                         </LinearLayout>
                     </androidx.cardview.widget.CardView>
                     <!--HORIZONTALSCROLLVIEW-->
                     <androidx.cardview.widget.CardView
-                        android:id="@+id/cardView2"
+                        android:id="@+id/cardView2Twd"
                         android:layout_width="200dp"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="20dp"
@@ -735,7 +739,7 @@
                             android:orientation="vertical">
 
                             <ImageView
-                                android:id="@+id/acción2"
+                                android:id="@+id/twd2img"
                                 android:layout_width="wrap_content"
                                 android:layout_height="140dp"
                                 android:scaleType="centerCrop"
@@ -745,24 +749,24 @@
                                 style="@style/Titulo"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
-                                android:text="  Todos" />
+                                android:text="  Todos " />
                             <!--android:drawableEnd="@drawable/ic_heart"-->
                             <TextView
                                 style="@style/Categoria"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
-                                android:text=" Acción" />
+                                android:text=" Zombies  " />
 
                             <TextView
                                 style="@style/Visitas"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
-                                android:text="  1.9k visitas" />
+                                android:text="  1.8k visitas" />
                         </LinearLayout>
                     </androidx.cardview.widget.CardView>
                     <!---->
                     <androidx.cardview.widget.CardView
-                        android:id="@+id/cardView3"
+                        android:id="@+id/cardView2R_evil7"
                         android:layout_width="200dp"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="20dp"
@@ -777,29 +781,29 @@
                             android:orientation="vertical">
 
                             <ImageView
-                                android:id="@+id/acción3"
+                                android:id="@+id/RE7img2"
                                 android:layout_width="wrap_content"
                                 android:layout_height="140dp"
                                 android:scaleType="centerCrop"
-                                android:src="@drawable/cyberpunk" />
+                                android:src="@drawable/resident7" />
 
                             <TextView
                                 style="@style/Titulo"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
-                                android:text="  Todos" />
+                                android:text="  Capcom" />
                             <!--android:drawableEnd="@drawable/ic_heart"-->
                             <TextView
                                 style="@style/Categoria"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
-                                android:text=" Acción" />
+                                android:text=" Resident Evil" />
 
                             <TextView
                                 style="@style/Visitas"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
-                                android:text="  1.9k visitas" />
+                                android:text="  3.2k visitas" />
                         </LinearLayout>
                     </androidx.cardview.widget.CardView>
                 </LinearLayout>
@@ -829,7 +833,8 @@
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal">
+                    android:orientation="horizontal"
+                    android:paddingEnd="20dp">
 
                     <androidx.cardview.widget.CardView
                         android:id="@+id/cardView1"
@@ -967,7 +972,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
                 android:layout_marginBottom="20dp"
-                android:text="Acción"
+                android:text="Acción/Shooter"
                 android:paddingStart="25dp"
                 />
             <!--SEXTA HORIZONTALSCROLLVIEW/////////////////////////////////////////////-->
@@ -984,10 +989,11 @@
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal">
+                    android:orientation="horizontal"
+                    android:paddingEnd="20dp">
 
                     <androidx.cardview.widget.CardView
-                        android:id="@+id/cardView1"
+                        android:id="@+id/cardViewDOOM"
                         android:layout_width="200dp"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="20dp"
@@ -1002,7 +1008,7 @@
                             android:orientation="vertical">
 
                             <ImageView
-                                android:id="@+id/acción"
+                                android:id="@+id/Doomimg"
                                 android:layout_width="wrap_content"
                                 android:layout_height="140dp"
                                 android:scaleType="centerCrop"
@@ -1018,13 +1024,13 @@
                                 style="@style/Categoria"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
-                                android:text=" Acción" />
+                                android:text=" Doom Eternal" />
 
                             <TextView
                                 style="@style/Visitas"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
-                                android:text="  1.9k visitas" />
+                                android:text="  900 visitas" />
                         </LinearLayout>
                     </androidx.cardview.widget.CardView>
                     <!--HORIZONTALSCROLLVIEW-->
