@@ -35,8 +35,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="39dp"
-                app:layout_constraintBottom_toTopOf="@+id/Populares"
-                app:layout_constraintStart_toStartOf="@+id/guideline2">
+                >
 
                 <LinearLayout
                     android:layout_width="wrap_content"
@@ -202,7 +201,7 @@
 
 
             <HorizontalScrollView
-                android:id="@+id/horizontalScrollView"
+                android:id="@+id/horizontalScrollViewMásPopular"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:clickable="true"
@@ -216,7 +215,7 @@
                     android:orientation="horizontal">
 
                     <androidx.cardview.widget.CardView
-                        android:id="@+id/cardView1"
+                        android:id="@+id/cardViewCyberpunk"
                         android:layout_width="200dp"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="20dp"
@@ -231,7 +230,7 @@
                             android:orientation="vertical">
 
                             <ImageView
-                                android:id="@+id/acción"
+                                android:id="@+id/actionimg"
                                 android:layout_width="wrap_content"
                                 android:layout_height="140dp"
                                 android:scaleType="centerCrop"
@@ -353,7 +352,7 @@
                 android:text="En tendencia"
                 android:paddingStart="25dp"
                  />
-            <!--Segunda horizontalscroll-->
+            <!--Segunda horizontalscrollview////////////////////////////////////////-->
 
             <HorizontalScrollView
                 android:id="@+id/horizontalScrollView2"
@@ -370,7 +369,7 @@
                     android:orientation="horizontal">
 
                     <androidx.cardview.widget.CardView
-                        android:id="@+id/cardView1"
+                        android:id="@+id/cardViewTwd"
                         android:layout_width="200dp"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="20dp"
@@ -385,7 +384,7 @@
                             android:orientation="vertical">
 
                             <ImageView
-                                android:id="@+id/acción"
+                                android:id="@+id/twdimg"
                                 android:layout_width="wrap_content"
                                 android:layout_height="140dp"
                                 android:scaleType="centerCrop"
@@ -412,7 +411,7 @@
                     </androidx.cardview.widget.CardView>
                     <!---->
                     <androidx.cardview.widget.CardView
-                        android:id="@+id/cardView2"
+                        android:id="@+id/cardViewR_evil7"
                         android:layout_width="200dp"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="20dp"
@@ -427,7 +426,7 @@
                             android:orientation="vertical">
 
                             <ImageView
-                                android:id="@+id/acción2"
+                                android:id="@+id/RE7img"
                                 android:layout_width="wrap_content"
                                 android:layout_height="140dp"
                                 android:scaleType="centerCrop"
@@ -479,13 +478,13 @@
                                 style="@style/Titulo"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
-                                android:text="  Todos" />
+                                android:text="  Santa Monica Studio" />
                             <!--android:drawableEnd="@drawable/ic_heart"-->
                             <TextView
                                 style="@style/Categoria"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
-                                android:text=" Acción" />
+                                android:text=" God of War" />
 
                             <TextView
                                 style="@style/Visitas"
@@ -508,7 +507,7 @@
                 android:text="Deportes"
                 android:paddingStart="25dp"
                 />
-            <!--TERCERA HORIZONTALSCROLLVIEW/////////////////////////-->
+            <!--TERCERA HORIZONTALSCROLLVIEW///////////////////////////////////////////////-->
             <HorizontalScrollView
                 android:id="@+id/horizontalScrollView"
                 android:layout_width="wrap_content"
@@ -663,7 +662,7 @@
                 android:paddingStart="25dp"
                 />
 
-            <!--CUARTO HORIZONTALSCROLLVIEW-->
+            <!--CUARTa HORIZONTALSCROLLVIEW///////////////////////////////////////////////-->
             <HorizontalScrollView
                 android:id="@+id/horizontalScrollView"
                 android:layout_width="wrap_content"
@@ -806,7 +805,7 @@
                 </LinearLayout>
             </HorizontalScrollView>
 
-            <!--QUINTO HORIZONTALSCROLLVIEW-->
+            <!--QUINTO HORIZONTALSCROLLVIEW////////////////////////////////////////////////////-->
             <TextView
                 android:id="@+id/retrotxt"
                 style="@style/Titulos_grandes"
@@ -817,7 +816,7 @@
                 android:text="Retro/Indie"
                 android:paddingStart="25dp"
                 />
-            <!--TERCER HORIZONTALSCROLLVIEW-->
+
             <HorizontalScrollView
                 android:id="@+id/horizontalScrollView"
                 android:layout_width="wrap_content"
