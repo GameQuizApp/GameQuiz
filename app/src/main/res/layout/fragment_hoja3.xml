@@ -50,21 +50,12 @@
         app:layout_constraintTop_toBottomOf="@id/login_button"
         android:layout_marginStart="16dp"/>
 
-    <com.google.android.material.switchmaterial.SwitchMaterial
-        android:id="@+id/login_switch"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        app:layout_constraintTop_toBottomOf="@id/logout_button"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginEnd="16dp"/>
-
     <View
         android:id="@+id/divider2"
         android:layout_width="0dp"
         android:layout_height="1dp"
         android:background="@android:color/darker_gray"
-        app:layout_constraintTop_toBottomOf="@id/login_switch"
+        app:layout_constraintTop_toBottomOf="@id/logout_button"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="24dp"
