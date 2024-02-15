@@ -20,7 +20,7 @@
     </style>
     <style name="Titulo">
         <item name="android:fontFamily">@font/eb_garamond</item>
-        <item name="android:textColor">?attr/colorSecondary</item>
+        <item name="android:textColor">?attr/colorSecondaryVariant</item>
         <item name="android:textSize">15sp</item>
         <item name="android:textStyle">bold</item>
     </style>
@@ -31,13 +31,13 @@
     </style>
     <style name="Visitas">
         <item name="android:fontFamily">@font/eb_garamond</item>
-        <item name="android:textColor">?attr/colorSecondary</item>
+        <item name="android:textColor">?attr/colorOnSecondary</item>
         <item name="android:textSize">15sp</item>
         <item name="android:layout_marginBottom">10dp</item>
     </style>
     <style name="Titulos_grandes">
         <item name="android:fontFamily">@font/eb_garamond</item>
-        <item name="android:textColor">?attr/colorOnPrimary</item>
+        <item name="android:textColor">?attr/colorSecondary</item>
         <item name="android:textSize">20sp</item>
         <item name="android:textStyle">bold</item>
         <item name="android:layout_marginBottom">10dp</item>

@@ -39,7 +39,7 @@ public class FragHome extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment FragHome.
+     * @return A new instance of fragment Hoja2.
      */
     // TODO: Rename and change types and number of parameters
     public static FragHome newInstance(String param1, String param2) {
@@ -63,7 +63,7 @@ public class FragHome extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflar el diseño del fragment
+        // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_home, container, false);
     }
 
@@ -83,6 +83,54 @@ public class FragHome extends Fragment {
                     @Override
                     public void run() {
                         scrollView.scrollTo(0, deporTextView.getTop());
+                    }
+                });
+            }
+        });
+        //Link a Acción
+        TextView actionTextView = view.findViewById(R.id.Accion);
+        TextView actionTxt = view.findViewById(R.id.actiontxt);
+
+        actionTextView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // Desplazar la vista hacia el TextView "tendencia"
+                scrollView.post(new Runnable() {
+                    @Override
+                    public void run() {
+                        scrollView.scrollTo(0, actionTxt.getTop());
+                    }
+                });
+            }
+        });
+        //Link a Terror
+        TextView terrorTextView = view.findViewById(R.id.Terror);
+        TextView terrorTxt = view.findViewById(R.id.Miedotxt);
+
+        terrorTextView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // Desplazar la vista hacia el TextView "tendencia"
+                scrollView.post(new Runnable() {
+                    @Override
+                    public void run() {
+                        scrollView.scrollTo(0, terrorTxt.getTop());
+                    }
+                });
+            }
+        });
+        //Link a Retro
+        TextView retroTextView = view.findViewById(R.id.Retro);
+        TextView retroTxt = view.findViewById(R.id.retrotxt);
+
+        retroTextView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // Desplazar la vista hacia el TextView "tendencia"
+                scrollView.post(new Runnable() {
+                    @Override
+                    public void run() {
+                        scrollView.scrollTo(0, retroTxt.getTop());
                     }
                 });
             }
