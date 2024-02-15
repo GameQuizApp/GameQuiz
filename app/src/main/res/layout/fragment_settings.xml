@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Hoja3">
+    tools:context=".FragSettings">
 
     <TextView
         android:id="@+id/title_textview"

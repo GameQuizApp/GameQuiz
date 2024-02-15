@@ -29,11 +29,11 @@ public class HelpSectionsPagerAdapter extends FragmentPagerAdapter {
 //        return PlaceholderFragment.newInstance(position + 1);
         switch (position) {
             case 0:
-                return new Hoja1();
+                return new FragHome();
             case 1:
-                return new Hoja2();
+                return new FragPlay();
             case 2:
-                return new Hoja3();
+                return new FragSettings();
             default:
                 return null;
 

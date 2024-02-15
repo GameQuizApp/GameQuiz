@@ -10,10 +10,10 @@ import android.view.ViewGroup;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link Hoja2#newInstance} factory method to
+ * Use the {@link FragPlay#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class Hoja2 extends Fragment {
+public class FragPlay extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -24,7 +24,7 @@ public class Hoja2 extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    public Hoja2() {
+    public FragPlay() {
         // Required empty public constructor
     }
 
@@ -34,11 +34,11 @@ public class Hoja2 extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment Hoja2.
+     * @return A new instance of fragment FragPlay.
      */
     // TODO: Rename and change types and number of parameters
-    public static Hoja2 newInstance(String param1, String param2) {
-        Hoja2 fragment = new Hoja2();
+    public static FragPlay newInstance(String param1, String param2) {
+        FragPlay fragment = new FragPlay();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -59,6 +59,6 @@ public class Hoja2 extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflar el diseño del fragment
-        return inflater.inflate(R.layout.fragment_hoja2, container, false);
+        return inflater.inflate(R.layout.fragment_play, container, false);
     }
 }

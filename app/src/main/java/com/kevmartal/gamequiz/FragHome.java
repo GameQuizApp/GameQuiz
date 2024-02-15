@@ -15,10 +15,10 @@ import org.checkerframework.checker.nullness.qual.Nullable;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link Hoja1#newInstance} factory method to
+ * Use the {@link FragHome#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class Hoja1 extends Fragment {
+public class FragHome extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -29,7 +29,7 @@ public class Hoja1 extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    public Hoja1() {
+    public FragHome() {
         // Required empty public constructor
     }
 
@@ -39,11 +39,11 @@ public class Hoja1 extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment Hoja1.
+     * @return A new instance of fragment FragHome.
      */
     // TODO: Rename and change types and number of parameters
-    public static Hoja1 newInstance(String param1, String param2) {
-        Hoja1 fragment = new Hoja1();
+    public static FragHome newInstance(String param1, String param2) {
+        FragHome fragment = new FragHome();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -64,7 +64,7 @@ public class Hoja1 extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflar el diseño del fragment
-        return inflater.inflate(R.layout.fragment_hoja1, container, false);
+        return inflater.inflate(R.layout.fragment_home, container, false);
     }
 
     @Override
