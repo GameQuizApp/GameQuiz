@@ -10,8 +10,11 @@
         <item name="colorSecondary">@color/morado</item>
         <item name="colorSecondaryVariant">@color/morado</item>
         <item name="colorOnSecondary">@color/verde_gris</item>
+        <!-- Tertiary brand color. -->
+        <item name="colorTertiary">@color/purple_200</item>
+        <item name="colorOnTertiary">@color/purple_500</item>
         <!-- Status bar color. -->
-        <item name="android:statusBarColor">?attr/background</item>
+        <item name="android:statusBarColor">?attr/colorPrimary</item>
         <!-- Customize your theme here. -->
     </style>
 
@@ -25,16 +28,19 @@
         <!-- Secondary brand color. -->
         <item name="colorSecondary">@color/morado</item>
         <item name="colorSecondaryVariant">@color/morado</item>
-        <item name="colorOnSecondary">@color/verde_gris</item>
+        <item name="colorOnSecondary">@color/azul_claro</item>
+        <!-- Tertiary brand color. -->
+        <item name="colorTertiary">@color/purple_200</item>
+        <item name="colorOnTertiary">@color/purple_500</item>
         <!-- Status bar color. -->
-        <item name="android:statusBarColor">?attr/background</item>
+        <item name="android:statusBarColor">?attr/colorPrimary</item>
         <!-- Customize your theme here. -->
     </style>
 
     <!-- Navigation bar theme -->
     <style name="BottomNavigation">
-        <item name="android:background">@color/white</item>
-        <item name="itemIconTint">@color/morado</item>
-        <item name="itemTextColor">@color/morado</item>
+        <item name="android:background">?attr/colorTertiary</item>
+        <item name="itemIconTint">?attr/colorSecondary</item>
+        <item name="itemTextColor">?attr/colorSecondary</item>
     </style>
 </resources>
