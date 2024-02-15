@@ -3,12 +3,15 @@ package com.kevmartal.gamequiz;
 import android.content.Intent;
 import android.os.Bundle;
 
+import androidx.appcompat.app.AppCompatDelegate;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.CompoundButton;
+import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -33,6 +36,7 @@ public class Hoja3 extends Fragment {
     Button loginbutton, logoutbutton;
     TextView result;
     FirebaseAuth mAuth;
+    Switch themeSwitch;
 
     public Hoja3() {
         // Required empty public constructor

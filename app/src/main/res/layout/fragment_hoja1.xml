@@ -4,6 +4,511 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="?attr/colorPrimary"
     tools:context=".Hoja1">
 
+    <ScrollView android:id="@+id/scrollviewCategorias"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <!--TODO EL CONTENIDO DE DENTRO-->
+            <TextView
+                android:id="@+id/catego"
+                style="@style/Titulos_grandes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:layout_marginBottom="20dp"
+                android:text="Categorías"
+                android:paddingStart="25dp"
+                 />
+            <!--Más populares + carvdiews de los juegos-->
+            <HorizontalScrollView
+                android:id="@+id/startHorizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="39dp"
+                >
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingStart="20dp"
+                    >
+
+                    <androidx.cardview.widget.CardView
+                        style="@style/Buscar_cat_card"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="20dp"
+                        android:elevation="10dp"
+                        app:cardCornerRadius="20dp">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:padding="8dp">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/tierra" />
+
+                            <TextView
+                                android:id="@+id/Todos"
+                                style="@style/Buscar_cat"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Todos" />
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        style="@style/Buscar_cat_card"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="20dp"
+                        android:elevation="10dp"
+                        app:cardCornerRadius="20dp">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:padding="8dp">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/balon" />
+
+                            <TextView
+                                android:id="@+id/Deportes"
+                                style="@style/Buscar_cat"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Deportes" />
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        style="@style/Buscar_cat_card"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="20dp"
+                        android:elevation="10dp"
+                        app:cardCornerRadius="20dp">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:padding="8dp">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/cyberico" />
+
+                            <TextView
+                                android:id="@+id/Accion"
+                                style="@style/Buscar_cat"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Acción" />
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        style="@style/Buscar_cat_card"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="20dp"
+                        android:elevation="10dp"
+                        app:cardCornerRadius="20dp">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:padding="8dp">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/asesino" />
+
+                            <TextView
+                                android:id="@+id/Terror"
+                                style="@style/Buscar_cat"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Terror" />
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        style="@style/Buscar_cat_card"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="20dp"
+                        android:elevation="10dp"
+                        app:cardCornerRadius="20dp">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:padding="8dp">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/retro" />
+
+                            <TextView
+                                android:id="@+id/Retro"
+                                style="@style/Buscar_cat"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Retro" />
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <TextView
+                android:id="@+id/Populares"
+                style="@style/Titulos_grandes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:text="Más populares"
+                android:paddingStart="25dp"
+                 />
+
+
+            <HorizontalScrollView
+                android:id="@+id/horizontalScrollViewMásPopular"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <androidx.cardview.widget.CardView
+                        style="@style/CardView_grande"
+                        android:id="@+id/cardViewCyberpunk"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:elevation="10dp"
+                        app:cardCornerRadius="20dp">
+
+                        <!-- Contenido de la tarjeta -->
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:id="@+id/actionimg"
+                                android:layout_width="wrap_content"
+                                android:layout_height="140dp"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/cyberpunk" />
+
+                            <TextView
+                                style="@style/Titulo"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:text="  Todos" />
+                            <!--android:drawableEnd="@drawable/ic_heart"-->
+                            <TextView
+                                style="@style/Categoria"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:text=" Acción" />
+
+                            <TextView
+                                style="@style/Visitas"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:text="  4.9k visitas" />
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+                    <!--HORIZONTALSCROLLVIEW-->
+                    <androidx.cardview.widget.CardView
+                        style="@style/CardView_grande"
+                        android:id="@+id/cardViewRockstar"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:elevation="10dp"
+                        app:cardCornerRadius="20dp">
+
+                        <!-- Contenido de la tarjeta -->
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:id="@+id/rockstarimg"
+                                android:layout_width="wrap_content"
+                                android:layout_height="140dp"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/rockstar" />
+
+                            <TextView
+                                style="@style/Titulo"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:text="  Videojuegos" />
+                            <!--android:drawableEnd="@drawable/ic_heart"-->
+                            <TextView
+                                style="@style/Categoria"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:text=" Rockstar Games" />
+
+                            <TextView
+                                style="@style/Visitas"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:text="  4.1k visitas" />
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+                    <!---->
+                    <androidx.cardview.widget.CardView
+                        style="@style/CardView_grande"
+                        android:id="@+id/cardViewUbisoft"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:elevation="10dp"
+                        app:cardCornerRadius="20dp">
+
+                        <!-- Contenido de la tarjeta -->
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:id="@+id/ubisoftimg"
+                                android:layout_width="wrap_content"
+                                android:layout_height="140dp"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/ubisoft" />
+
+                            <TextView
+                                style="@style/Titulo"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:text="  Todos" />
+                            <!--android:drawableEnd="@drawable/ic_heart"-->
+                            <TextView
+                                style="@style/Categoria"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:text=" Ubisoft" />
+
+                            <TextView
+                                style="@style/Visitas"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:text="  5k visitas" />
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+                </LinearLayout>
+            </HorizontalScrollView>
+
+
+            <TextView
+                android:id="@+id/tendencia"
+                style="@style/Titulos_grandes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="En tendencia"
+                android:paddingStart="25dp"
+                 />
+            <!--Segunda horizontalscrollview////////////////////////////////////////-->
+
+            <HorizontalScrollView
+                android:id="@+id/horizontalScrollView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:clickable="true"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tendencia">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <androidx.cardview.widget.CardView
+                        style="@style/CardView_grande"
+                        android:id="@+id/cardViewTwd"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:elevation="10dp"
+                        app:cardCornerRadius="20dp">
+
+                        <!-- Contenido de la tarjeta -->
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:id="@+id/twdimg"
+                                android:layout_width="wrap_content"
+                                android:layout_height="140dp"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/twd" />
+
+                            <TextView
+                                style="@style/Titulo"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:text="  Telltale games" />
+                            <!--android:drawableEnd="@drawable/ic_heart"-->
+                            <TextView
+                                style="@style/Categoria"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:text=" The walking Dead" />
+
+                            <TextView
+                                style="@style/Visitas"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:text="  900 visitas" />
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+                    <!---->
+                    <androidx.cardview.widget.CardView
+                        style="@style/CardView_grande"
+                        android:id="@+id/cardViewR_evil7"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:elevation="10dp"
+                        app:cardCornerRadius="20dp">
+
+                        <!-- Contenido de la tarjeta -->
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:id="@+id/RE7img"
+                                android:layout_width="wrap_content"
+                                android:layout_height="140dp"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/resident7" />
+
+                            <TextView
+                                style="@style/Titulo"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:text="  Capcom" />
+                            <!--android:drawableEnd="@drawable/ic_heart"-->
+                            <TextView
+                                style="@style/Categoria"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:text=" R.E. Biohazard" />
+
+                            <TextView
+                                style="@style/Visitas"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:text="  3.2k visitas" />
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+                    <!---->
+                    <androidx.cardview.widget.CardView
+                        style="@style/CardView_grande"
+                        android:id="@+id/cardViewGodOfWar"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:elevation="10dp"
+                        app:cardCornerRadius="20dp">
+
+                        <!-- Contenido de la tarjeta -->
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:id="@+id/GodOfWarimg"
+                                android:layout_width="wrap_content"
+                                android:layout_height="140dp"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/cyberpunk" />
+
+                            <TextView
+                                style="@style/Titulo"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:text="  Santa Monica Studio" />
+                            <!--android:drawableEnd="@drawable/ic_heart"-->
+                            <TextView
+                                style="@style/Categoria"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:text=" God of War" />
+
+                            <TextView
+                                style="@style/Visitas"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:text="  1.9k visitas" />
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+                </LinearLayout>
+            </HorizontalScrollView>
+
+
+            <TextView
+                android:id="@+id/deportes_textv"
+                style="@style/Titulos_grandes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:text="Deportes"
+                android:paddingStart="25dp"
+                />
+
+        <!--FINAL DEL SCROLLVIEW-->
+        </LinearLayout>
+    </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>
