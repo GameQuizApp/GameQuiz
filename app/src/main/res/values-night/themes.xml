@@ -39,7 +39,7 @@
 
     <!-- Navigation bar theme -->
     <style name="BottomNavigation">
-        <item name="android:background">?attr/colorTertiary</item>
+        <item name="android:background">#422250</item>
         <item name="itemIconTint">?attr/colorOnTertiary</item>
         <item name="itemTextColor">?attr/colorOnTertiary</item>
     </style>
