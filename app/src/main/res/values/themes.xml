@@ -14,7 +14,7 @@
         <item name="colorTertiary">@color/purple_200</item>
         <item name="colorOnTertiary">@color/purple_500</item>
         <!-- Status bar color. -->
-        <item name="android:statusBarColor">?attr/colorPrimary</item>
+        <item name="android:statusBarColor">?attr/colorTertiary</item>
         <!-- Customize your theme here. -->
     </style>
 
