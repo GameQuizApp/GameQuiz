@@ -31,7 +31,7 @@
     </style>
     <style name="Visitas">
         <item name="android:fontFamily">@font/eb_garamond</item>
-        <item name="android:textColor">@color/gris_claro</item>
+        <item name="android:textColor">?attr/colorSecondary</item>
         <item name="android:textSize">15sp</item>
         <item name="android:layout_marginBottom">10dp</item>
     </style>
@@ -43,10 +43,10 @@
         <item name="android:layout_marginBottom">10dp</item>
     </style>
     <style name="CardView_grande">
-        <item name="android:backgroundTint">?attr/colorSecondaryVariant</item>
+        <item name="android:backgroundTint">?attr/colorPrimaryVariant</item>
     </style>
     <style name="Buscar_cat_card">
-        <item name="android:backgroundTint">?attr/colorSecondaryVariant</item>
+        <item name="android:backgroundTint">?attr/colorPrimaryVariant</item>
     </style>
     <style name="Buscar_cat">
         <item name="android:fontFamily">@font/eb_garamond</item>
@@ -55,6 +55,6 @@
         <item name="android:textStyle">bold</item>
     </style>
     <style name="AlertDialogTheme" parent="Theme.AppCompat.Light.Dialog.Alert">
-        <item name="android:windowBackground">@drawable/background_alertdialog</item>
+        <item name="android:windowBackground">?attr/colorPrimaryVariant</item>
     </style>
 </resources>

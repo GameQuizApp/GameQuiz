@@ -4,7 +4,7 @@
         <!-- Primary brand color. -->
         <item name="android:windowIsTranslucent">true</item> <!-- Desactiva el Splash por defecto de Android -->
         <item name="colorPrimary">@color/white</item>
-        <item name="colorPrimaryVariant">@color/blanco_amarillo</item>
+        <item name="colorPrimaryVariant">@color/gris_claro</item>
         <item name="colorOnPrimary">@color/black</item>
         <!-- Secondary brand color. -->
         <item name="colorSecondary">@color/morado</item>
