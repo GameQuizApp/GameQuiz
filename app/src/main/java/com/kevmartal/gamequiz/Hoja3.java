@@ -1,6 +1,7 @@
 package com.kevmartal.gamequiz;
 
 import android.content.Intent;
+import android.content.res.Configuration;
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatDelegate;
@@ -36,6 +37,8 @@ public class Hoja3 extends Fragment {
     Button loginbutton, logoutbutton;
     TextView result;
     FirebaseAuth mAuth;
+    Switch themeSwitch;
+
     Switch themeSwitch;
 
     public Hoja3() {
@@ -118,6 +121,28 @@ public class Hoja3 extends Fragment {
                 mAuth.signOut();
                 String toastTxt = getString(R.string.bye);
                 Toast.makeText(getContext(), toastTxt, Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        themeSwitch = view.findViewById(R.id.themeswitch);
+
+        switch (getResources().getConfiguration().uiMode & Configuration.UI_MODE_NIGHT_MASK) {
+            case Configuration.UI_MODE_NIGHT_YES:
+                themeSwitch.setChecked(true);
+                break;
+            case Configuration.UI_MODE_NIGHT_NO:
+                themeSwitch.setChecked(false);
+                break;
+        }
+
+        themeSwitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if(isChecked) {
+                    AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
+                } else {
+                    AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
+                }
             }
         });
 
