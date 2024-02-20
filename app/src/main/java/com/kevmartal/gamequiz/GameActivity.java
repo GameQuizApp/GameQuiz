@@ -3,6 +3,7 @@ package com.kevmartal.gamequiz;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.util.Log;
@@ -13,6 +14,7 @@ import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.DataSource;
+import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.bumptech.glide.load.engine.GlideException;
 import com.bumptech.glide.request.RequestListener;
 import com.bumptech.glide.request.target.Target;
@@ -86,6 +88,9 @@ public class GameActivity extends AppCompatActivity {
         ImageView imageView = findViewById(R.id.imageView);
         Glide.with(this)
                 .load(imageUrl)
+                .centerCrop() // Centrar la imagen y recortar los bordes
+                .diskCacheStrategy(DiskCacheStrategy.ALL) // Almacenar la imagen en caché para que tarde menos en ser cargada a partir del primer intento
+                .placeholder((new ColorDrawable(this.getResources().getColor(R.color.morado)))) // Añadir un color donde vaya la imagen para manejar lo que pasa en ese espacio hasta que la imagen es cargada
                 .error(R.drawable.ic_launcher) // R.drawable.error_image es la imagen que se mostrará en caso de error
                 .listener(new RequestListener<Drawable>() {
                     @Override

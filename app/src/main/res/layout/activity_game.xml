@@ -8,19 +8,24 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
+        android:layout_width="0dp"
+        android:layout_height="256dp"
+        android:background="@drawable/image_background"
+        android:elevation="4dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintTop_toTopOf="parent" />
+
 
     <Button
         android:id="@+id/optionButton1"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="OPTION 1"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="16dp"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
         app:layout_constraintStart_toStartOf="parent"
@@ -32,34 +37,38 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="OPTION 2"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="16dp"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/optionButton1" />
+        app:layout_constraintTop_toBottomOf="@id/optionButton1"
+        android:layout_marginBottom="32dp" />
 
     <Button
         android:id="@+id/optionButton3"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="OPTION 3"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="16dp"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/optionButton2" />
+        app:layout_constraintTop_toBottomOf="@id/optionButton2"
+        android:layout_marginBottom="32dp" />
 
     <Button
         android:id="@+id/optionButton4"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="OPTION 4"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="16dp"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/optionButton3" />
+        app:layout_constraintTop_toBottomOf="@id/optionButton3"
+        android:layout_marginBottom="32dp" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

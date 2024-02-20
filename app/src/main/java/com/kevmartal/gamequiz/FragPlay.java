@@ -1,5 +1,6 @@
 package com.kevmartal.gamequiz;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -7,6 +8,7 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -23,6 +25,7 @@ public class FragPlay extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+    Button btnPlay;
 
     public FragPlay() {
         // Required empty public constructor
@@ -58,7 +61,17 @@ public class FragPlay extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflar el diseño del fragment
-        return inflater.inflate(R.layout.fragment_play, container, false);
+        // Inflar el diseño del fragmento
+        View view = inflater.inflate(R.layout.fragment_play, container, false);
+
+        btnPlay = view.findViewById(R.id.buttonPlay);
+        btnPlay.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getActivity(), GameActivity.class));
+            }
+        });
+
+        return view;
     }
 }
