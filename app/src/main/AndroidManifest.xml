@@ -16,6 +16,15 @@
         android:theme="@style/Theme.GameQuiz.NoActionBar"
         tools:targetApi="31">
         <activity
+            android:name=".TerrorPage"
+            android:exported="false" />
+        <activity
+            android:name=".ZombiesPage"
+            android:exported="false" />
+        <activity
+            android:name=".RockstarPage"
+            android:exported="false" />
+        <activity
             android:name=".PruebaImagenes"
             android:exported="true" />
         <activity

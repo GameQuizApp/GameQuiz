@@ -6,5 +6,26 @@
     android:layout_height="match_parent"
     android:background="?attr/colorPrimary"
     tools:context=".FragPlay">
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="?attr/colorPrimary">
+
+        <!-- Puedes ajustar la disposición y propiedades del GridLayout según tus necesidades -->
+        <GridLayout
+            android:id="@+id/gridLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:columnCount="2"
+            android:columnOrderPreserved="false"
+            android:padding="16dp"
+            android:rowCount="2">
+
+            <!-- Botones se agregarán dinámicamente en tiempo de ejecución -->
+
+        </GridLayout>
+    </RelativeLayout>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

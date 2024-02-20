@@ -1,64 +1,69 @@
 package com.kevmartal.gamequiz;
 
+import android.graphics.Color;
 import android.os.Bundle;
-
-import androidx.fragment.app.Fragment;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.GridLayout;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link FragPlay#newInstance} factory method to
- * create an instance of this fragment.
- */
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.fragment.app.Fragment;
+
 public class FragPlay extends Fragment {
-
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
-
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
 
     public FragPlay() {
         // Required empty public constructor
     }
 
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment FragPlay.
-     */
-    // TODO: Rename and change types and number of parameters
-    public static FragPlay newInstance(String param1, String param2) {
-        FragPlay fragment = new FragPlay();
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
-        return fragment;
-    }
-
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
-    }
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflar el diseño del fragment
+        // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_play, container, false);
+    }
+
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+
+        // Obtén una referencia al GridLayout en tu layout
+        GridLayout gridLayout = view.findViewById(R.id.gridLayout);
+
+        // Define los parámetros del GridLayout
+        GridLayout.LayoutParams params = new GridLayout.LayoutParams();
+        params.width = GridLayout.LayoutParams.MATCH_PARENT;
+        params.height = GridLayout.LayoutParams.WRAP_CONTENT;
+
+        // Crea botones y añádelos al GridLayout
+        addButtonToGridLayout(gridLayout, "Modo 1", Color.parseColor("#FFC107"), params);
+        addButtonToGridLayout(gridLayout, "Modo 2", Color.parseColor("#4CAF50"), params);
+        addButtonToGridLayout(gridLayout, "Modo 3", Color.parseColor("#2196F3"), params);
+        // Agrega más botones según sea necesario
+
+        // Configura el marco para el GridLayout (puedes ajustar los valores según tu preferencia)
+        gridLayout.setBackgroundResource(R.drawable.rounded_border);
+    }
+
+    private void addButtonToGridLayout(GridLayout gridLayout, String buttonText, int buttonColor, GridLayout.LayoutParams params) {
+        // Crea un nuevo botón
+        Button button = new Button(requireContext());
+        button.setText(buttonText);
+        button.setBackgroundColor(buttonColor);
+        button.setTextColor(Color.WHITE);
+        button.setTextSize(18);
+
+        // Establece el oyente de clic para cada botón si es necesario
+        // button.setOnClickListener(new View.OnClickListener() {
+        //     @Override
+        //     public void onClick(View v) {
+        //         // Acciones cuando se hace clic en el botón
+        //     }
+        // });
+
+        // Agrega el botón al GridLayout con los parámetros proporcionados
+        gridLayout.addView(button, params);
     }
 }

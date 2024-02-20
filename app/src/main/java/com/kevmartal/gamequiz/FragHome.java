@@ -1,8 +1,11 @@
 package com.kevmartal.gamequiz;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -71,6 +74,39 @@ public class FragHome extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
+        TextView EnlaceAction= view.findViewById(R.id.TextviewEnlaceAction);
+        TextView EnlaceRockstar= view.findViewById(R.id.TextViewEnlaceRockstar);
+        TextView EnlaceZombies= view.findViewById(R.id.TextviewEnlaceZombies);
+        TextView EnlaceTerror= view.findViewById(R.id.TextviewEnlaceTerror);
+        EnlaceAction.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                // Crear un Intent para iniciar la nueva actividad
+                Intent intent = new Intent(getActivity(), PruebaImagenes.class);
+
+                // Iniciar la nueva actividad
+                startActivity(intent);
+            }
+        });
+        //Enlace activityRockstar
+        EnlaceRockstar.setOnClickListener(v -> {
+            Intent intent = new Intent(getActivity(), RockstarPage.class);
+            startActivity(intent);
+        });
+        //Enlace activityZombie
+        EnlaceZombies.setOnClickListener(v -> {
+            Intent intent = new Intent(getActivity(), ZombiesPage.class);
+            startActivity(intent);
+        });
+        //Enlace activityTerror
+        EnlaceTerror.setOnClickListener(v -> {
+            Intent intent = new Intent(getActivity(), TerrorPage.class);
+            startActivity(intent);
+        });
+
+
+        //ENLACE DE LAS CATEGORÍAS
         TextView deportesTextView = view.findViewById(R.id.Deportes);
         TextView deporTextView = view.findViewById(R.id.deportes_textv);
         ScrollView scrollView = view.findViewById(R.id.scrollviewCategorias);
