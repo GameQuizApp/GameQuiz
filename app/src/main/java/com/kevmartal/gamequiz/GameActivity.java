@@ -17,13 +17,17 @@ import com.bumptech.glide.load.engine.GlideException;
 import com.bumptech.glide.request.RequestListener;
 import com.bumptech.glide.request.target.Target;
 
+import java.util.Collections;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Random;
+import java.util.Set;
 
 public class GameActivity extends AppCompatActivity {
 
     private List<Question> questions;
     private int currentQuestionIndex = 0;
+    private Set<Integer> usedQuestionIndexes = new HashSet<>(); // Conjunto para almacenar los índices de preguntas utilizadas
 
     // Método para cargar las preguntas desde Firestore
     private void loadQuestionsFromFirestore() {
@@ -34,12 +38,11 @@ public class GameActivity extends AppCompatActivity {
                 // Aquí puedes utilizar la lista de preguntas
                 questions = questionList;
 
-                // Elegir una pregunta aleatoria
-                Random random = new Random();
-                currentQuestionIndex = random.nextInt(questions.size());
+                // Barajar aleatoriamente la lista de preguntas
+                Collections.shuffle(questions);
 
-                // Mostrar la pregunta aleatoria
-                showQuestion(questions.get(currentQuestionIndex));
+                // Mostrar la primera pregunta
+                showNextQuestion();
             }
 
             @Override
@@ -48,6 +51,28 @@ public class GameActivity extends AppCompatActivity {
                 Toast.makeText(GameActivity.this, "Error al obtener las preguntas", Toast.LENGTH_SHORT).show();
             }
         });
+    }
+
+    // Método para mostrar la siguiente pregunta disponible
+    private void showNextQuestion() {
+        if (questions != null && !questions.isEmpty()) {
+            // Buscar la siguiente pregunta no utilizada
+            for (int i = 0; i < questions.size(); i++) {
+                if (!usedQuestionIndexes.contains(i)) {
+                    currentQuestionIndex = i;
+                    showQuestion(questions.get(currentQuestionIndex));
+                    usedQuestionIndexes.add(i); // Agregar el índice de la pregunta utilizada al conjunto
+                    return;
+                }
+            }
+            // Si se han mostrado todas las preguntas, finalizar el juego
+            Toast.makeText(GameActivity.this, "Se han mostrado todas las preguntas", Toast.LENGTH_SHORT).show();
+            finish();
+        } else {
+            // Si no hay preguntas disponibles, finalizar el juego
+            Toast.makeText(GameActivity.this, "No hay preguntas disponibles", Toast.LENGTH_SHORT).show();
+            finish();
+        }
     }
 
 
@@ -97,18 +122,12 @@ public class GameActivity extends AppCompatActivity {
             if (selectedOptionIndex == correctAnswerIndex) {
                 // Respuesta correcta: Incrementa el puntaje
                 Toast.makeText(this, "Respuesta CORRECTA", Toast.LENGTH_SHORT).show();
-                // Muestra la siguiente pregunta si hay más, de lo contrario, finaliza el juego
-                currentQuestionIndex++;
-                if (currentQuestionIndex < questions.size()) {
-                    showQuestion(questions.get(currentQuestionIndex));
-                } else {
-                    // El juego ha terminado
-                    // Puedes mostrar un mensaje de fin de juego o realizar otras acciones
-                }
             } else {
                 // Respuesta incorrecta: Disminuye las vidas o realiza otras acciones
                 Toast.makeText(this, "Respuesta INCORRECTA", Toast.LENGTH_SHORT).show();
             }
+            // Muestra la siguiente pregunta
+            showNextQuestion();
         } else {
             // No hay más preguntas disponibles o la lista de preguntas es nula
             // Maneja este caso según la lógica de tu juego
