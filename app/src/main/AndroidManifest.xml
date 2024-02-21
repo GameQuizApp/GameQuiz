@@ -16,6 +16,9 @@
         android:theme="@style/Theme.GameQuiz.NoActionBar"
         tools:targetApi="31">
         <activity
+            android:name=".RandomImagePage"
+            android:exported="false" />
+        <activity
             android:name=".TerrorPage"
             android:exported="false" />
         <activity
