@@ -28,7 +28,7 @@
             android:name=".RockstarPage"
             android:exported="false" />
         <activity
-            android:name=".PruebaImagenes"
+            android:name=".GameActivity"
             android:exported="true" />
         <activity
             android:name=".Signup"

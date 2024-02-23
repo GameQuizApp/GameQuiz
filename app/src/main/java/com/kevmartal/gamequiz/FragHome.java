@@ -83,7 +83,7 @@ public class FragHome extends Fragment {
             public void onClick(View v) {
 
                 // Crear un Intent para iniciar la nueva actividad
-                Intent intent = new Intent(getActivity(), PruebaImagenes.class);
+                Intent intent = new Intent(getContext(), GameActivity.class);
 
                 // Iniciar la nueva actividad
                 startActivity(intent);
