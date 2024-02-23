@@ -57,4 +57,14 @@
     <style name="AlertDialogTheme" parent="Theme.AppCompat.Light.Dialog.Alert">
         <item name="android:windowBackground">?attr/colorPrimaryVariant</item>
     </style>
+    <style name="Titulo_game">
+        <item name="android:fontFamily">@font/eb_garamond</item>
+        <item name="android:textColor">?attr/colorOnPrimary</item>
+        <item name="android:textSize">25sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="OptionsButton">
+    <item name="android:backgroundTint">@color/vino</item>
+    <item name="cornerRadius">10dp</item>
+    </style>
 </resources>

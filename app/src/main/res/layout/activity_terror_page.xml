@@ -6,14 +6,76 @@
     android:layout_height="match_parent"
     tools:context=".TerrorPage">
 
-    <Button
-        android:id="@+id/button"
+    <TextView
+        android:id="@+id/action_txt"
+        style="@style/Titulo_game"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:backgroundTint="#B42525"
-        android:text="Button"
-        app:layout_constraintBottom_toBottomOf="parent"
+
+        android:layout_marginTop="50dp"
+        android:text="Terror"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="0dp"
+        android:layout_height="256dp"
+        android:background="@drawable/image_background"
+        android:elevation="4dp"
+        android:padding="10dp"
+        android:layout_margin="5dp"
+        android:backgroundTint="@color/vino"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/action_txt"/>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imageView">
+
+        <Button
+            android:id="@+id/optionButton1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="OPTION 1"
+            style="@style/OptionsButton"
+            android:layout_marginTop="16dp" />
+
+        <Button
+            android:id="@+id/optionButton2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="OPTION 2"
+            style="@style/OptionsButton"
+            android:layout_marginTop="16dp"
+            />
+
+        <Button
+            android:id="@+id/optionButton3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="OPTION 3"
+            style="@style/OptionsButton"
+            android:layout_marginTop="16dp"
+            />
+
+        <Button
+            android:id="@+id/optionButton4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="OPTION 4"
+            style="@style/OptionsButton"
+            android:layout_marginTop="16dp"
+            />
+
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -43,4 +43,18 @@
         <item name="itemIconTint">?attr/colorOnTertiary</item>
         <item name="itemTextColor">?attr/colorOnTertiary</item>
     </style>
+
+    <style name="TemaPruebaNice" parent="Theme.AppCompat.DayNight">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/vino</item>
+        <item name="colorPrimaryVariant">@color/morado</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/morado</item>
+        <item name="colorSecondaryVariant">@color/gris_claro</item>
+        <item name="colorOnSecondary">@color/vino</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">@color/vino</item>
+        <!-- Customize your theme here. -->
+    </style>
 </resources>
