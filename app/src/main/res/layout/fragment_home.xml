@@ -244,6 +244,7 @@ tools:context=".FragHome">
                             android:text="  Todos" />
                         <!--android:drawableEnd="@drawable/ic_heart"-->
                         <TextView
+                            android:id="@+id/TextviewEnlaceAction"
                             style="@style/Categoria"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
@@ -286,6 +287,7 @@ tools:context=".FragHome">
                             android:text="  Videojuegos" />
                         <!--android:drawableEnd="@drawable/ic_heart"-->
                         <TextView
+                            android:id="@+id/TextViewEnlaceRockstar"
                             style="@style/Categoria"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
@@ -399,6 +401,7 @@ tools:context=".FragHome">
                             android:text="  Todos" />
                         <!--android:drawableEnd="@drawable/ic_heart"-->
                         <TextView
+                            android:id="@+id/TextviewEnlaceZombies"
                             style="@style/Categoria"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
@@ -710,6 +713,7 @@ tools:context=".FragHome">
                             android:text="  Todos" />
                         <!--android:drawableEnd="@drawable/ic_heart"-->
                         <TextView
+                            android:id="@+id/TextviewEnlaceTerror"
                             style="@style/Categoria"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
