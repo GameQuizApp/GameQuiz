@@ -18,27 +18,32 @@
         <activity
             android:name=".RandomImagePage"
             android:parentActivityName=".Main"
+            android:label="Juegos Randoms"
             android:theme="@style/TemaPruebaNice"
             android:exported="false" />
         <activity
             android:name=".TerrorPage"
             android:parentActivityName=".Main"
+            android:label="Juegos de Terror"
             android:theme="@style/TemaPruebaNice"
             android:exported="false" />
         <activity
             android:name=".ZombiesPage"
             android:parentActivityName=".Main"
+            android:label="Juegos de Zombies"
             android:theme="@style/TemaPruebaNice"
             android:exported="false" />
         <activity
             android:name=".RockstarPage"
             android:parentActivityName=".Main"
+            android:label="Juegos de Rockstar"
             android:theme="@style/TemaPruebaNice"
             android:exported="false" />
         <activity
             android:name=".GameActivity"
             android:exported="true"
             android:parentActivityName=".Main"
+            android:label="Juegos de Acción"
             android:theme="@style/TemaPruebaNice"/>
         <activity
             android:name=".Signup"

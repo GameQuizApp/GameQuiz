@@ -5,17 +5,55 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".RockstarPage">
-    <TextView
-        android:id="@+id/action_txt"
-        style="@style/Titulo_game"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
 
-        android:layout_marginTop="50dp"
-        android:text="Rockstar"
+    <LinearLayout
+        android:id="@+id/linearIcon"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="25dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/puntosIcon"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:background="@drawable/image_background"
+            android:elevation="4dp"
+            android:src="@drawable/dolar" />
+
+        <TextView
+            android:id="@+id/puntosTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="0"
+            android:textSize="24sp" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/vidasTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:text="3"
+            android:textSize="24sp" />
+
+        <ImageView
+            android:id="@+id/vidasIcon"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:background="@drawable/image_background"
+            android:elevation="4dp"
+            android:src="@drawable/corazon" />
+    </LinearLayout>
+
 
     <ImageView
         android:id="@+id/imageView"
@@ -23,12 +61,12 @@
         android:layout_height="256dp"
         android:background="@drawable/image_background"
         android:elevation="4dp"
-        android:padding="10dp"
         android:layout_margin="5dp"
+        android:paddingTop="10dp"
         android:backgroundTint="@color/vino"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/action_txt"/>
+        app:layout_constraintTop_toBottomOf="@id/linearIcon"/>
 
     <LinearLayout
         android:layout_width="0dp"
@@ -77,4 +115,5 @@
             />
 
     </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
