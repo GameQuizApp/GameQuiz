@@ -5,17 +5,61 @@
     android:layout_height="match_parent"
     tools:context=".GameActivity">
 
+    <ImageView
+        android:id="@+id/puntosIcon"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:background="@drawable/image_background"
+        android:src="@drawable/dolar"
+        android:elevation="4dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/puntosTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:layout_marginStart="8dp"
+        android:textSize="24sp"
+        app:layout_constraintStart_toEndOf="@id/puntosIcon"
+        app:layout_constraintTop_toTopOf="@id/puntosIcon" />
+
+    <TextView
+        android:id="@+id/vidasTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="3"
+        android:layout_marginEnd="8dp"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toStartOf="@id/vidasIcon"
+        app:layout_constraintTop_toTopOf="@id/vidasIcon" />
+
+    <ImageView
+        android:id="@+id/vidasIcon"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:background="@drawable/image_background"
+        android:src="@drawable/corazon"
+        android:elevation="4dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
     <TextView
         android:id="@+id/action_txt"
         style="@style/Titulo_game"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
 
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="16dp"
         android:text="Acción"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@id/puntosIcon" />
 
     <ImageView
         android:id="@+id/imageView"
