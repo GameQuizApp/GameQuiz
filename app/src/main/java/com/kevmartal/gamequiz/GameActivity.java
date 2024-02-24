@@ -158,42 +158,44 @@ public class GameActivity extends AppCompatActivity {
 
     // Método para mostrar una pregunta en la interfaz de usuario
     private void showQuestion(Question question) {
-        // Aquí puedes mostrar la imagen y las opciones de respuesta en tu interfaz de usuario
-        String imageUrl = question.getImageUrl();
-        List<String> options = question.getOptions();
+        if (!isDestroyed()) {
+            // Aquí puedes mostrar la imagen y las opciones de respuesta en tu interfaz de usuario
+            String imageUrl = question.getImageUrl();
+            List<String> options = question.getOptions();
 
-        // Por ejemplo, puedes cargar la imagen con Glide
-        ImageView imageView = findViewById(R.id.imageView);
-        Glide.with(this)
-                .load(imageUrl)
-                .centerCrop() // Centrar la imagen y recortar los bordes
-                .diskCacheStrategy(DiskCacheStrategy.ALL) // Almacenar la imagen en caché para que tarde menos en ser cargada a partir del primer intento
-                .placeholder((new ColorDrawable(this.getResources().getColor(R.color.morado)))) // Añadir un color donde vaya la imagen para manejar lo que pasa en ese espacio hasta que la imagen es cargada
-                .error(R.drawable.ic_launcher) // R.drawable.error_image es la imagen que se mostrará en caso de error
-                .listener(new RequestListener<Drawable>() {
-                    @Override
-                    public boolean onLoadFailed(@Nullable GlideException e, Object model, Target<Drawable> target, boolean isFirstResource) {
-                        Log.e("Glide", "Error loading image", e);
-                        return false; // Return false to allow Glide to handle the error drawable
-                    }
+            // Por ejemplo, puedes cargar la imagen con Glide
+            ImageView imageView = findViewById(R.id.imageView);
+            Glide.with(this)
+                    .load(imageUrl)
+                    .centerCrop() // Centrar la imagen y recortar los bordes
+                    .diskCacheStrategy(DiskCacheStrategy.ALL) // Almacenar la imagen en caché para que tarde menos en ser cargada a partir del primer intento
+                    .placeholder((new ColorDrawable(this.getResources().getColor(R.color.morado)))) // Añadir un color donde vaya la imagen para manejar lo que pasa en ese espacio hasta que la imagen es cargada
+                    .error(R.drawable.ic_launcher) // R.drawable.error_image es la imagen que se mostrará en caso de error
+                    .listener(new RequestListener<Drawable>() {
+                        @Override
+                        public boolean onLoadFailed(@Nullable GlideException e, Object model, Target<Drawable> target, boolean isFirstResource) {
+                            Log.e("Glide", "Error loading image", e);
+                            return false; // Return false to allow Glide to handle the error drawable
+                        }
 
-                    @Override
-                    public boolean onResourceReady(Drawable resource, Object model, Target<Drawable> target, DataSource dataSource, boolean isFirstResource) {
-                        return false; // Return false to allow Glide to handle the resource drawable
-                    }
-                })
-                .into(imageView);
+                        @Override
+                        public boolean onResourceReady(Drawable resource, Object model, Target<Drawable> target, DataSource dataSource, boolean isFirstResource) {
+                            return false; // Return false to allow Glide to handle the resource drawable
+                        }
+                    })
+                    .into(imageView);
 
-        // Luego, puedes mostrar las opciones de respuesta en los botones
-        Button optionButton1 = findViewById(R.id.optionButton1);
-        optionButton1.setText(options.get(0));
-        // Repite este proceso para cada opción de respuesta y su respectivo botón
-        Button optionButton2 = findViewById(R.id.optionButton2);
-        optionButton2.setText(options.get(1));
-        Button optionButton3 = findViewById(R.id.optionButton3);
-        optionButton3.setText(options.get(2));
-        Button optionButton4 = findViewById(R.id.optionButton4);
-        optionButton4.setText(options.get(3));
+            // Luego, puedes mostrar las opciones de respuesta en los botones
+            Button optionButton1 = findViewById(R.id.optionButton1);
+            optionButton1.setText(options.get(0));
+            // Repite este proceso para cada opción de respuesta y su respectivo botón
+            Button optionButton2 = findViewById(R.id.optionButton2);
+            optionButton2.setText(options.get(1));
+            Button optionButton3 = findViewById(R.id.optionButton3);
+            optionButton3.setText(options.get(2));
+            Button optionButton4 = findViewById(R.id.optionButton4);
+            optionButton4.setText(options.get(3));
+        }
     }
 
     // Método para manejar la selección de una respuesta por parte del usuario
