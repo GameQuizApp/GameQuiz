@@ -261,6 +261,9 @@ public class GameActivity extends AppCompatActivity {
             }
         });
 
+        // Hacer que el diálogo no sea cancelable
+        builder.setCancelable(false);
+
         // Crear y mostrar el diálogo de alerta
         AlertDialog dialog = builder.create();
         dialog.show();
