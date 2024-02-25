@@ -20,25 +20,25 @@
             android:parentActivityName=".Main"
             android:label="Juegos Randoms"
             android:theme="@style/TemaPruebaNice"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".TerrorPage"
             android:parentActivityName=".Main"
             android:label="Juegos de Terror"
             android:theme="@style/TemaPruebaNice"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".ZombiesPage"
             android:parentActivityName=".Main"
             android:label="Juegos de Zombies"
             android:theme="@style/TemaPruebaNice"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".RockstarPage"
             android:parentActivityName=".Main"
             android:label="Juegos de Rockstar"
             android:theme="@style/TemaPruebaNice"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".GameActivity"
             android:exported="true"
