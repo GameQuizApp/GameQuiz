@@ -108,10 +108,10 @@ public class FragHome extends Fragment {
                 dialog.setContentView(vista);
 
                 TextView title = (TextView) vista.findViewById(R.id.titulo);
-                title.setText("Acción");
+                title.setText(getString(R.string.action));
 
                 TextView description = (TextView) vista.findViewById(R.id.descripcion);
-                description.setText("En esta categoría puedes encontrar diversos juegos del género de acción");
+                description.setText(getString(R.string.action_description));
 
                 dialog.show();
             }
@@ -132,10 +132,10 @@ public class FragHome extends Fragment {
                 dialog.setContentView(vista);
 
                 TextView title = (TextView) vista.findViewById(R.id.titulo);
-                title.setText("Rockstar");
+                title.setText(getString(R.string.rockstar));
 
                 TextView description = (TextView) vista.findViewById(R.id.descripcion);
-                description.setText("En esta categoría puedes encontrar diversos juegos de la empresa Rockstar");
+                description.setText(getString(R.string.rockstar_description));
 
                 dialog.show();
             }
@@ -156,10 +156,10 @@ public class FragHome extends Fragment {
                 dialog.setContentView(vista);
 
                 TextView title = (TextView) vista.findViewById(R.id.titulo);
-                title.setText("Ubisoft");
+                title.setText(getString(R.string.ubisoft));
 
                 TextView description = (TextView) vista.findViewById(R.id.descripcion);
-                description.setText("En esta categoría puedes encontrar diversos juegos de la empresa Ubisoft");
+                description.setText(getString(R.string.ubisoft_description));
 
                 dialog.show();
             }
@@ -180,10 +180,10 @@ public class FragHome extends Fragment {
                 dialog.setContentView(vista);
 
                 TextView title = (TextView) vista.findViewById(R.id.titulo);
-                title.setText("Zombies");
+                title.setText(getString(R.string.zombies));
 
                 TextView description = (TextView) vista.findViewById(R.id.descripcion);
-                description.setText("En esta categoría puedes encontrar diversos juegos del género de zombies");
+                description.setText(getString(R.string.zombies_description));
 
                 dialog.show();
             }
@@ -204,10 +204,10 @@ public class FragHome extends Fragment {
                 dialog.setContentView(vista);
 
                 TextView title = (TextView) vista.findViewById(R.id.titulo);
-                title.setText("Resident Evil");
+                title.setText(getString(R.string.resident_evil));
 
                 TextView description = (TextView) vista.findViewById(R.id.descripcion);
-                description.setText("En esta categoría puedes encontrar diversos juegos de la saga Resident Evil");
+                description.setText(getString(R.string.resident_evil_description));
 
                 dialog.show();
             }
@@ -228,10 +228,10 @@ public class FragHome extends Fragment {
                 dialog.setContentView(vista);
 
                 TextView title = (TextView) vista.findViewById(R.id.titulo);
-                title.setText("God of War");
+                title.setText(getString(R.string.god_of_war));
 
                 TextView description = (TextView) vista.findViewById(R.id.descripcion);
-                description.setText("En esta categoría puedes encontrar diversos juegos de la saga God of War");
+                description.setText(getString(R.string.god_of_war_description));
 
                 dialog.show();
             }
@@ -252,10 +252,10 @@ public class FragHome extends Fragment {
                 dialog.setContentView(vista);
 
                 TextView title = (TextView) vista.findViewById(R.id.titulo);
-                title.setText("Tekken");
+                title.setText(getString(R.string.tekken));
 
                 TextView description = (TextView) vista.findViewById(R.id.descripcion);
-                description.setText("En esta categoría puedes encontrar diversos juegos de la saga Tekken");
+                description.setText(getString(R.string.tekken_description));
 
                 dialog.show();
             }
@@ -276,10 +276,10 @@ public class FragHome extends Fragment {
                 dialog.setContentView(vista);
 
                 TextView title = (TextView) vista.findViewById(R.id.titulo);
-                title.setText("NBA");
+                title.setText(getString(R.string.nba));
 
                 TextView description = (TextView) vista.findViewById(R.id.descripcion);
-                description.setText("En esta categoría puedes encontrar diversos juegos de la saga NBA");
+                description.setText(getString(R.string.nba_description));
 
                 dialog.show();
             }
@@ -300,10 +300,10 @@ public class FragHome extends Fragment {
                 dialog.setContentView(vista);
 
                 TextView title = (TextView) vista.findViewById(R.id.titulo);
-                title.setText("Racing");
+                title.setText(getString(R.string.racing));
 
                 TextView description = (TextView) vista.findViewById(R.id.descripcion);
-                description.setText("En esta categoría puedes encontrar diversos juegos del género de carreras");
+                description.setText(getString(R.string.racing_description));
 
                 dialog.show();
             }
@@ -324,10 +324,10 @@ public class FragHome extends Fragment {
                 dialog.setContentView(vista);
 
                 TextView title = (TextView) vista.findViewById(R.id.titulo);
-                title.setText("Terror");
+                title.setText(getString(R.string.horror));
 
                 TextView description = (TextView) vista.findViewById(R.id.descripcion);
-                description.setText("En esta categoría puedes encontrar diversos juegos del género de terror");
+                description.setText(getString(R.string.horror_description));
 
                 dialog.show();
             }
@@ -348,10 +348,10 @@ public class FragHome extends Fragment {
                 dialog.setContentView(vista);
 
                 TextView title = (TextView) vista.findViewById(R.id.titulo);
-                title.setText("Zombies");
+                title.setText(getString(R.string.zombies));
 
                 TextView description = (TextView) vista.findViewById(R.id.descripcion);
-                description.setText("En esta categoría puedes encontrar diversos juegos del género de zombies");
+                description.setText(getString(R.string.zombies_description));
 
                 dialog.show();
             }
@@ -372,10 +372,10 @@ public class FragHome extends Fragment {
                 dialog.setContentView(vista);
 
                 TextView title = (TextView) vista.findViewById(R.id.titulo);
-                title.setText("Resident Evil");
+                title.setText(getString(R.string.resident_evil));
 
                 TextView description = (TextView) vista.findViewById(R.id.descripcion);
-                description.setText("En esta categoría puedes encontrar diversos juegos de la saga Resident Evil");
+                description.setText(getString(R.string.resident_evil_description));
 
                 dialog.show();
             }
@@ -396,10 +396,10 @@ public class FragHome extends Fragment {
                 dialog.setContentView(vista);
 
                 TextView title = (TextView) vista.findViewById(R.id.titulo);
-                title.setText("Indies");
+                title.setText(getString(R.string.indies));
 
                 TextView description = (TextView) vista.findViewById(R.id.descripcion);
-                description.setText("En esta categoría puedes encontrar diversos juegos del género indie");
+                description.setText(getString(R.string.indies_description));
 
                 dialog.show();
             }
@@ -420,10 +420,10 @@ public class FragHome extends Fragment {
                 dialog.setContentView(vista);
 
                 TextView title = (TextView) vista.findViewById(R.id.titulo);
-                title.setText("Retro");
+                title.setText(getString(R.string.retro));
 
                 TextView description = (TextView) vista.findViewById(R.id.descripcion);
-                description.setText("En esta categoría puedes encontrar diversos juegos del género retro");
+                description.setText(getString(R.string.retro_description));
 
                 dialog.show();
             }
@@ -444,10 +444,10 @@ public class FragHome extends Fragment {
                 dialog.setContentView(vista);
 
                 TextView title = (TextView) vista.findViewById(R.id.titulo);
-                title.setText("Silksong");
+                title.setText(getString(R.string.silksong));
 
                 TextView description = (TextView) vista.findViewById(R.id.descripcion);
-                description.setText("En esta categoría puedes encontrar diversos juegos de la saga Hollow Knight");
+                description.setText(getString(R.string.silksong_description));
 
                 dialog.show();
             }
@@ -468,10 +468,10 @@ public class FragHome extends Fragment {
                 dialog.setContentView(vista);
 
                 TextView title = (TextView) vista.findViewById(R.id.titulo);
-                title.setText("Shooter");
+                title.setText(getString(R.string.shooter));
 
                 TextView description = (TextView) vista.findViewById(R.id.descripcion);
-                description.setText("En esta categoría puedes encontrar diversos juegos del género de disparos");
+                description.setText(getString(R.string.shooter_description));
 
                 dialog.show();
             }
@@ -492,10 +492,10 @@ public class FragHome extends Fragment {
                 dialog.setContentView(vista);
 
                 TextView title = (TextView) vista.findViewById(R.id.titulo);
-                title.setText("Acción");
+                title.setText(getString(R.string.action));
 
                 TextView description = (TextView) vista.findViewById(R.id.descripcion);
-                description.setText("En esta categoría puedes encontrar diversos juegos del género de acción");
+                description.setText(getString(R.string.action_description));
 
                 dialog.show();
             }
@@ -516,10 +516,10 @@ public class FragHome extends Fragment {
                 dialog.setContentView(vista);
 
                 TextView title = (TextView) vista.findViewById(R.id.titulo);
-                title.setText("Epic Games");
+                title.setText(getString(R.string.epic_games));
 
                 TextView description = (TextView) vista.findViewById(R.id.descripcion);
-                description.setText("En esta categoría puedes encontrar diversos juegos de la empresa Epic Games");
+                description.setText(getString(R.string.epic_games_description));
 
                 dialog.show();
             }

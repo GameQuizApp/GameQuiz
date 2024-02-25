@@ -42,4 +42,23 @@
     <string name="trending">En tendencia</string>
     <string name="retro_indie">Retro/Indie</string>
     <string name="action_shooter">Acción/Disparos</string>
+    <string name="action_description">En esta categoría puedes encontrar diversos juegos del género de acción</string>
+    <string name="rockstar_description">En esta categoría puedes encontrar diversos juegos de la empresa Rockstar</string>
+    <string name="zombies">Zombies</string>
+    <string name="racing">Carreras</string>
+    <string name="indies">Indies</string>
+    <string name="shooter">Disparos</string>
+    <string name="ubisoft_description">En esta categoría puedes encontrar diversos juegos de la empresa Ubisoft</string>
+    <string name="resident_evil_description">En esta categoría puedes encontrar diversos juegos de la saga Resident Evil</string>
+    <string name="god_of_war_description">En esta categoría puedes encontrar diversos juegos de la saga God of War</string>
+    <string name="tekken_description">En esta categoría puedes encontrar diversos juegos de la saga Tekken</string>
+    <string name="nba_description">En esta categoría puedes encontrar diversos juegos de la saga NBA</string>
+    <string name="racing_description">En esta categoría puedes encontrar diversos juegos del género de carreras</string>
+    <string name="horror_description">En esta categoría puedes encontrar diversos juegos del género de terror</string>
+    <string name="zombies_description">En esta categoría puedes encontrar diversos juegos del género de zombies</string>
+    <string name="indies_description">En esta categoría puedes encontrar diversos juegos del género indie</string>
+    <string name="retro_description">En esta categoría puedes encontrar diversos juegos del género retro</string>
+    <string name="silksong_description">En esta categoría puedes encontrar diversos juegos de la saga Hollow Knight</string>
+    <string name="shooter_description">En esta categoría puedes encontrar diversos juegos del género de disparos</string>
+    <string name="epic_games_description">En esta categoría puedes encontrar diversos juegos de la empresa Epic Games</string>
 </resources>

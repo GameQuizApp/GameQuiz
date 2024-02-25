@@ -43,5 +43,32 @@
     <string name="trending">Trending</string>
     <string name="retro_indie">Retro/Indie</string>
     <string name="action_shooter">Action/Shooter</string>
+    <string name="action_description">In this category you can find games from the action genre</string>
+    <string name="rockstar" translatable="false">Rockstar</string>
+    <string name="rockstar_description">In this category you can find games from the brand Rockstar</string>
+    <string name="ubisoft" translatable="false">Ubisoft</string>
+    <string name="ubisoft_description">In this category you can find games from the brand Ubisoft</string>
+    <string name="zombies">Zombies</string>
+    <string name="resident_evil" translatable="false">Resident Evil</string>
+    <string name="resident_evil_description">In this category you can find games from Resident Evil\'s saga</string>
+    <string name="god_of_war" translatable="false">God of War</string>
+    <string name="god_of_war_description">In this category you can find games from God of War\'s saga</string>
+    <string name="tekken" translatable="false">Tekken</string>
+    <string name="tekken_description">In this category you can find games from Tekken\'s saga</string>
+    <string name="nba" translatable="false">NBA</string>
+    <string name="nba_description">In this category you can find games from NBA\'s saga</string>
+    <string name="racing">Racing</string>
+    <string name="racing_description">In this category you can find games from the racing genre</string>
+    <string name="horror_description">In this category you can find games from the horror genre</string>
+    <string name="zombies_description">In this category you can find games from the zombies genre</string>
+    <string name="indies">Indies</string>
+    <string name="indies_description">In this category you can find games from the indies genre</string>
+    <string name="retro_description">In this category you can find games from the retro genre</string>
+    <string name="silksong" translatable="false">Silksong</string>
+    <string name="silksong_description">In this category you can find games from Hollow Knight\'s saga</string>
+    <string name="shooter">Shooter</string>
+    <string name="shooter_description">In this category you can find games from the shooter genre</string>
+    <string name="epic_games" translatable="false">Epic Games</string>
+    <string name="epic_games_description">In this category you can find games from the brand Epic Games</string>
     <!-- TODO: Remove or change this placeholder text -->
 </resources>
