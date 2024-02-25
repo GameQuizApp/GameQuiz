@@ -44,7 +44,7 @@
         <item name="itemTextColor">?attr/colorOnTertiary</item>
     </style>
 
-    <style name="TemaPruebaNice" parent="Theme.AppCompat.DayNight">
+    <style name="TemaPruebaNice" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/vino</item>
         <item name="colorPrimaryVariant">@color/morado</item>
@@ -55,6 +55,5 @@
         <item name="colorOnSecondary">@color/vino</item>
         <!-- Status bar color. -->
         <item name="android:statusBarColor">@color/vino</item>
-        <!-- Customize your theme here. -->
     </style>
 </resources>
