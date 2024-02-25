@@ -30,4 +30,16 @@
     <string name="play">Jugar</string>
     <string name="settings">Configuración</string>
     <string name="logout">Cerrar sesión</string>
+    <string name="description">Descripción</string>
+    <string name="title">Título</string>
+    <string name="categories">Categorías</string>
+    <string name="all">Todos</string>
+    <string name="sports">Deportes</string>
+    <string name="action">Acción</string>
+    <string name="horror">Terror</string>
+    <string name="retro">Retro</string>
+    <string name="popular">Más populares</string>
+    <string name="trending">En tendencia</string>
+    <string name="retro_indie">Retro/Indie</string>
+    <string name="action_shooter">Acción/Disparos</string>
 </resources>

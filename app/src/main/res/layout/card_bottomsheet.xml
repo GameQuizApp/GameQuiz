@@ -12,7 +12,7 @@
             android:id="@+id/titulo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Título"
+            android:text="@string/title"
             android:textSize="18sp"
             android:textStyle="bold"
             android:layout_margin="10dp"/>
@@ -21,7 +21,7 @@
             android:id="@+id/descripcion"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Descripción"
+            android:text="@string/description"
             android:textSize="16sp"
             android:layout_marginStart="10dp"
             android:layout_marginEnd="10dp"

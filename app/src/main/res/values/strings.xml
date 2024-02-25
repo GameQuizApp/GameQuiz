@@ -31,5 +31,17 @@
     <string name="play">Play</string>
     <string name="settings">Settings</string>
     <string name="logout">Log out</string>
+    <string name="description">Description</string>
+    <string name="title">Title</string>
+    <string name="categories">Categories</string>
+    <string name="all">All</string>
+    <string name="sports">Sports</string>
+    <string name="action">Action</string>
+    <string name="horror">Horror</string>
+    <string name="retro">Retro</string>
+    <string name="popular">Most popular</string>
+    <string name="trending">Trending</string>
+    <string name="retro_indie">Retro/Indie</string>
+    <string name="action_shooter">Action/Shooter</string>
     <!-- TODO: Remove or change this placeholder text -->
 </resources>
