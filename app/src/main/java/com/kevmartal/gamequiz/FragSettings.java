@@ -12,6 +12,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.CompoundButton;
+import android.widget.ImageView;
 import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -35,7 +36,7 @@ public class FragSettings extends Fragment {
     private String mParam1;
     private String mParam2;
     Button loginbutton, logoutbutton;
-    TextView result;
+    ImageView logo;
     FirebaseAuth mAuth;
     Switch themeSwitch;
 
@@ -96,17 +97,26 @@ public class FragSettings extends Fragment {
          *  });
          */
 
-        result = view.findViewById(R.id.result_textview);
-        result.setOnClickListener(new View.OnClickListener() {
+        logo = view.findViewById(R.id.logo);
+        logo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
                 BottomSheetDialog dialog = new BottomSheetDialog(getActivity());
 
-                View vista = LayoutInflater.from(getActivity().getApplicationContext()).inflate(R.layout.result_bottomsheet, null);
+                View vista = LayoutInflater.from(getActivity().getApplicationContext()).inflate(R.layout.card_bottomsheet, null);
 
                 dialog.setCancelable(true);
                 dialog.setContentView(vista);
+
+                TextView title = (TextView) vista.findViewById(R.id.titulo);
+                title.setText("Créditos");
+
+                TextView description = (TextView) vista.findViewById(R.id.descripcion);
+                description.setText("Los desarrolladores de esta aplicación son:\n" +
+                        "\uD83D\uDC68\u200D\uD83D\uDCBB Kevin Bayas: Designer.\n" +
+                        "\uD83D\uDC68\u200D\uD83D\uDCBB Alejandro Rodríguez: Cloud Master.\n" +
+                        "\uD83D\uDC68\u200D\uD83D\uDCBB Martín Guijarro: SCRUM Master.\n");
 
                 dialog.show();
             }
