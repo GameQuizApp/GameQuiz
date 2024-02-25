@@ -37,7 +37,7 @@ public class FragPlay extends Fragment {
         // Crea botones y añádelos al LinearLayout
         addButtonToLinearLayout(linearLayout, "Modo Random", Color.parseColor("#FFC107"));
         addButtonToLinearLayout(linearLayout, "1vs1", Color.parseColor("#4CAF50"));
-        addButtonToLinearLayout(linearLayout, "Si", Color.parseColor("#2196F3"));
+        addButtonToLinearLayout(linearLayout, "Vidas Infinitas", Color.parseColor("#2196F3"));
         // Agrega más botones según sea necesario
 
         // Configura el fondo del LinearLayout con bordes redondos
@@ -78,7 +78,7 @@ public class FragPlay extends Fragment {
                 public void onClick(View v) {
                     // Acción cuando se hace clic en el tercer botón ("Si")
                     // Muestra un Toast
-                    Toast.makeText(requireContext(), "Si", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(requireContext(), "Vidas Infinitas", Toast.LENGTH_SHORT).show();
                 }
             });
         }
