@@ -1,13 +1,13 @@
 {
   "project_info": {
-    "project_number": "177132210684",
-    "project_id": "gamequiz-2024",
-    "storage_bucket": "gamequiz-2024.appspot.com"
+    "project_number": "369029683733",
+    "project_id": "gamequiz-2324",
+    "storage_bucket": "gamequiz-2324.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:177132210684:android:fe294d99b0a522ac94ca79",
+        "mobilesdk_app_id": "1:369029683733:android:47bbfb08bf58c8d68bcc1c",
         "android_client_info": {
           "package_name": "com.kevmartal.gamequiz"
         }
@@ -15,7 +15,7 @@
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyDzSWcsFjri2i_ll5uzEoz0dZqdO1olHJQ"
+          "current_key": "AIzaSyB5GLsCMuHc-gdThIEv0zsLS3jPy7gUhU0"
         }
       ],
       "services": {

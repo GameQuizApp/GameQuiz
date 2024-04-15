@@ -31,7 +31,7 @@ public class FirestoreManager {
             public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
                 List<Question> questions = new ArrayList<>();
                 for (QueryDocumentSnapshot document : queryDocumentSnapshots) {
-                    String imageUrl = document.getString("imageURL");
+                    String imageUrl = document.getString("imageUrl");
                     List<String> options = (List<String>) document.get("options");
                     long correctAnswerIndex = (long) document.get("correctAnswerIndex");
                     Question question = new Question(imageUrl, options, (int) correctAnswerIndex);
