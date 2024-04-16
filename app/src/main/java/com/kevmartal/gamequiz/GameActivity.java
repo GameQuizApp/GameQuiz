@@ -6,35 +6,28 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.DialogInterface;
 import android.graphics.drawable.ColorDrawable;
-import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.os.Handler;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
-import com.bumptech.glide.load.DataSource;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
-import com.bumptech.glide.load.engine.GlideException;
-import com.bumptech.glide.request.RequestListener;
-import com.bumptech.glide.request.target.Target;
 import com.google.android.material.snackbar.Snackbar;
 
+import java.util.ArrayList;
 import java.util.Collections;
-import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
+import java.util.Random;
 
 public class GameActivity extends AppCompatActivity {
 
-    private List<Question> questions;
+    private List<Game> games;
     private int currentQuestionIndex = 0;
     private int puntos = 0, vidas = 3;
     private TextView puntosTxt, vidasTxt;
-    private Set<Integer> usedQuestionIndexes = new HashSet<>(); // Conjunto para almacenar los índices de preguntas utilizadas
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,8 +37,8 @@ public class GameActivity extends AppCompatActivity {
         puntosTxt = findViewById(R.id.puntosTxt);
         vidasTxt = findViewById(R.id.vidasTxt);
 
-        // Cargar las preguntas desde Firestore al iniciar la actividad
-        loadQuestionsFromFirestore();
+        // Cargar los juegos desde Firestore al iniciar la actividad
+        loadGamesFromFirestore();
 
         // Asignar un listener a cada botón de respuesta
         Button optionButton1 = findViewById(R.id.optionButton1);
@@ -81,17 +74,14 @@ public class GameActivity extends AppCompatActivity {
         });
     }
 
-    // Método para cargar las preguntas desde Firestore
-    private void loadQuestionsFromFirestore() {
+    // Método para cargar los juegos desde Firestore
+    private void loadGamesFromFirestore() {
         FirestoreManager firestoreManager = new FirestoreManager();
-        firestoreManager.getQuestions(new FirestoreManager.FirestoreCallback() {
+        firestoreManager.getGames(new FirestoreManager.FirestoreCallback() {
             @Override
-            public void onSuccess(List<Question> questionList) {
-                // Aquí puedes utilizar la lista de preguntas
-                questions = questionList;
-
-                // Barajar aleatoriamente la lista de preguntas
-                Collections.shuffle(questions);
+            public void onSuccess(List<Game> gameList) {
+                // Aquí puedes utilizar la lista de juegos
+                games = gameList;
 
                 // Mostrar la primera pregunta
                 showNextQuestion();
@@ -100,7 +90,7 @@ public class GameActivity extends AppCompatActivity {
             @Override
             public void onFailure(Exception e) {
                 // Manejar el fallo en caso de que la obtención de datos falle
-                showInfoMessage("Error al obtener las preguntas");
+                showInfoMessage("Error al obtener los juegos");
                 finish();
             }
         });
@@ -108,93 +98,40 @@ public class GameActivity extends AppCompatActivity {
 
     // Método para mostrar la siguiente pregunta disponible
     private void showNextQuestion() {
-        // Reactivar los botones y restaurar su color original
-        enableOptionButtons();
-        restoreButtonColors();
+        if (games != null && !games.isEmpty()) {
+            // Seleccionar aleatoriamente 4 juegos para la pregunta actual
+            List<Game> selectedGames = getRandomGames(games, 4);
 
-        if (questions != null && !questions.isEmpty()) {
-            // Buscar la siguiente pregunta no utilizada
-            for (int i = 0; i < questions.size(); i++) {
-                if (!usedQuestionIndexes.contains(i)) {
-                    currentQuestionIndex = i;
-                    showQuestion(questions.get(currentQuestionIndex));
-                    usedQuestionIndexes.add(i); // Agregar el índice de la pregunta utilizada al conjunto
-                    return;
-                }
-            }
-            // Si se han mostrado todas las preguntas, finalizar el juego
-            showSuccessMessage("Enhorabuena, te has pasado el juego");
-            finish();
-        } else {
-            // Si no hay preguntas disponibles, finalizar el juego
-            showInfoMessage("No hay preguntas disponibles");
-            finish();
-        }
-    }
+            // Seleccionar aleatoriamente el juego que será la respuesta correcta
+            int correctGameIndex = new Random().nextInt(4);
 
-    // Método para restaurar el color original de los botones de opción
-    private void restoreButtonColors() {
-        Button optionButton1 = findViewById(R.id.optionButton1);
-        Button optionButton2 = findViewById(R.id.optionButton2);
-        Button optionButton3 = findViewById(R.id.optionButton3);
-        Button optionButton4 = findViewById(R.id.optionButton4);
-        optionButton1.setBackgroundColor(getResources().getColor(R.color.vino)); // Restaurar el color
-        optionButton2.setBackgroundColor(getResources().getColor(R.color.vino));
-        optionButton3.setBackgroundColor(getResources().getColor(R.color.vino));
-        optionButton4.setBackgroundColor(getResources().getColor(R.color.vino));
-    }
-
-    // Método para activar todos los botones de opción
-    private void enableOptionButtons() {
-        Button optionButton1 = findViewById(R.id.optionButton1);
-        Button optionButton2 = findViewById(R.id.optionButton2);
-        Button optionButton3 = findViewById(R.id.optionButton3);
-        Button optionButton4 = findViewById(R.id.optionButton4);
-        optionButton1.setEnabled(true);
-        optionButton2.setEnabled(true);
-        optionButton3.setEnabled(true);
-        optionButton4.setEnabled(true);
-    }
-
-    // Método para mostrar una pregunta en la interfaz de usuario
-    private void showQuestion(Question question) {
-        if (!isDestroyed()) {
-            // Aquí puedes mostrar la imagen y las opciones de respuesta en tu interfaz de usuario
-            String imageUrl = question.getImageUrl();
-            List<String> options = question.getOptions();
-
-            // Por ejemplo, puedes cargar la imagen con Glide
+            // Mostrar la imagen del juego seleccionado
+            Game correctGame = selectedGames.get(correctGameIndex);
+            String imageUrl = correctGame.getImageUrl();
             ImageView imageView = findViewById(R.id.imageView);
             Glide.with(this)
                     .load(imageUrl)
-                    .centerCrop() // Centrar la imagen y recortar los bordes
-                    .diskCacheStrategy(DiskCacheStrategy.ALL) // Almacenar la imagen en caché para que tarde menos en ser cargada a partir del primer intento
-                    .placeholder((new ColorDrawable(this.getResources().getColor(R.color.morado)))) // Añadir un color donde vaya la imagen para manejar lo que pasa en ese espacio hasta que la imagen es cargada
-                    .error(R.drawable.ic_launcher) // R.drawable.error_image es la imagen que se mostrará en caso de error
-                    .listener(new RequestListener<Drawable>() {
-                        @Override
-                        public boolean onLoadFailed(@Nullable GlideException e, Object model, Target<Drawable> target, boolean isFirstResource) {
-                            Log.e("Glide", "Error loading image", e);
-                            return false; // Return false to allow Glide to handle the error drawable
-                        }
-
-                        @Override
-                        public boolean onResourceReady(Drawable resource, Object model, Target<Drawable> target, DataSource dataSource, boolean isFirstResource) {
-                            return false; // Return false to allow Glide to handle the resource drawable
-                        }
-                    })
+                    .centerCrop()
+                    .diskCacheStrategy(DiskCacheStrategy.ALL)
+                    .placeholder(new ColorDrawable(getResources().getColor(R.color.morado)))
+                    .error(R.drawable.ic_launcher)
                     .into(imageView);
 
-            // Luego, puedes mostrar las opciones de respuesta en los botones
-            Button optionButton1 = findViewById(R.id.optionButton1);
-            optionButton1.setText(options.get(0));
-            // Repite este proceso para cada opción de respuesta y su respectivo botón
-            Button optionButton2 = findViewById(R.id.optionButton2);
-            optionButton2.setText(options.get(1));
-            Button optionButton3 = findViewById(R.id.optionButton3);
-            optionButton3.setText(options.get(2));
-            Button optionButton4 = findViewById(R.id.optionButton4);
-            optionButton4.setText(options.get(3));
+            // Asignar el nombre del juego correcto al botón con el índice correcto
+            Button correctButton = getOptionButton(correctGameIndex);
+            correctButton.setText(correctGame.getName());
+
+            // Asignar los nombres de los otros juegos a los botones restantes
+            for (int i = 0; i < 4; i++) {
+                if (i != correctGameIndex) {
+                    Button optionButton = getOptionButton(i);
+                    optionButton.setText(selectedGames.get(i).getName());
+                }
+            }
+        } else {
+            // Si no hay juegos disponibles, finalizar el juego
+            showInfoMessage("No hay juegos disponibles");
+            finish();
         }
     }
 
@@ -203,9 +140,9 @@ public class GameActivity extends AppCompatActivity {
         // Obtener el botón seleccionado
         Button selectedButton = getOptionButton(selectedOptionIndex);
 
-        if (questions != null && currentQuestionIndex < questions.size()) {
-            Question currentQuestion = questions.get(currentQuestionIndex);
-            int correctAnswerIndex = currentQuestion.getCorrectAnswerIndex();
+        if (games != null && !games.isEmpty()) {
+            // Obtener el índice de respuesta correcta
+            int correctAnswerIndex = new Random().nextInt(4);
 
             // Cambiar el color del botón seleccionado dependiendo de si es correcto o no
             if (selectedOptionIndex == correctAnswerIndex) {
@@ -243,7 +180,7 @@ public class GameActivity extends AppCompatActivity {
                 }
             }, 1000); // Retraso de 1 segundo (1000 milisegundos)
         } else {
-            showInfoMessage("SE ACABARON LAS PREGUNTAS");
+            showInfoMessage("SE ACABARON LOS JUEGOS");
             finish();
         }
     }
@@ -271,7 +208,6 @@ public class GameActivity extends AppCompatActivity {
         dialog.show();
     }
 
-
     // Método para mostrar un mensaje de éxito
     private void showSuccessMessage(String message) {
         Snackbar.make(findViewById(android.R.id.content), message, Snackbar.LENGTH_LONG).show();
@@ -292,6 +228,18 @@ public class GameActivity extends AppCompatActivity {
         optionButton2.setEnabled(false);
         optionButton3.setEnabled(false);
         optionButton4.setEnabled(false);
+    }
+
+    // Método para obtener un conjunto aleatorio de juegos
+    private List<Game> getRandomGames(List<Game> games, int count) {
+        List<Game> randomGames = new ArrayList<>();
+        if (games.size() <= count) {
+            randomGames.addAll(games);
+        } else {
+            Collections.shuffle(games);
+            randomGames.addAll(games.subList(0, count));
+        }
+        return randomGames;
     }
 
     // Método para obtener el botón de opción según el índice proporcionado

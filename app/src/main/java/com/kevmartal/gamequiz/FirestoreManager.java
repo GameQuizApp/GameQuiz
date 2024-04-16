@@ -13,31 +13,30 @@ import java.util.List;
 public class FirestoreManager {
 
     private FirebaseFirestore db;
-    private CollectionReference questionsRef;
+    private CollectionReference gamesRef;
 
     public FirestoreManager() {
         db = FirebaseFirestore.getInstance();
-        questionsRef = db.collection("questions");
+        gamesRef = db.collection("games");
     }
 
     public interface FirestoreCallback {
-        void onSuccess(List<Question> questions);
+        void onSuccess(List<Game> games);
         void onFailure(Exception e);
     }
 
-    public void getQuestions(final FirestoreCallback callback) {
-        questionsRef.get().addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
+    public void getGames(final FirestoreCallback callback) {
+        gamesRef.get().addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
             @Override
             public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
-                List<Question> questions = new ArrayList<>();
+                List<Game> games = new ArrayList<>();
                 for (QueryDocumentSnapshot document : queryDocumentSnapshots) {
+                    String name = document.getString("name");
                     String imageUrl = document.getString("imageUrl");
-                    List<String> options = (List<String>) document.get("options");
-                    long correctAnswerIndex = (long) document.get("correctAnswerIndex");
-                    Question question = new Question(imageUrl, options, (int) correctAnswerIndex);
-                    questions.add(question);
+                    Game game = new Game(name, imageUrl);
+                    games.add(game);
                 }
-                callback.onSuccess(questions);
+                callback.onSuccess(games);
             }
         }).addOnFailureListener(new OnFailureListener() {
             @Override
