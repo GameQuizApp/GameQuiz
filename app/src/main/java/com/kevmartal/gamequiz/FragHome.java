@@ -3,6 +3,7 @@ package com.kevmartal.gamequiz;
 import android.content.Intent;
 import android.os.Bundle;
 
+import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
@@ -532,7 +533,7 @@ public class FragHome extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        TextView EnlaceAction= view.findViewById(R.id.TextviewEnlaceAction);
+        CardView EnlaceAction= view.findViewById(R.id.cardViewCyberpunk);
         TextView EnlaceRockstar= view.findViewById(R.id.TextViewEnlaceRockstar);
         TextView EnlaceZombies= view.findViewById(R.id.TextviewEnlaceZombies);
         TextView EnlaceTerror= view.findViewById(R.id.TextviewEnlaceTerror);
@@ -541,7 +542,7 @@ public class FragHome extends Fragment {
             public void onClick(View v) {
 
                 // Crear un Intent para iniciar la nueva actividad
-                Intent intent = new Intent(getContext(), GameActivity.class);
+                Intent intent = new Intent(getContext(), ActionDescriptionPage.class);
 
                 // Iniciar la nueva actividad
                 startActivity(intent);
@@ -588,7 +589,7 @@ public class FragHome extends Fragment {
         actionTextView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                // Desplazar la vista hacia el TextView "tendencia"
+                // Desplazar la vista hacia el TextView "action"
                 scrollView.post(new Runnable() {
                     @Override
                     public void run() {
@@ -604,7 +605,7 @@ public class FragHome extends Fragment {
         terrorTextView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                // Desplazar la vista hacia el TextView "tendencia"
+                // Desplazar la vista hacia el TextView "terror"
                 scrollView.post(new Runnable() {
                     @Override
                     public void run() {
@@ -620,7 +621,7 @@ public class FragHome extends Fragment {
         retroTextView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                // Desplazar la vista hacia el TextView "tendencia"
+                // Desplazar la vista hacia el TextView "retro"
                 scrollView.post(new Runnable() {
                     @Override
                     public void run() {
