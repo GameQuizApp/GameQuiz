@@ -30,7 +30,7 @@ public class ActionDescriptionPage extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent= new Intent(ActionDescriptionPage.this, GameActivity.class);
+                Intent intent= new Intent(ActionDescriptionPage.this, RandomImagePage.class);
                 startActivity(intent);
             }
         });

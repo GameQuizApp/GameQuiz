@@ -31,7 +31,7 @@ public class RandomImagePage extends AppCompatActivity implements View.OnClickLi
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_game);
+        setContentView(R.layout.activity_random_image_page);
 
         puntosTxt = findViewById(R.id.puntosTxt);
         vidasTxt = findViewById(R.id.vidasTxt);
