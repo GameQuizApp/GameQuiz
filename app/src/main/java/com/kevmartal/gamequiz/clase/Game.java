@@ -1,4 +1,4 @@
-package com.kevmartal.gamequiz;
+package com.kevmartal.gamequiz.clase;
 
 public class Game {
     private String name;

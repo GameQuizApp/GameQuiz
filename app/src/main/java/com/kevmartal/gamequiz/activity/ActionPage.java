@@ -1,8 +1,10 @@
-package com.kevmartal.gamequiz;
+package com.kevmartal.gamequiz.activity;
 
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.kevmartal.gamequiz.R;
 
 public class ActionPage extends AppCompatActivity {
 

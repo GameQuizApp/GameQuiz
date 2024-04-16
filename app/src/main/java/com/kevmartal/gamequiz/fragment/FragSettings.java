@@ -1,4 +1,4 @@
-package com.kevmartal.gamequiz;
+package com.kevmartal.gamequiz.fragment;
 
 import android.content.Intent;
 import android.content.res.Configuration;
@@ -19,6 +19,8 @@ import android.widget.Toast;
 
 import com.google.android.material.bottomsheet.BottomSheetDialog;
 import com.google.firebase.auth.FirebaseAuth;
+import com.kevmartal.gamequiz.activity.Login;
+import com.kevmartal.gamequiz.R;
 
 /**
  * A simple {@link Fragment} subclass.

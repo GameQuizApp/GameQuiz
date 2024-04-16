@@ -1,4 +1,4 @@
-package com.kevmartal.gamequiz;
+package com.kevmartal.gamequiz.activity;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
@@ -14,6 +14,9 @@ import android.widget.TextView;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.google.android.material.snackbar.Snackbar;
+import com.kevmartal.gamequiz.R;
+import com.kevmartal.gamequiz.clase.FirestoreManager;
+import com.kevmartal.gamequiz.clase.Game;
 
 import java.util.ArrayList;
 import java.util.Collections;

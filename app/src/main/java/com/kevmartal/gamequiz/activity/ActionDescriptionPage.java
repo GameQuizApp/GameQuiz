@@ -1,4 +1,4 @@
-package com.kevmartal.gamequiz;
+package com.kevmartal.gamequiz.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -12,7 +12,7 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.kevmartal.gamequiz.R;
 
 public class ActionDescriptionPage extends AppCompatActivity {
 

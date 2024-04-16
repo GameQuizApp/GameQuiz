@@ -1,4 +1,4 @@
-package com.kevmartal.gamequiz;
+package com.kevmartal.gamequiz.activity;
 
 import androidx.activity.OnBackPressedCallback;
 import androidx.annotation.IdRes;
@@ -17,6 +17,8 @@ import android.view.View;
 import com.google.android.material.bottomnavigation.BottomNavigationItemView;
 import com.google.android.material.bottomnavigation.BottomNavigationMenuView;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.kevmartal.gamequiz.R;
+import com.kevmartal.gamequiz.fragment.SectionsPagerAdapter;
 
 public class Main extends AppCompatActivity {
 

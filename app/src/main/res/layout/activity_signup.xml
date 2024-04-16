@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/azul_sign"
-    tools:context=".Signup">
+    tools:context=".activity.Signup">
 
     <com.airbnb.lottie.LottieAnimationView
         android:id="@+id/registra"

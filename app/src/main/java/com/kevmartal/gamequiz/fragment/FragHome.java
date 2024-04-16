@@ -1,14 +1,11 @@
-package com.kevmartal.gamequiz;
+package com.kevmartal.gamequiz.fragment;
 
 import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentTransaction;
 
-import android.provider.MediaStore;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -17,6 +14,11 @@ import android.widget.ScrollView;
 import android.widget.TextView;
 
 import com.google.android.material.bottomsheet.BottomSheetDialog;
+import com.kevmartal.gamequiz.activity.ActionDescriptionPage;
+import com.kevmartal.gamequiz.R;
+import com.kevmartal.gamequiz.activity.RockstarPage;
+import com.kevmartal.gamequiz.activity.TerrorPage;
+import com.kevmartal.gamequiz.activity.ZombiesPage;
 
 import org.checkerframework.checker.nullness.qual.NonNull;
 import org.checkerframework.checker.nullness.qual.Nullable;

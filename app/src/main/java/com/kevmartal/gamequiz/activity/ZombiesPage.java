@@ -1,8 +1,10 @@
-package com.kevmartal.gamequiz;
+package com.kevmartal.gamequiz.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import com.kevmartal.gamequiz.R;
 
 public class ZombiesPage extends AppCompatActivity {
 

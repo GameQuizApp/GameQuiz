@@ -15,7 +15,7 @@
         android:orientation="vertical"
         android:gravity="center"
         android:padding="16dp"
-        tools:context=".FragPlay">
+        tools:context=".fragment.FragPlay">
 
         <!-- Puedes ajustar la orientación y propiedades del LinearLayout según tus necesidades -->
         <LinearLayout

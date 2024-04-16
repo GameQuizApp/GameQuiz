@@ -16,51 +16,51 @@
         android:theme="@style/Theme.GameQuiz.NoActionBar"
         tools:targetApi="31">
         <activity
-            android:name=".ActionDescriptionPage"
+            android:name=".activity.ActionDescriptionPage"
             android:exported="true"
-            android:parentActivityName=".Main"
+            android:parentActivityName=".activity.Main"
             android:theme="@style/TemaPruebaNice"/>
         <activity
-            android:name=".RandomImagePage"
+            android:name=".activity.RandomImagePage"
             android:exported="true"
             android:label="Juegos Randoms"
-            android:parentActivityName=".Main"
+            android:parentActivityName=".activity.Main"
             android:theme="@style/TemaPruebaNice" />
         <activity
-            android:name=".TerrorPage"
+            android:name=".activity.TerrorPage"
             android:exported="true"
             android:label="Juegos de Terror"
-            android:parentActivityName=".Main"
+            android:parentActivityName=".activity.Main"
             android:theme="@style/TemaPruebaNice" />
         <activity
-            android:name=".ZombiesPage"
+            android:name=".activity.ZombiesPage"
             android:exported="true"
             android:label="Juegos de Zombies"
-            android:parentActivityName=".Main"
+            android:parentActivityName=".activity.Main"
             android:theme="@style/TemaPruebaNice" />
         <activity
-            android:name=".RockstarPage"
+            android:name=".activity.RockstarPage"
             android:exported="true"
             android:label="Juegos de Rockstar"
-            android:parentActivityName=".Main"
+            android:parentActivityName=".activity.Main"
             android:theme="@style/TemaPruebaNice" />
         <activity
-            android:name=".ActionPage"
+            android:name=".activity.ActionPage"
             android:exported="true"
             android:label="Juegos de Acción"
-            android:parentActivityName=".Main"
+            android:parentActivityName=".activity.Main"
             android:theme="@style/TemaPruebaNice" />
         <activity
-            android:name=".Signup"
+            android:name=".activity.Signup"
             android:exported="true" />
         <activity
-            android:name=".Login"
+            android:name=".activity.Login"
             android:exported="true" />
         <activity
-            android:name=".Main"
+            android:name=".activity.Main"
             android:exported="true" />
         <activity
-            android:name=".Splash"
+            android:name=".activity.Splash"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
