@@ -111,7 +111,7 @@ public class Main extends AppCompatActivity {
 
     // Removing badges
     public static void removeBadge(BottomNavigationView bottomNavigationView, @IdRes int itemId) {
-        BottomNavigationItemView itemView = bottomNavigationView.findViewById(itemId);
+        @SuppressLint("RestrictedApi") BottomNavigationItemView itemView = bottomNavigationView.findViewById(itemId);
         if (itemView.getChildCount() == 3) {
             itemView.removeViewAt(2);
         }
