@@ -107,6 +107,9 @@ public class RandomImagePage extends AppCompatActivity implements View.OnClickLi
                     optionButton.setText(selectedGames.get(i).getName());
                 }
             }
+
+            // Eliminar el juego mostrado de la lista de juegos disponibles
+            games.remove(correctGame);
         } else {
             showMessage("No hay juegos disponibles");
             finish();
@@ -137,24 +140,30 @@ public class RandomImagePage extends AppCompatActivity implements View.OnClickLi
                 // Restar una vida al jugador
                 vidas--;
                 vidasTxt.setText(String.valueOf(vidas));
-                // Mostrar mensaje de pérdida si el jugador ha perdido todas las vidas
-                if (vidas == 0) {
-                    showLossMessage();
-                }
             }
             // Deshabilitar los botones de opción después de seleccionar uno
             disableOptionButtons();
-            // Mostrar la siguiente pregunta después de un breve retraso
-            new Handler().postDelayed(this::showNextQuestion, 1000);
+            // Comprobar vidas después de cada respuesta
+            if (vidas > 0) {
+                if (games.size() >= 4) {
+                    // La lista de juegos tiene 4 o más juegos para seguir generando preguntas
+                    new Handler().postDelayed(this::showNextQuestion, 1000);
+                } else {
+                    // No quedan juegos suficientes para generar más preguntas
+                    showResultMessage("ganado");
+                }
+            } else {
+                showResultMessage("perdido");
+            }
         } else {
-            showMessage("SE ACABARON LOS JUEGOS");
+            showMessage("NO HAY MÁS JUEGOS DISPONIBLES");
             finish();
         }
     }
 
-    private void showLossMessage() {
+    private void showResultMessage(String resultado) {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setTitle("¡Has perdido!");
+        builder.setTitle("¡Has "+resultado+"!");
         builder.setMessage("Has obtenido " + puntos + " puntos.");
         builder.setPositiveButton("Aceptar", (dialog, which) -> {
             dialog.dismiss();
@@ -203,8 +212,14 @@ public class RandomImagePage extends AppCompatActivity implements View.OnClickLi
 
     private List<Game> getRandomGames(List<Game> games) {
         List<Game> randomGames = new ArrayList<>(games);
-        Collections.shuffle(randomGames);
-        return randomGames.subList(0, 4);
+        if (randomGames.size() >= 4) {
+            Collections.shuffle(randomGames);
+            return randomGames.subList(0, 4);
+        } else {
+            // Aquí puedes manejar el caso en el que la lista tenga menos de 4 elementos
+            // Por ejemplo, puedes mostrar un mensaje de error o devolver una lista vacía.
+            return new ArrayList<>();
+        }
     }
 
     private Button getOptionButton(int optionIndex) {
