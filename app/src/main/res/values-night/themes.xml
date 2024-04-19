@@ -23,7 +23,7 @@
         <!-- Primary brand color. -->
         <item name="android:windowIsTranslucent">true</item> <!-- Desactiva el Splash por defecto de Android -->
         <item name="colorPrimary">@color/morado</item>
-        <item name="colorPrimaryVariant">@color/black</item>
+        <item name="colorPrimaryVariant">@color/vino</item>
         <item name="colorOnPrimary">@color/white</item>
         <!-- Secondary brand color. -->
         <item name="colorSecondary">@color/gris_claro</item>
@@ -51,6 +51,19 @@
         <item name="colorOnPrimary">@color/white</item>
         <!-- Secondary brand color. -->
         <item name="colorSecondary">@color/morado</item>
+        <item name="colorSecondaryVariant">@color/gris_claro</item>
+        <item name="colorOnSecondary">@color/fucsia_700</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">@color/vino</item>
+    </style>
+
+    <style name="Description_theme" parent="Theme.GameQuiz.DarkActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/vino</item>
+        <item name="colorPrimaryVariant">#32174D</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/white</item>
         <item name="colorSecondaryVariant">@color/gris_claro</item>
         <item name="colorOnSecondary">@color/fucsia_700</item>
         <!-- Status bar color. -->

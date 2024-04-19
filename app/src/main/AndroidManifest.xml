@@ -19,7 +19,7 @@
             android:name=".activity.ActionDescriptionPage"
             android:exported="true"
             android:parentActivityName=".activity.Main"
-            android:theme="@style/TemaPruebaNice"/>
+            android:theme="@style/Description_theme"/>
         <activity
             android:name=".activity.RandomImagePage"
             android:exported="true"

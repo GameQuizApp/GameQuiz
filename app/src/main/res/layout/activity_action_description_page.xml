@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
+    android:background="?attr/colorPrimaryVariant"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".activity.ActionDescriptionPage">
@@ -58,7 +59,7 @@
                       android:layout_marginTop="5dp"
                       android:layout_width="wrap_content"
                       android:layout_height="wrap_content"
-                        android:src="@drawable/guardar"/>
+                      android:src="@drawable/guardar"/>
                </LinearLayout>
 
 
@@ -70,29 +71,29 @@
              android:layout_marginTop="20dp"
              android:layout_width="260dp"
              android:layout_gravity="center"
-             android:layout_height="2dp"
-             android:background="#4CAF50"/>
+             android:layout_height="3dp"
+             android:background="@color/verde"/>
       <LinearLayout
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
           android:orientation="horizontal">
          <!--TODO EL CONTENIDO DE DENTRO-->
       <TextView
-          style="@style/Categoria"
-          android:layout_marginStart="120dp"
+          style="@style/Titulos_grandes"
+          android:layout_marginStart="110dp"
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
           android:text="25"
          />
          <TextView
-             style="@style/Categoria"
+             style="@style/Titulos_grandes"
              android:layout_marginStart="50dp"
              android:layout_width="wrap_content"
              android:layout_height="wrap_content"
              android:text="4.9k"
              />
          <TextView
-             style="@style/Categoria"
+             style="@style/Titulos_grandes"
              android:layout_marginStart="50dp"
              android:layout_width="wrap_content"
              android:layout_height="wrap_content"
@@ -105,21 +106,21 @@
              android:orientation="horizontal">
             <!--TODO EL CONTENIDO DE DENTRO-->
             <TextView
-                style="@style/Categoria"
+                style="@style/Titulos_grandes"
                 android:layout_marginStart="80dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Preguntas"
                 />
             <TextView
-                style="@style/Categoria"
+                style="@style/Titulos_grandes"
                 android:layout_marginStart="10dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Visitas"
                 />
             <TextView
-                style="@style/Categoria"
+                style="@style/Titulos_grandes"
                 android:layout_marginStart="10dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -127,11 +128,10 @@
                 />
          </LinearLayout>
          <View
-             android:layout_marginTop="10dp"
              android:layout_width="260dp"
              android:layout_gravity="center"
-             android:layout_height="2dp"
-             android:background="#4CAF50"/>
+             android:layout_height="4dp"
+             android:background="@color/verde"/>
          <TextView
              style="@style/Titulo"
              android:layout_margin="10dp"
@@ -144,7 +144,7 @@
          <TextView
              android:layout_marginTop="20dp"
              style="@style/Titulo_game"
-             android:layout_marginStart="60dp"
+             android:layout_marginStart="20dp"
              android:layout_width="wrap_content"
              android:layout_height="wrap_content"
              android:text="Comentarios"
