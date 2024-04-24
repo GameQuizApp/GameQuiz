@@ -30,12 +30,15 @@ public class ActionDescriptionPage extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent= new Intent(ActionDescriptionPage.this, RandomImagePage.class);
+                // Crear un Intent para pasar al Activity RandomImagePage
+                Intent intent = new Intent(ActionDescriptionPage.this, RandomImagePage.class);
+                // Agregar el parámetro String al intent
+                intent.putExtra("category", "action");
                 startActivity(intent);
             }
         });
 
-        ImageView imageButton = (ImageView) findViewById(R.id.guardar_juego);
+        ImageView imageButton = findViewById(R.id.guardar_juego);
         imageButton.setOnClickListener(new View.OnClickListener() {
             boolean isFavorito = false;
 
@@ -52,7 +55,5 @@ public class ActionDescriptionPage extends AppCompatActivity {
                 }
             }
         });
-
-
     }
 }

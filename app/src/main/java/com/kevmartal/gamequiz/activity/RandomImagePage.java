@@ -68,12 +68,25 @@ public class RandomImagePage extends AppCompatActivity implements View.OnClickLi
     }
 
     private void loadGamesFromFirestore() {
+        String category = getIntent().getStringExtra("category");
         FirestoreManager firestoreManager = new FirestoreManager();
         firestoreManager.getGames(new FirestoreManager.FirestoreCallback() {
             @Override
             public void onSuccess(List<Game> gameList) {
-                games = gameList;
-                showNextQuestion();
+                if (category != null && category.equals("action")) {
+                    // Filtrar los juegos por la categoría "action"
+                    games = filterGamesByCategory(gameList, "action");
+                } else {
+                    // Usar todos los juegos si no se especifica una categoría existente
+                    games = gameList;
+                }
+
+                if (!games.isEmpty()) {
+                    showNextQuestion();
+                } else {
+                    showMessage("No hay juegos disponibles");
+                    finish();
+                }
             }
 
             @Override
@@ -82,6 +95,16 @@ public class RandomImagePage extends AppCompatActivity implements View.OnClickLi
                 finish();
             }
         });
+    }
+
+    private List<Game> filterGamesByCategory(List<Game> games, String category) {
+        List<Game> filteredGames = new ArrayList<>();
+        for (Game game : games) {
+            if (game.getCategories() != null && game.getCategories().contains(category)) {
+                filteredGames.add(game);
+            }
+        }
+        return filteredGames;
     }
 
     private void showNextQuestion() {
