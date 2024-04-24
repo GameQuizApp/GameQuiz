@@ -16,9 +16,6 @@ import android.widget.TextView;
 import com.google.android.material.bottomsheet.BottomSheetDialog;
 import com.kevmartal.gamequiz.activity.ActionDescriptionPage;
 import com.kevmartal.gamequiz.R;
-import com.kevmartal.gamequiz.activity.RockstarPage;
-import com.kevmartal.gamequiz.activity.TerrorPage;
-import com.kevmartal.gamequiz.activity.ZombiesPage;
 
 import org.checkerframework.checker.nullness.qual.NonNull;
 import org.checkerframework.checker.nullness.qual.Nullable;
@@ -549,21 +546,6 @@ public class FragHome extends Fragment {
                 // Iniciar la nueva actividad
                 startActivity(intent);
             }
-        });
-        //Enlace activityRockstar
-        EnlaceRockstar.setOnClickListener(v -> {
-            Intent intent = new Intent(getActivity(), RockstarPage.class);
-            startActivity(intent);
-        });
-        //Enlace activityZombie
-        EnlaceZombies.setOnClickListener(v -> {
-            Intent intent = new Intent(getActivity(), ZombiesPage.class);
-            startActivity(intent);
-        });
-        //Enlace activityTerror
-        EnlaceTerror.setOnClickListener(v -> {
-            Intent intent = new Intent(getActivity(), TerrorPage.class);
-            startActivity(intent);
         });
 
 

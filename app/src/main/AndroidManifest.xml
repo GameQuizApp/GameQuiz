@@ -27,30 +27,6 @@
             android:parentActivityName=".activity.Main"
             android:theme="@style/TemaPruebaNice" />
         <activity
-            android:name=".activity.TerrorPage"
-            android:exported="true"
-            android:label="Juegos de Terror"
-            android:parentActivityName=".activity.Main"
-            android:theme="@style/TemaPruebaNice" />
-        <activity
-            android:name=".activity.ZombiesPage"
-            android:exported="true"
-            android:label="Juegos de Zombies"
-            android:parentActivityName=".activity.Main"
-            android:theme="@style/TemaPruebaNice" />
-        <activity
-            android:name=".activity.RockstarPage"
-            android:exported="true"
-            android:label="Juegos de Rockstar"
-            android:parentActivityName=".activity.Main"
-            android:theme="@style/TemaPruebaNice" />
-        <activity
-            android:name=".activity.ActionPage"
-            android:exported="true"
-            android:label="Juegos de Acción"
-            android:parentActivityName=".activity.Main"
-            android:theme="@style/TemaPruebaNice" />
-        <activity
             android:name=".activity.Signup"
             android:exported="true" />
         <activity
