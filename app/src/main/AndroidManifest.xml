@@ -21,7 +21,7 @@
             android:parentActivityName=".activity.Main"
             android:theme="@style/Description_theme"/>
         <activity
-            android:name=".activity.RandomImagePage"
+            android:name=".activity.GameActivity"
             android:exported="true"
             android:label="Juegos Randoms"
             android:parentActivityName=".activity.Main"

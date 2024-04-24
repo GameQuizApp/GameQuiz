@@ -15,7 +15,7 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import com.kevmartal.gamequiz.R;
-import com.kevmartal.gamequiz.activity.RandomImagePage;
+import com.kevmartal.gamequiz.activity.GameActivity;
 
 public class FragPlay extends Fragment {
 
@@ -54,7 +54,7 @@ public class FragPlay extends Fragment {
                 public void onClick(View v) {
                     // Acción cuando se hace clic en el primer botón ("Modo Random")
                     // Por ejemplo, inicia una nueva actividad
-                    Intent intent = new Intent(getActivity(), RandomImagePage.class);
+                    Intent intent = new Intent(getActivity(), GameActivity.class);
                     startActivity(intent);
                 }
             });

@@ -23,7 +23,7 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Random;
 
-public class RandomImagePage extends AppCompatActivity implements View.OnClickListener {
+public class GameActivity extends AppCompatActivity implements View.OnClickListener {
 
     private List<Game> games;
     private int puntos = 0, vidas = 3;
