@@ -15,6 +15,7 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import com.kevmartal.gamequiz.R;
+import com.kevmartal.gamequiz.activity.ActionDescriptionPage;
 import com.kevmartal.gamequiz.activity.GameActivity;
 
 public class FragPlay extends Fragment {
@@ -53,7 +54,7 @@ public class FragPlay extends Fragment {
                 @Override
                 public void onClick(View v) {
                     // Acción cuando se hace clic en el primer botón ("Modo Random")
-                    // Por ejemplo, inicia una nueva actividad
+                    // Crear un Intent para pasar al Activity GameActivity
                     Intent intent = new Intent(getActivity(), GameActivity.class);
                     startActivity(intent);
                 }
@@ -79,9 +80,12 @@ public class FragPlay extends Fragment {
             tercerBoton.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    // Acción cuando se hace clic en el tercer botón ("Si")
-                    // Muestra un Toast
-                    Toast.makeText(requireContext(), "Vidas Infinitas", Toast.LENGTH_SHORT).show();
+                    // Acción cuando se hace clic en el tercer botón ("Vidas Infinitas")
+                    // Crear un Intent para pasar al Activity GameActivity
+                    Intent intent = new Intent(getActivity(), GameActivity.class);
+                    // Agregar el parámetro String al intent
+                    intent.putExtra("category", "inf");
+                    startActivity(intent);
                 }
             });
         }

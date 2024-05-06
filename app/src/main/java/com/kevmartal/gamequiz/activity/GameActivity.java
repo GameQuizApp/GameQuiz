@@ -34,10 +34,19 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_random_image_page);
+        setContentView(R.layout.activity_game);
 
         puntosTxt = findViewById(R.id.puntosTxt);
         vidasTxt = findViewById(R.id.vidasTxt);
+
+        // Establecer los valores iniciales de puntos y vidas
+        puntosTxt.setText("0");
+        String category = getIntent().getStringExtra("category");
+        if (category == null || !category.equals("inf")) {
+            vidasTxt.setText("3");
+        } else {
+            vidasTxt.setText("∞");
+        }
 
         // Inicializar y configurar los botones de opción
         initializeOptionButtons();
@@ -151,11 +160,14 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
                 selectedButton.setBackgroundColor(getResources().getColor(R.color.verde));
                 puntos++;
                 puntosTxt.setText(String.valueOf(puntos));
-                // Mostrar mensaje de éxito si el jugador ha ganado una vida
-                if (puntos % 5 == 0) {
-                    showMessage("Has ganado una vida");
-                    vidas++;
-                    vidasTxt.setText(String.valueOf(vidas));
+                // Mostrar mensaje de éxito si el jugador ha ganado una vida, solo si la categoría no es "inf" o es nula
+                String category = getIntent().getStringExtra("category");
+                if (category == null || !category.equals("inf")) {
+                    if (puntos % 5 == 0) {
+                        showMessage("Has ganado una vida");
+                        vidas++;
+                        vidasTxt.setText(String.valueOf(vidas));
+                    }
                 }
             } else {
                 // Cambiar el color del botón seleccionado a naranja si es una respuesta incorrecta
@@ -163,9 +175,12 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
                 // Cambiar el color del botón correcto a verde
                 Button correctButton = getOptionButton(correctAnswerIndex);
                 correctButton.setBackgroundColor(getResources().getColor(R.color.verde));
-                // Restar una vida al jugador
-                vidas--;
-                vidasTxt.setText(String.valueOf(vidas));
+                // Restar una vida al jugador, solo si la categoría no es "inf" o es nula
+                String category = getIntent().getStringExtra("category");
+                if (category == null || !category.equals("inf")) {
+                    vidas--;
+                    vidasTxt.setText(String.valueOf(vidas));
+                }
             }
             // Deshabilitar los botones de opción después de seleccionar uno
             disableOptionButtons();
