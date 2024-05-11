@@ -54,12 +54,12 @@
                       style="@style/Titulo_game"
                       android:text="Acción"/>
 
-                  <ImageView
-                      android:id="@+id/guardar_juego"
-                      android:layout_marginTop="5dp"
-                      android:layout_width="wrap_content"
-                      android:layout_height="wrap_content"
-                      android:src="@drawable/guardar"/>
+                  <com.airbnb.lottie.LottieAnimationView
+                      android:id="@+id/save_btn"
+                      android:layout_width="40dp"
+                      android:layout_height="40dp"
+                      app:lottie_rawRes="@raw/animation_save"
+                        />
                </LinearLayout>
 
 

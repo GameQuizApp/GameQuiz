@@ -66,4 +66,7 @@ dependencies {
     implementation("com.google.firebase:firebase-auth-ktx")
 
     implementation("com.google.firebase:firebase-firestore:24.11.0") // La versión puede variar
+    // Shadows
+    implementation("com.github.dmytrodanylyk.shadow-layout:library:1.0.1") 
+
 }

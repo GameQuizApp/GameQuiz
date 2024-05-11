@@ -30,4 +30,5 @@
     <color name="azul_sign">#99CCFF</color>
     <color name="rojo_login">#FF9999</color>
     <color name="rojo_claro">#FFCCCC</color>
+    <color name="transparente">#00FFFFFF</color>
 </resources>

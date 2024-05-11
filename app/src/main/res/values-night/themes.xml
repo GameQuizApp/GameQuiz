@@ -69,4 +69,29 @@
         <!-- Status bar color. -->
         <item name="android:statusBarColor">@color/vino</item>
     </style>
+    <!-- HAY QUE MODIFICAR-->
+    <style name="Login_theme" parent="Theme.GameQuiz.DarkActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/purple_200</item>
+        <item name="colorPrimaryVariant">@color/gris_claro</item>
+        <item name="colorOnPrimary">@color/black</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/black</item>
+        <item name="colorSecondaryVariant">@color/black</item>
+        <item name="colorOnSecondary">@color/fucsia_700</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">@color/vino</item>
+    </style>
+    <style name="Signup_theme" parent="Theme.GameQuiz.DarkActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/purple_200</item>
+        <item name="colorPrimaryVariant">@color/gris_claro</item>
+        <item name="colorOnPrimary">@color/black</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/black</item>
+        <item name="colorSecondaryVariant">@color/black</item>
+        <item name="colorOnSecondary">@color/fucsia_700</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">@color/vino</item>
+    </style>
 </resources>

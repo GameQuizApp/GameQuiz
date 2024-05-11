@@ -6,31 +6,73 @@
     android:layout_height="match_parent"
     android:background="?attr/colorPrimary">
 
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="?attr/colorPrimary"
-        android:orientation="vertical"
         android:gravity="center"
-        android:padding="16dp"
-        tools:context=".fragment.FragPlay">
+        android:orientation="vertical">
 
-        <!-- Puedes ajustar la orientación y propiedades del LinearLayout según tus necesidades -->
-        <LinearLayout
-            android:id="@+id/linearLayout"
-            android:layout_width="match_parent"
+        <com.dd.ShadowLayout
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:background="@drawable/rounded_border">
+            android:backgroundTint="?attr/colorSecondary"
+            app:sl_shadowRadius="20dp"
+            app:sl_shadowColor="@color/black"
+            app:sl_cornerRadius="20dp">
 
-            <!-- Botones se agregarán dinámicamente en tiempo de ejecución -->
+            <Button
+                android:id="@+id/buttonRandom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:backgroundTint="@color/transparente"
+                android:text="Modo aleatorio"
+                android:textColor="?attr/colorPrimary"
+                android:textSize="16sp"
+                 />
 
-        </LinearLayout>
+        </com.dd.ShadowLayout>
+        <com.dd.ShadowLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="?attr/colorSecondary"
+            app:sl_shadowRadius="20dp"
+            app:sl_shadowColor="@color/black"
+            app:sl_cornerRadius="20dp">
 
+            <Button
+                android:id="@+id/buttonCharacters"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:backgroundTint="@color/transparente"
+                android:text="Solo personajes"
+                android:textColor="?attr/colorPrimary"
+                android:textSize="16sp"
+                />
+
+        </com.dd.ShadowLayout>
+        <com.dd.ShadowLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="?attr/colorSecondary"
+            app:sl_shadowRadius="20dp"
+            app:sl_shadowColor="@color/black"
+            app:sl_cornerRadius="20dp">
+
+            <Button
+                android:id="@+id/buttonInfinityLifes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:backgroundTint="@color/transparente"
+                android:text="Vidas infinitas"
+                android:textColor="?attr/colorPrimary"
+                android:textSize="16sp"
+                />
+
+        </com.dd.ShadowLayout>
     </LinearLayout>
 
-
-
 </RelativeLayout>
+
