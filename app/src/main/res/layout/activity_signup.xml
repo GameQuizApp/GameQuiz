@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/azul_sign"
+    android:background="?attr/colorPrimary"
     tools:context=".activity.Signup">
 
     <com.airbnb.lottie.LottieAnimationView
@@ -25,7 +25,7 @@
         android:layout_margin="8dp"
         android:alpha="0.8"
         android:elevation="20dp"
-        android:backgroundTint="@color/azul_claro"
+        android:backgroundTint="?attr/colorSecondary"
         app:cardCornerRadius="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -44,7 +44,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="20dp"
                 android:text="@string/signup"
-                android:textColor="@color/naranja_fuerte"
+                android:textColor="?attr/colorSecondaryVariant"
                 android:textSize="22sp"
                 android:textStyle="bold" />
                 <!--android:drawableRight="@drawable/x"-->
@@ -105,7 +105,7 @@
                 android:id="@+id/txt_passwd"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:alpha="0.6"
+
                 android:background="@drawable/background_edittext"
                 android:drawableEnd="@drawable/candado"
                 android:hint="@string/password"
@@ -120,7 +120,6 @@
                 android:id="@+id/txt_passwd_repeat"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:alpha="0.6"
                 android:background="@drawable/background_edittext"
                 android:drawableEnd="@drawable/candado"
                 android:hint="@string/confirm_password"
@@ -139,8 +138,8 @@
                 android:layout_height="wrap_content"
                 android:padding="15dp"
                 android:text="@string/signup"
-                android:backgroundTint="@color/azul_sign"
-                android:textColor="@color/naranja_fuerte"
+                android:backgroundTint="?attr/colorPrimary"
+                android:textColor="?attr/colorSecondaryVariant"
                 android:textStyle="bold"/>
 
             <LinearLayout
@@ -154,6 +153,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="50dp"
+                    android:textColor="@color/black"
                     android:text="@string/login_again" />
 
                 <TextView
@@ -161,7 +161,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/login"
-                    android:textColor="@color/naranja_fuerte"
+                    android:textColor="?attr/colorSecondaryVariant"
                     android:onClick="openLogin"
                     android:layout_marginStart="8dp"
                     />

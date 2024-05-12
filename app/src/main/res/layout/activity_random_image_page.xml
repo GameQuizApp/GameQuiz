@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="?attr/colorPrimaryVariant"
     tools:context=".activity.RandomImagePage">
 
     <LinearLayout
@@ -100,6 +101,7 @@
         app:layout_constraintTop_toBottomOf="@id/cardViewImages">
 
         <Button
+            android:textColor="@color/white"
             android:id="@+id/optionButton1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -108,6 +110,7 @@
             android:layout_marginTop="16dp" />
 
         <Button
+            android:textColor="@color/white"
             android:id="@+id/optionButton2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -117,6 +120,7 @@
             />
 
         <Button
+            android:textColor="@color/white"
             android:id="@+id/optionButton3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -126,6 +130,7 @@
             />
 
         <Button
+            android:textColor="@color/white"
             android:id="@+id/optionButton4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

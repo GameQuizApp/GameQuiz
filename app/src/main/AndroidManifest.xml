@@ -25,7 +25,7 @@
             android:exported="true"
             android:label="Juegos Randoms"
             android:parentActivityName=".activity.Main"
-            android:theme="@style/TemaPruebaNice" />
+            android:theme="@style/RandomPageTheme" />
         <activity
             android:name=".activity.TerrorPage"
             android:exported="true"
@@ -52,10 +52,12 @@
             android:theme="@style/TemaPruebaNice" />
         <activity
             android:name=".activity.Signup"
-            android:exported="true" />
+            android:exported="true"
+            android:theme="@style/Signup_theme"/>
         <activity
             android:name=".activity.Login"
-            android:exported="true" />
+            android:exported="true"
+            android:theme="@style/Login_theme"/>
         <activity
             android:name=".activity.Main"
             android:exported="true" />

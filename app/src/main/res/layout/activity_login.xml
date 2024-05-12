@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/rojo_login"
+    android:background="?attr/colorPrimary"
     tools:context="com.kevmartal.gamequiz.activity.Login">
 
     <com.airbnb.lottie.LottieAnimationView
@@ -25,7 +25,7 @@
         android:layout_margin="8dp"
         android:alpha="0.8"
         android:elevation="20dp"
-        android:backgroundTint="@color/rojo_claro"
+        android:backgroundTint="?attr/colorSecondary"
         app:cardCornerRadius="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -44,7 +44,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="20dp"
                 android:text="@string/login"
-                android:textColor="@color/vino"
+                android:textColor="?attr/colorPrimaryVariant"
                 android:textSize="22sp"
                 android:textStyle="bold" />
                 <!--android:drawableEnd="@drawable/x"-->
@@ -96,7 +96,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="25dp"
-                    android:buttonTint="@color/rojo_login"
+                    android:buttonTint="?attr/colorPrimary"
                     android:text="@string/remember" />
 
                 <TextView
@@ -111,8 +111,8 @@
                 android:layout_height="wrap_content"
                 android:padding="15dp"
                 android:text="@string/login"
-                android:backgroundTint="@color/rojo_login"
-                android:textColor="@color/vino"
+                android:backgroundTint="?attr/colorPrimary"
+                android:textColor="?attr/colorPrimaryVariant"
                 android:textStyle="bold"/>
 
             <LinearLayout
@@ -133,7 +133,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/signup"
-                    android:textColor="@color/naranja_fuerte"
+                    android:textColor="?attr/colorSecondaryVariant"
                     android:onClick="openRegister"
                     android:layout_marginStart="8dp"
                     />
