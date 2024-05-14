@@ -23,7 +23,7 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Random;
 
-public class RandomImagePage extends AppCompatActivity implements View.OnClickListener {
+public class GameActivity extends AppCompatActivity implements View.OnClickListener {
 
     private List<Game> games;
     private int puntos = 0, vidas = 3;
@@ -34,10 +34,19 @@ public class RandomImagePage extends AppCompatActivity implements View.OnClickLi
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_random_image_page);
+        setContentView(R.layout.activity_game);
 
         puntosTxt = findViewById(R.id.puntosTxt);
         vidasTxt = findViewById(R.id.vidasTxt);
+
+        // Establecer los valores iniciales de puntos y vidas
+        puntosTxt.setText("0");
+        String category = getIntent().getStringExtra("category");
+        if (category == null || !category.equals("inf")) {
+            vidasTxt.setText("3");
+        } else {
+            vidasTxt.setText("∞");
+        }
 
         // Inicializar y configurar los botones de opción
         initializeOptionButtons();
@@ -68,12 +77,25 @@ public class RandomImagePage extends AppCompatActivity implements View.OnClickLi
     }
 
     private void loadGamesFromFirestore() {
+        String category = getIntent().getStringExtra("category");
         FirestoreManager firestoreManager = new FirestoreManager();
         firestoreManager.getGames(new FirestoreManager.FirestoreCallback() {
             @Override
             public void onSuccess(List<Game> gameList) {
-                games = gameList;
-                showNextQuestion();
+                if (category != null && category.equals("action")) {
+                    // Filtrar los juegos por la categoría "action"
+                    games = filterGamesByCategory(gameList, "action");
+                } else {
+                    // Usar todos los juegos si no se especifica una categoría existente
+                    games = gameList;
+                }
+
+                if (!games.isEmpty()) {
+                    showNextQuestion();
+                } else {
+                    showMessage("No hay juegos disponibles");
+                    finish();
+                }
             }
 
             @Override
@@ -82,6 +104,16 @@ public class RandomImagePage extends AppCompatActivity implements View.OnClickLi
                 finish();
             }
         });
+    }
+
+    private List<Game> filterGamesByCategory(List<Game> games, String category) {
+        List<Game> filteredGames = new ArrayList<>();
+        for (Game game : games) {
+            if (game.getCategories() != null && game.getCategories().contains(category)) {
+                filteredGames.add(game);
+            }
+        }
+        return filteredGames;
     }
 
     private void showNextQuestion() {
@@ -128,11 +160,14 @@ public class RandomImagePage extends AppCompatActivity implements View.OnClickLi
                 selectedButton.setBackgroundColor(getResources().getColor(R.color.verde));
                 puntos++;
                 puntosTxt.setText(String.valueOf(puntos));
-                // Mostrar mensaje de éxito si el jugador ha ganado una vida
-                if (puntos % 5 == 0) {
-                    showMessage("Has ganado una vida");
-                    vidas++;
-                    vidasTxt.setText(String.valueOf(vidas));
+                // Mostrar mensaje de éxito si el jugador ha ganado una vida, solo si la categoría no es "inf" o es nula
+                String category = getIntent().getStringExtra("category");
+                if (category == null || !category.equals("inf")) {
+                    if (puntos % 5 == 0) {
+                        showMessage("Has ganado una vida");
+                        vidas++;
+                        vidasTxt.setText(String.valueOf(vidas));
+                    }
                 }
             } else {
                 // Cambiar el color del botón seleccionado a naranja si es una respuesta incorrecta
@@ -140,9 +175,12 @@ public class RandomImagePage extends AppCompatActivity implements View.OnClickLi
                 // Cambiar el color del botón correcto a verde
                 Button correctButton = getOptionButton(correctAnswerIndex);
                 correctButton.setBackgroundColor(getResources().getColor(R.color.verde));
-                // Restar una vida al jugador
-                vidas--;
-                vidasTxt.setText(String.valueOf(vidas));
+                // Restar una vida al jugador, solo si la categoría no es "inf" o es nula
+                String category = getIntent().getStringExtra("category");
+                if (category == null || !category.equals("inf")) {
+                    vidas--;
+                    vidasTxt.setText(String.valueOf(vidas));
+                }
             }
             // Deshabilitar los botones de opción después de seleccionar uno
             disableOptionButtons();

@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="?attr/colorPrimaryVariant"
-    tools:context=".activity.RandomImagePage">
+    tools:context=".activity.GameActivity">
 
     <LinearLayout
         android:id="@+id/linearIcon"
@@ -30,7 +29,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
-            android:text="0"
             android:textSize="24sp" />
 
         <View
@@ -43,7 +41,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="8dp"
-            android:text="3"
             android:textSize="24sp" />
 
         <ImageView
@@ -101,7 +98,6 @@
         app:layout_constraintTop_toBottomOf="@id/cardViewImages">
 
         <Button
-            android:textColor="@color/white"
             android:id="@+id/optionButton1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -110,7 +106,6 @@
             android:layout_marginTop="16dp" />
 
         <Button
-            android:textColor="@color/white"
             android:id="@+id/optionButton2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -120,7 +115,6 @@
             />
 
         <Button
-            android:textColor="@color/white"
             android:id="@+id/optionButton3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -130,7 +124,6 @@
             />
 
         <Button
-            android:textColor="@color/white"
             android:id="@+id/optionButton4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

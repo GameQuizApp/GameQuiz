@@ -12,12 +12,10 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-import com.airbnb.lottie.LottieAnimationView;
 import com.kevmartal.gamequiz.R;
 
 public class ActionDescriptionPage extends AppCompatActivity {
-    private boolean switchOn= false,btn_save=false;
-    LottieAnimationView lottieSave;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,29 +30,30 @@ public class ActionDescriptionPage extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent= new Intent(ActionDescriptionPage.this, RandomImagePage.class);
+                // Crear un Intent para pasar al Activity GameActivity
+                Intent intent = new Intent(ActionDescriptionPage.this, GameActivity.class);
+                // Agregar el parámetro String al intent
+                intent.putExtra("category", "action");
                 startActivity(intent);
             }
         });
-        //VISTA ANIMATION VIEW CLICK
-        lottieSave=findViewById(R.id.save_btn);
 
-        lottieSave.setOnClickListener(new View.OnClickListener() {
+        ImageView imageButton = findViewById(R.id.guardar_juego);
+        imageButton.setOnClickListener(new View.OnClickListener() {
+            boolean isFavorito = false;
+
             @Override
             public void onClick(View v) {
-                if(switchOn){
-                    lottieSave.setMinAndMaxProgress(0.0f,0.0f);
-                    lottieSave.playAnimation();
-                    switchOn=false;
-                }else{
-                    lottieSave.setMinAndMaxProgress(0.0f,1.0f);
-                    lottieSave.playAnimation();
-                    switchOn=true;
+                if (isFavorito) {
+                    // Si ya es favorito, cambia a la imagen no favorita
+                    imageButton.setImageResource(R.drawable.guardar);
+                    isFavorito = false;
+                } else {
+                    // Si no es favorito, cambia a la imagen favorita
+                    imageButton.setImageResource(R.drawable.guardado_black);
+                    isFavorito = true;
                 }
             }
         });
-
-
-
     }
 }
