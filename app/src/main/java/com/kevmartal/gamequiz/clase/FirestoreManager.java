@@ -33,7 +33,8 @@ public class FirestoreManager {
                 for (QueryDocumentSnapshot document : queryDocumentSnapshots) {
                     String name = document.getString("name");
                     String imageUrl = document.getString("imageUrl");
-                    Game game = new Game(name, imageUrl);
+                    List<String> categories = (List<String>) document.get("categories");
+                    Game game = new Game(name, imageUrl, categories);
                     games.add(game);
                 }
                 callback.onSuccess(games);

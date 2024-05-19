@@ -15,7 +15,10 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import com.kevmartal.gamequiz.R;
-import com.kevmartal.gamequiz.activity.RandomImagePage;
+import com.kevmartal.gamequiz.activity.ActionDescriptionPage;
+import com.kevmartal.gamequiz.activity.GameActivity;
+
+import java.util.Objects;
 
 public class FragPlay extends Fragment {
 
@@ -35,17 +38,32 @@ public class FragPlay extends Fragment {
         super.onViewCreated(view, savedInstanceState);
 
         Button buttonRandom = view.findViewById(R.id.buttonRandom);
+        Button buttonInf = view.findViewById(R.id.buttonInfinityLifes);
+
         buttonRandom.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 // Código para iniciar la nueva actividad aquí
-                Intent intent = new Intent(getActivity(), RandomImagePage.class);
+                Intent intent = new Intent(getActivity(), GameActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        buttonInf.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Crear un Intent para pasar al Activity GameActivity
+                Intent intent = new Intent(getActivity(), GameActivity.class);
+                // Agregar el parámetro String al intent
+                intent.putExtra("category", "inf");
                 startActivity(intent);
             }
         });
     }
 
 }
+
+
 
 
 

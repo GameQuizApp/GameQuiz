@@ -32,7 +32,10 @@ public class ActionDescriptionPage extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent= new Intent(ActionDescriptionPage.this, RandomImagePage.class);
+                // Crear un Intent para pasar al Activity GameActivity
+                Intent intent = new Intent(ActionDescriptionPage.this, GameActivity.class);
+                // Agregar el parámetro String al intent
+                intent.putExtra("category", "action");
                 startActivity(intent);
             }
         });

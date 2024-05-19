@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="?attr/colorPrimaryVariant"
-    tools:context=".activity.RandomImagePage">
+    tools:context=".activity.GameActivity">
 
     <LinearLayout
         android:id="@+id/linearIcon"
@@ -30,8 +29,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
-            android:text="0"
-            android:textColor="?attr/colorSecondary"
             android:textSize="24sp" />
 
         <View
@@ -44,8 +41,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="8dp"
-            android:text="3"
-            android:textColor="?attr/colorSecondary"
             android:textSize="24sp" />
 
         <ImageView
