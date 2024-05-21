@@ -26,9 +26,8 @@ import java.util.Random;
 public class GameActivity extends AppCompatActivity implements View.OnClickListener {
 
     private List<Game> games;
-    private int puntos = 0, vidas = 3;
+    private int puntos = 0, vidas = 3, correctAnswerIndex;
     private TextView puntosTxt, vidasTxt;
-    private int correctAnswerIndex;
     private List<Button> optionButtons;
 
     @Override
@@ -85,8 +84,8 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
                 if (category != null && category.equals("action")) {
                     // Filtrar los juegos por la categoría "action"
                     games = filterGamesByCategory(gameList, "action");
-                } else {
-                    // Usar todos los juegos si no se especifica una categoría existente
+                } else if (category != null && (category.equals("inf") || category.equals("randGames"))) {
+                    // Usar todos los juegos si la categoría es "inf" o "randGames"
                     games = gameList;
                 }
 
