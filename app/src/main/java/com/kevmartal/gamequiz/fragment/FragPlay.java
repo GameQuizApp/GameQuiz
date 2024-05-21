@@ -43,8 +43,10 @@ public class FragPlay extends Fragment {
         buttonRandom.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Código para iniciar la nueva actividad aquí
+                // Crear un Intent para pasar al Activity GameActivity
                 Intent intent = new Intent(getActivity(), GameActivity.class);
+                // Agregar el parámetro String al intent
+                intent.putExtra("category", "randomGames");
                 startActivity(intent);
             }
         });
