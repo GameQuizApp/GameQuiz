@@ -87,7 +87,13 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
             firestoreManager.getGames(new FirestoreManager.FirestoreCallbackGames() {
                 @Override
                 public void onSuccess(List<Game> gameList) {
-                    games = gameList;
+                    if (category != null && category.equals("action")) {
+                        // Filtrar los juegos por la categoría "action"
+                        games = filterGamesByCategory(gameList, "action");
+                    } else {
+                        // Usar todos los juegos si no se especifica una categoría existente
+                        games = gameList;
+                    }
 
                     if (!games.isEmpty()) {
                         showNextContent();
@@ -96,7 +102,6 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
                         finish();
                     }
                 }
-
                 @Override
                 public void onFailure(Exception e) {
                     showMessage("Error al obtener los juegos");
@@ -125,6 +130,16 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
                 }
             });
         }
+    }
+
+    private List<Game> filterGamesByCategory(List<Game> games, String category) {
+        List<Game> filteredGames = new ArrayList<>();
+        for (Game game : games) {
+            if (game.getCategories() != null && game.getCategories().contains(category)) {
+                filteredGames.add(game);
+            }
+        }
+        return filteredGames;
     }
 
     private void showNextContent() {
@@ -196,84 +211,61 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
     private void handleContentSelection(int selectedOptionIndex) {
         Button selectedButton = getOptionButton(selectedOptionIndex);
 
-        if (category != null && category.equals("characters")) {
-            if (characters != null && !characters.isEmpty()) {
-                if (selectedOptionIndex == correctAnswerIndex) {
-                    // Cambiar el color del botón seleccionado a verde si es la respuesta correcta
-                    selectedButton.setBackgroundTintList(AppCompatResources.getColorStateList(this, R.color.verde));
-                    puntos++;
-                    puntosTxt.setText(String.valueOf(puntos));
-                    // Manejo de vidas
-                    if (puntos % 5 == 0) {
-                        showMessage("Has ganado una vida");
-                        vidas++;
-                        vidasTxt.setText(String.valueOf(vidas));
-                    }
-                } else {                    // Cambiar el color del botón seleccionado a naranja si es una respuesta incorrecta
-                    selectedButton.setBackgroundTintList(AppCompatResources.getColorStateList(this, R.color.naranja_fuerte));
-                    // Cambiar el color del botón correcto a verde
-                    Button correctButton = getOptionButton(correctAnswerIndex);
-                    correctButton.setBackgroundTintList(AppCompatResources.getColorStateList(this, R.color.verde_amarillo));
-                    // Manejo de vidas
+        if ((games != null && !games.isEmpty()) || (characters != null && !characters.isEmpty())) {
+            if (selectedOptionIndex == correctAnswerIndex) {
+                // Cambiar el fondo del botón seleccionado a verde si es la respuesta correcta
+                selectedButton.setBackgroundTintList(AppCompatResources.getColorStateList(this, R.color.verde));
+                puntos++;
+                puntosTxt.setText(String.valueOf(puntos));
+                // Mostrar mensaje de éxito si el jugador ha ganado una vida, solo si la categoría no es "inf" o es nula
+                if (category == null || !category.equals("inf")) {
+                if (puntos % 5 == 0) {
+                    showMessage("Has ganado una vida");
+                    vidas++;
+                    vidasTxt.setText(String.valueOf(vidas));
+                }
+                }
+            } else {
+                // Cambiar el fondo del botón seleccionado a naranja si es una respuesta incorrecta
+                selectedButton.setBackgroundTintList(AppCompatResources.getColorStateList(this, R.color.naranja_fuerte));
+                // Cambiar el fondo del botón correcto a verde
+                Button correctButton = getOptionButton(correctAnswerIndex);
+                correctButton.setBackgroundTintList(AppCompatResources.getColorStateList(this, R.color.verde_amarillo));
+                // Manejo de vidas
+                if (category == null || !category.equals("inf")) {
                     vidas--;
                     vidasTxt.setText(String.valueOf(vidas));
                 }
-                // Deshabilitar los botones de opción después de seleccionar uno
-                disableOptionButtons();
-                // Comprobar vidas después de cada respuesta
-                if (vidas > 0) {
-                    if (characters.size() >= 4) {
-                        new Handler().postDelayed(this::showNextContent, 2000);
+            }
+            // Deshabilitar los botones de opción después de seleccionar uno
+            disableOptionButtons();
+            // Comprobar vidas después de cada respuesta
+            if (vidas > 0) {
+                if (category != null && category.equals("characters")) {
+                    // Verificar si hay suficientes personajes para generar más preguntas
+                    if (characters != null && characters.size() >= 4) {
+                        // La lista de personajes tiene 4 o más personajes para seguir generando preguntas
+                        new Handler().postDelayed(this::showNextContent, 1300);
                     } else {
+                        // No hay suficientes personajes, mostrar mensaje y finalizar actividad
                         showResultMessage("ganado");
                     }
                 } else {
-                    showResultMessage("perdido");
+                    // Verificar si hay suficientes juegos para generar más preguntas
+                    if (games != null && games.size() >= 4) {
+                        // La lista de juegos tiene 4 o más juegos para seguir generando preguntas
+                        new Handler().postDelayed(this::showNextContent, 1300);
+                    } else {
+                        // No hay suficientes juegos, mostrar mensaje y finalizar actividad
+                        showResultMessage("ganado");
+                    }
                 }
             } else {
-                showMessage("NO HAY MÁS PERSONAJES DISPONIBLES");
-                finish();
+                showResultMessage("perdido");
             }
         } else {
-            if (games != null && !games.isEmpty()) {
-                if (selectedOptionIndex == correctAnswerIndex) {
-                    // Cambiar el fondo del botón seleccionado a verde si es la respuesta correcta
-                    selectedButton.setBackgroundTintList(AppCompatResources.getColorStateList(this, R.color.verde));
-                    puntos++;
-                    puntosTxt.setText(String.valueOf(puntos));
-                    // Mostrar mensaje de éxito si el jugador ha ganado una vida, solo si la categoría no es "inf" o es nula
-                    if (category == null || !category.equals("inf")) {
-                        if (puntos % 5 == 0) {
-                            showMessage("Has ganado una vida");
-                            vidas++;
-                            vidasTxt.setText(String.valueOf(vidas));
-                        }
-                    }
-                } else {
-                    // Cambiar el fondo del botón seleccionado a naranja si es una respuesta incorrecta
-                    selectedButton.setBackgroundTintList(AppCompatResources.getColorStateList(this, R.color.naranja_fuerte));
-                    // Cambiar el fondo del botón correcto a verde
-                    Button correctButton = getOptionButton(correctAnswerIndex);
-                    correctButton.setBackgroundTintList(AppCompatResources.getColorStateList(this, R.color.verde_amarillo));
-                }
-                // Deshabilitar los botones de opción después de seleccionar uno
-                disableOptionButtons();
-                // Comprobar vidas después de cada respuesta
-                if (vidas > 0) {
-                    if (games.size() >= 4) {
-                        // La lista de juegos tiene 4 o más juegos para seguir generando preguntas
-                        new Handler().postDelayed(this::showNextContent, 2000);
-                    } else {
-                        // No quedan juegos suficientes para generar más preguntas
-                        showResultMessage("ganado");
-                    }
-                } else {
-                    showResultMessage("perdido");
-                }
-            } else {
-                showMessage("NO HAY MÁS JUEGOS DISPONIBLES");
-                finish();
-            }
+            showMessage("ERROR EN LA CARGA DE DATOS");
+            finish();
         }
     }
 
