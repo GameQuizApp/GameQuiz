@@ -2,6 +2,7 @@ package com.kevmartal.gamequiz.activity;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.content.res.AppCompatResources;
 
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
@@ -156,11 +157,11 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
 
         if (games != null && !games.isEmpty()) {
             if (selectedOptionIndex == correctAnswerIndex) {
-                // Cambiar el color del botón seleccionado a verde si es la respuesta correcta
-                selectedButton.setBackgroundColor(getResources().getColor(R.color.verde));
+                // Cambia el color del botón seleccionado a verde si es la respuesta correcta
+                selectedButton.setBackgroundTintList(AppCompatResources.getColorStateList(this, R.color.verde));
                 puntos++;
                 puntosTxt.setText(String.valueOf(puntos));
-                // Mostrar mensaje de éxito si el jugador ha ganado una vida, solo si la categoría no es "inf" o es nula
+                // Manejo de vidas
                 String category = getIntent().getStringExtra("category");
                 if (category == null || !category.equals("inf")) {
                     if (puntos % 5 == 0) {
@@ -170,12 +171,12 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
                     }
                 }
             } else {
-                // Cambiar el color del botón seleccionado a naranja si es una respuesta incorrecta
-                selectedButton.setBackgroundColor(getResources().getColor(R.color.naranja));
-                // Cambiar el color del botón correcto a verde
+                // Cambia el color del botón seleccionado a naranja si es una respuesta incorrecta
+                selectedButton.setBackgroundTintList(AppCompatResources.getColorStateList(this, R.color.naranja_fuerte));
+                // Cambia el color del botón correcto a verde
                 Button correctButton = getOptionButton(correctAnswerIndex);
-                correctButton.setBackgroundColor(getResources().getColor(R.color.verde));
-                // Restar una vida al jugador, solo si la categoría no es "inf" o es nula
+                correctButton.setBackgroundTintList(AppCompatResources.getColorStateList(this, R.color.verde_amarillo));
+                // Manejo de vidas
                 String category = getIntent().getStringExtra("category");
                 if (category == null || !category.equals("inf")) {
                     vidas--;
@@ -187,10 +188,8 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
             // Comprobar vidas después de cada respuesta
             if (vidas > 0) {
                 if (games.size() >= 4) {
-                    // La lista de juegos tiene 4 o más juegos para seguir generando preguntas
-                    new Handler().postDelayed(this::showNextQuestion, 1000);
+                    new Handler().postDelayed(this::showNextQuestion, 2000);
                 } else {
-                    // No quedan juegos suficientes para generar más preguntas
                     showResultMessage("ganado");
                 }
             } else {
@@ -227,10 +226,10 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     private void restoreButtonColors() {
-        findViewById(R.id.optionButton1).setBackgroundColor(getResources().getColor(R.color.vino));
-        findViewById(R.id.optionButton2).setBackgroundColor(getResources().getColor(R.color.vino));
-        findViewById(R.id.optionButton3).setBackgroundColor(getResources().getColor(R.color.vino));
-        findViewById(R.id.optionButton4).setBackgroundColor(getResources().getColor(R.color.vino));
+        for (Button button : optionButtons) {
+            // Utiliza el atributo de fondo original de los botones definidos en el estilo
+            button.setBackgroundTintList(AppCompatResources.getColorStateList(this, R.color.vino));
+        }
     }
 
     private void enableOptionButtons() {
