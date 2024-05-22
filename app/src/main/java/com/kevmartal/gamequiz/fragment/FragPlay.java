@@ -38,6 +38,7 @@ public class FragPlay extends Fragment {
         super.onViewCreated(view, savedInstanceState);
 
         Button buttonRandom = view.findViewById(R.id.buttonRandom);
+        Button buttonCharacter = view.findViewById(R.id.buttonCharacters);
         Button buttonInf = view.findViewById(R.id.buttonInfinityLifes);
 
         buttonRandom.setOnClickListener(new View.OnClickListener() {
@@ -45,8 +46,17 @@ public class FragPlay extends Fragment {
             public void onClick(View v) {
                 // Crear un Intent para pasar al Activity GameActivity
                 Intent intent = new Intent(getActivity(), GameActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        buttonCharacter.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Crear un Intent para pasar al Activity GameActivity
+                Intent intent = new Intent(getActivity(), GameActivity.class);
                 // Agregar el parámetro String al intent
-                intent.putExtra("category", "randomGames");
+                intent.putExtra("category", "characters");
                 startActivity(intent);
             }
         });
