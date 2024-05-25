@@ -16,10 +16,25 @@
         android:theme="@style/Theme.GameQuiz.NoActionBar"
         tools:targetApi="31">
         <activity
+            android:name=".activity.TerrorDescriptionPage"
+            android:exported="false"
+            android:parentActivityName=".activity.Main"
+            android:theme="@style/Description_theme"/>
+        <activity
+            android:name=".activity.ZombiesDescriptionPage"
+            android:exported="false"
+            android:parentActivityName=".activity.Main"
+            android:theme="@style/Description_theme"/>
+        <activity
+            android:name=".activity.RockstarDescriptionPage"
+            android:exported="false"
+            android:parentActivityName=".activity.Main"
+            android:theme="@style/Description_theme"/>
+        <activity
             android:name=".activity.ActionDescriptionPage"
             android:exported="true"
             android:parentActivityName=".activity.Main"
-            android:theme="@style/Description_theme"/>
+            android:theme="@style/Description_theme" />
         <activity
             android:name=".activity.GameActivity"
             android:exported="true"
@@ -29,11 +44,11 @@
         <activity
             android:name=".activity.Signup"
             android:exported="true"
-            android:theme="@style/Signup_theme"/>
+            android:theme="@style/Signup_theme" />
         <activity
             android:name=".activity.Login"
             android:exported="true"
-            android:theme="@style/Login_theme"/>
+            android:theme="@style/Login_theme" />
         <activity
             android:name=".activity.Main"
             android:exported="true" />

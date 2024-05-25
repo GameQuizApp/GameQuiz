@@ -377,7 +377,7 @@ tools:context=".fragment.FragHome">
 
                 <androidx.cardview.widget.CardView
                     style="@style/CardView_grande"
-                    android:id="@+id/cardViewTwd"
+                    android:id="@+id/cardViewZombies"
                     android:layout_width="200dp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="20dp"
@@ -691,7 +691,7 @@ tools:context=".fragment.FragHome">
 
                 <androidx.cardview.widget.CardView
                     style="@style/CardView_grande"
-                    android:id="@+id/cardViewLethalC"
+                    android:id="@+id/cardViewTerror"
                     android:layout_width="200dp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="20dp"

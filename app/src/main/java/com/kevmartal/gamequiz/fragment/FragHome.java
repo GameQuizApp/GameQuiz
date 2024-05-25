@@ -16,6 +16,9 @@ import android.widget.TextView;
 import com.google.android.material.bottomsheet.BottomSheetDialog;
 import com.kevmartal.gamequiz.activity.ActionDescriptionPage;
 import com.kevmartal.gamequiz.R;
+import com.kevmartal.gamequiz.activity.RockstarDescriptionPage;
+import com.kevmartal.gamequiz.activity.TerrorDescriptionPage;
+import com.kevmartal.gamequiz.activity.ZombiesDescriptionPage;
 
 import org.checkerframework.checker.nullness.qual.NonNull;
 import org.checkerframework.checker.nullness.qual.Nullable;
@@ -533,9 +536,9 @@ public class FragHome extends Fragment {
         super.onViewCreated(view, savedInstanceState);
 
         CardView EnlaceAction= view.findViewById(R.id.cardViewCyberpunk);
-        TextView EnlaceRockstar= view.findViewById(R.id.TextViewEnlaceRockstar);
-        TextView EnlaceZombies= view.findViewById(R.id.TextviewEnlaceZombies);
-        TextView EnlaceTerror= view.findViewById(R.id.TextviewEnlaceTerror);
+        CardView EnlaceRockstar= view.findViewById(R.id.cardViewRockstar);
+        CardView EnlaceZombies= view.findViewById(R.id.cardViewZombies);
+        CardView EnlaceTerror= view.findViewById(R.id.cardViewTerror);
         EnlaceAction.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -547,6 +550,47 @@ public class FragHome extends Fragment {
                 startActivity(intent);
             }
         });
+
+        EnlaceRockstar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                // Crear un Intent para iniciar la nueva actividad
+                Intent intent = new Intent(getContext(), RockstarDescriptionPage.class);
+
+                // Iniciar la nueva actividad
+                startActivity(intent);
+            }
+        });
+
+        EnlaceZombies.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                // Crear un Intent para iniciar la nueva actividad
+                Intent intent = new Intent(getContext(), ZombiesDescriptionPage.class);
+
+                // Iniciar la nueva actividad
+                startActivity(intent);
+            }
+        });
+
+        EnlaceTerror.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                // Crear un Intent para iniciar la nueva actividad
+                Intent intent = new Intent(getContext(), TerrorDescriptionPage.class);
+
+                // Iniciar la nueva actividad
+                startActivity(intent);
+            }
+        });
+
+
+
+
+
 
 
         //ENLACE DE LAS CATEGORÍAS
