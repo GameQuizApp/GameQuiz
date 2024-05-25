@@ -2,6 +2,7 @@ package com.kevmartal.gamequiz.activity;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.content.res.AppCompatResources;
 
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
@@ -15,6 +16,7 @@ import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.google.android.material.snackbar.Snackbar;
 import com.kevmartal.gamequiz.R;
+import com.kevmartal.gamequiz.clase.Character;
 import com.kevmartal.gamequiz.clase.FirestoreManager;
 import com.kevmartal.gamequiz.clase.Game;
 
@@ -26,10 +28,12 @@ import java.util.Random;
 public class GameActivity extends AppCompatActivity implements View.OnClickListener {
 
     private List<Game> games;
+    private List<Character> characters;
     private int puntos = 0, vidas = 3;
     private TextView puntosTxt, vidasTxt;
     private int correctAnswerIndex;
     private List<Button> optionButtons;
+    private String category;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,7 +45,7 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
 
         // Establecer los valores iniciales de puntos y vidas
         puntosTxt.setText("0");
-        String category = getIntent().getStringExtra("category");
+        category = getIntent().getStringExtra("category");
         if (category == null || !category.equals("inf")) {
             vidasTxt.setText("3");
         } else {
@@ -51,8 +55,8 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
         // Inicializar y configurar los botones de opción
         initializeOptionButtons();
 
-        // Cargar los juegos desde Firestore al iniciar la actividad
-        loadGamesFromFirestore();
+        // Cargar los contenidos desde Firestore al iniciar la actividad
+        loadContentFromFirestore();
     }
 
     // Método para inicializar y configurar los botones de opción
@@ -73,37 +77,59 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View v) {
         // Obtener el índice de la opción seleccionada a partir del botón
         int selectedOptionIndex = optionButtons.indexOf((Button) v);
-        handleAnswerSelection(selectedOptionIndex);
+        handleContentSelection(selectedOptionIndex);
     }
 
-    private void loadGamesFromFirestore() {
-        String category = getIntent().getStringExtra("category");
+    private void loadContentFromFirestore() {
         FirestoreManager firestoreManager = new FirestoreManager();
-        firestoreManager.getGames(new FirestoreManager.FirestoreCallback() {
-            @Override
-            public void onSuccess(List<Game> gameList) {
-                if (category != null && category.equals("action")) {
-                    // Filtrar los juegos por la categoría "action"
-                    games = filterGamesByCategory(gameList, "action");
-                } else {
-                    // Usar todos los juegos si no se especifica una categoría existente
-                    games = gameList;
-                }
+        if (category == null || !category.equals("characters")) {
+            // Cargar juegos
+            firestoreManager.getGames(new FirestoreManager.FirestoreCallbackGames() {
+                @Override
+                public void onSuccess(List<Game> gameList) {
+                    if (category != null && category.equals("action")) {
+                        // Filtrar los juegos por la categoría "action"
+                        games = filterGamesByCategory(gameList, "action");
+                    } else {
+                        // Usar todos los juegos si no se especifica una categoría existente
+                        games = gameList;
+                    }
 
-                if (!games.isEmpty()) {
-                    showNextQuestion();
-                } else {
-                    showMessage("No hay juegos disponibles");
+                    if (!games.isEmpty()) {
+                        showNextContent();
+                    } else {
+                        showMessage("No hay juegos disponibles");
+                        finish();
+                    }
+                }
+                @Override
+                public void onFailure(Exception e) {
+                    showMessage("Error al obtener los juegos");
                     finish();
                 }
-            }
+            });
+        } else {
+            // Cargar personajes
+            firestoreManager.getCharacters(new FirestoreManager.FirestoreCallbackCharacters() {
+                @Override
+                public void onSuccess(List<Character> characterList) {
+                    characters = characterList;
 
-            @Override
-            public void onFailure(Exception e) {
-                showMessage("Error al obtener los juegos");
-                finish();
-            }
-        });
+                    if (!characters.isEmpty()) {
+                        showNextContent();
+                    } else {
+                        showMessage("No hay personajes disponibles");
+                        finish();
+                    }
+                }
+
+                @Override
+                public void onFailure(Exception e) {
+                    showMessage("Error al obtener los personajes");
+                    finish();
+                }
+            });
+        }
     }
 
     private List<Game> filterGamesByCategory(List<Game> games, String category) {
@@ -116,67 +142,96 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
         return filteredGames;
     }
 
-    private void showNextQuestion() {
+    private void showNextContent() {
         // Restaurar los colores originales de los botones y habilitarlos
         restoreButtonColors();
         enableOptionButtons();
 
-        if (games != null && !games.isEmpty()) {
-            // Seleccionar aleatoriamente 4 juegos para la pregunta actual
-            List<Game> selectedGames = getRandomGames(games);
-            // Seleccionar aleatoriamente el índice del juego correcto
-            correctAnswerIndex = new Random().nextInt(4);
+        if (category != null && category.equals("characters")) {
+            if (characters != null && !characters.isEmpty()) {
+                // Seleccionar aleatoriamente 4 personajes para la pregunta actual
+                List<Character> selectedCharacters = getRandomCharacters(characters);
+                // Seleccionar aleatoriamente el índice del personaje correcto
+                correctAnswerIndex = new Random().nextInt(4);
 
-            // Obtener el juego correcto y mostrar su imagen
-            Game correctGame = selectedGames.get(correctAnswerIndex);
-            loadImage(correctGame.getImageUrl());
+                // Obtener el personaje correcto y mostrar su imagen
+                Character correctCharacter = selectedCharacters.get(correctAnswerIndex);
+                loadImage(correctCharacter.getImageUrl());
 
-            // Asignar el nombre del juego correcto al botón correspondiente
-            Button correctButton = getOptionButton(correctAnswerIndex);
-            correctButton.setText(correctGame.getName());
+                // Asignar el nombre del personaje correcto al botón correspondiente
+                Button correctButton = getOptionButton(correctAnswerIndex);
+                correctButton.setText(correctCharacter.getName());
 
-            // Asignar los nombres de los otros juegos a los botones restantes
-            for (int i = 0; i < 4; i++) {
-                if (i != correctAnswerIndex) {
-                    Button optionButton = getOptionButton(i);
-                    optionButton.setText(selectedGames.get(i).getName());
+                // Asignar los nombres de los otros personajes a los botones restantes
+                for (int i = 0; i < 4; i++) {
+                    if (i != correctAnswerIndex) {
+                        Button optionButton = getOptionButton(i);
+                        optionButton.setText(selectedCharacters.get(i).getName());
+                    }
                 }
-            }
 
-            // Eliminar el juego mostrado de la lista de juegos disponibles
-            games.remove(correctGame);
+                // Eliminar el personaje mostrado de la lista de personajes disponibles
+                characters.remove(correctCharacter);
+            } else {
+                showMessage("No hay personajes disponibles");
+                finish();
+            }
         } else {
-            showMessage("No hay juegos disponibles");
-            finish();
+            if (games != null && !games.isEmpty()) {
+                // Seleccionar aleatoriamente 4 juegos para la pregunta actual
+                List<Game> selectedGames = getRandomGames(games);
+                // Seleccionar aleatoriamente el índice del juego correcto
+                correctAnswerIndex = new Random().nextInt(4);
+
+                // Obtener el juego correcto y mostrar su imagen
+                Game correctGame = selectedGames.get(correctAnswerIndex);
+                loadImage(correctGame.getImageUrl());
+
+                // Asignar el nombre del juego correcto al botón correspondiente
+                Button correctButton = getOptionButton(correctAnswerIndex);
+                correctButton.setText(correctGame.getName());
+
+                // Asignar los nombres de los otros juegos a los botones restantes
+                for (int i = 0; i < 4; i++) {
+                    if (i != correctAnswerIndex) {
+                        Button optionButton = getOptionButton(i);
+                        optionButton.setText(selectedGames.get(i).getName());
+                    }
+                }
+
+                // Eliminar el juego mostrado de la lista de juegos disponibles
+                games.remove(correctGame);
+            } else {
+                showMessage("No hay juegos disponibles");
+                finish();
+            }
         }
     }
 
-    private void handleAnswerSelection(int selectedOptionIndex) {
+    private void handleContentSelection(int selectedOptionIndex) {
         Button selectedButton = getOptionButton(selectedOptionIndex);
 
-        if (games != null && !games.isEmpty()) {
+        if ((games != null && !games.isEmpty()) || (characters != null && !characters.isEmpty())) {
             if (selectedOptionIndex == correctAnswerIndex) {
-                // Cambiar el color del botón seleccionado a verde si es la respuesta correcta
-                selectedButton.setBackgroundColor(getResources().getColor(R.color.verde));
+                // Cambiar el fondo del botón seleccionado a verde si es la respuesta correcta
+                selectedButton.setBackgroundTintList(AppCompatResources.getColorStateList(this, R.color.verde));
                 puntos++;
                 puntosTxt.setText(String.valueOf(puntos));
                 // Mostrar mensaje de éxito si el jugador ha ganado una vida, solo si la categoría no es "inf" o es nula
-                String category = getIntent().getStringExtra("category");
                 if (category == null || !category.equals("inf")) {
-                    if (puntos % 5 == 0) {
-                        showMessage("Has ganado una vida");
-                        vidas++;
-                        vidasTxt.setText(String.valueOf(vidas));
-                    }
+                if (puntos % 5 == 0) {
+                    showMessage("Has ganado una vida");
+                    vidas++;
+                    vidasTxt.setText(String.valueOf(vidas));
+                }
                 }
             } else {
-                // Cambiar el color del botón seleccionado a naranja si es una respuesta incorrecta
-                selectedButton.setBackgroundColor(getResources().getColor(R.color.naranja));
-                // Cambiar el color del botón correcto a verde
+                // Cambiar el fondo del botón seleccionado a naranja si es una respuesta incorrecta
+                selectedButton.setBackgroundTintList(AppCompatResources.getColorStateList(this, R.color.naranja_fuerte));
+                // Cambiar el fondo del botón correcto a verde
                 Button correctButton = getOptionButton(correctAnswerIndex);
-                correctButton.setBackgroundColor(getResources().getColor(R.color.verde));
-                // Restar una vida al jugador, solo si la categoría no es "inf" o es nula
-                String category = getIntent().getStringExtra("category");
+                correctButton.setBackgroundTintList(AppCompatResources.getColorStateList(this, R.color.verde_amarillo));
+                // Manejo de vidas
                 if (category == null || !category.equals("inf")) {
                     vidas--;
                     vidasTxt.setText(String.valueOf(vidas));
@@ -186,25 +241,37 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
             disableOptionButtons();
             // Comprobar vidas después de cada respuesta
             if (vidas > 0) {
-                if (games.size() >= 4) {
-                    // La lista de juegos tiene 4 o más juegos para seguir generando preguntas
-                    new Handler().postDelayed(this::showNextQuestion, 1000);
+                if (category != null && category.equals("characters")) {
+                    // Verificar si hay suficientes personajes para generar más preguntas
+                    if (characters != null && characters.size() >= 4) {
+                        // La lista de personajes tiene 4 o más personajes para seguir generando preguntas
+                        new Handler().postDelayed(this::showNextContent, 1300);
+                    } else {
+                        // No hay suficientes personajes, mostrar mensaje y finalizar actividad
+                        showResultMessage("ganado");
+                    }
                 } else {
-                    // No quedan juegos suficientes para generar más preguntas
-                    showResultMessage("ganado");
+                    // Verificar si hay suficientes juegos para generar más preguntas
+                    if (games != null && games.size() >= 4) {
+                        // La lista de juegos tiene 4 o más juegos para seguir generando preguntas
+                        new Handler().postDelayed(this::showNextContent, 1300);
+                    } else {
+                        // No hay suficientes juegos, mostrar mensaje y finalizar actividad
+                        showResultMessage("ganado");
+                    }
                 }
             } else {
                 showResultMessage("perdido");
             }
         } else {
-            showMessage("NO HAY MÁS JUEGOS DISPONIBLES");
+            showMessage("ERROR EN LA CARGA DE DATOS");
             finish();
         }
     }
 
     private void showResultMessage(String resultado) {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setTitle("¡Has "+resultado+"!");
+        builder.setTitle("¡Has " + resultado + "!");
         builder.setMessage("Has obtenido " + puntos + " puntos.");
         builder.setPositiveButton("Aceptar", (dialog, which) -> {
             dialog.dismiss();
@@ -220,24 +287,21 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     private void disableOptionButtons() {
-        findViewById(R.id.optionButton1).setEnabled(false);
-        findViewById(R.id.optionButton2).setEnabled(false);
-        findViewById(R.id.optionButton3).setEnabled(false);
-        findViewById(R.id.optionButton4).setEnabled(false);
+        for (Button button : optionButtons) {
+            button.setEnabled(false);
+        }
     }
 
     private void restoreButtonColors() {
-        findViewById(R.id.optionButton1).setBackgroundColor(getResources().getColor(R.color.vino));
-        findViewById(R.id.optionButton2).setBackgroundColor(getResources().getColor(R.color.vino));
-        findViewById(R.id.optionButton3).setBackgroundColor(getResources().getColor(R.color.vino));
-        findViewById(R.id.optionButton4).setBackgroundColor(getResources().getColor(R.color.vino));
+        for (Button button : optionButtons) {
+            button.setBackgroundTintList(AppCompatResources.getColorStateList(this, R.color.vino));
+        }
     }
 
     private void enableOptionButtons() {
-        findViewById(R.id.optionButton1).setEnabled(true);
-        findViewById(R.id.optionButton2).setEnabled(true);
-        findViewById(R.id.optionButton3).setEnabled(true);
-        findViewById(R.id.optionButton4).setEnabled(true);
+        for (Button button : optionButtons) {
+            button.setEnabled(true);
+        }
     }
 
     private void loadImage(String imageUrl) {
@@ -253,14 +317,14 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
 
     private List<Game> getRandomGames(List<Game> games) {
         List<Game> randomGames = new ArrayList<>(games);
-        if (randomGames.size() >= 4) {
-            Collections.shuffle(randomGames);
-            return randomGames.subList(0, 4);
-        } else {
-            // Aquí puedes manejar el caso en el que la lista tenga menos de 4 elementos
-            // Por ejemplo, puedes mostrar un mensaje de error o devolver una lista vacía.
-            return new ArrayList<>();
-        }
+        Collections.shuffle(randomGames);
+        return randomGames.subList(0, Math.min(4, randomGames.size()));
+    }
+
+    private List<Character> getRandomCharacters(List<Character> characters) {
+        List<Character> randomCharacters = new ArrayList<>(characters);
+        Collections.shuffle(randomCharacters);
+        return randomCharacters.subList(0, Math.min(4, randomCharacters.size()));
     }
 
     private Button getOptionButton(int optionIndex) {
