@@ -34,7 +34,7 @@ public class RockstarDescriptionPage extends AppCompatActivity {
                 // Crear un Intent para pasar al Activity GameActivity
                 Intent intent = new Intent(RockstarDescriptionPage.this, GameActivity.class);
                 // Agregar el parámetro String al intent
-                intent.putExtra("category", "action");
+                intent.putExtra("category", "rockstar_games");
                 startActivity(intent);
             }
         });

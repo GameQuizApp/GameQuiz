@@ -34,7 +34,7 @@ public class ZombiesDescriptionPage extends AppCompatActivity {
                 // Crear un Intent para pasar al Activity GameActivity
                 Intent intent = new Intent(ZombiesDescriptionPage.this, GameActivity.class);
                 // Agregar el parámetro String al intent
-                intent.putExtra("category", "action");
+                intent.putExtra("category", "zombies");
                 startActivity(intent);
             }
         });

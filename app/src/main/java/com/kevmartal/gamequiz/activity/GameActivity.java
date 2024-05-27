@@ -90,6 +90,15 @@ public class GameActivity extends AppCompatActivity implements View.OnClickListe
                     if (category != null && category.equals("action")) {
                         // Filtrar los juegos por la categoría "action"
                         games = filterGamesByCategory(gameList, "action");
+                    } else if (category != null && category.equals("rockstar_games")) {
+                        // Filtrar los juegos por la categoría "rockstar_games"
+                        games = filterGamesByCategory(gameList, "rockstar_games");
+                    } else if (category != null && category.equals("terror")) {
+                        // Filtrar los juegos por la categoría "terror"
+                        games = filterGamesByCategory(gameList, "terror");
+                    } else if (category != null && category.equals("zombies")) {
+                        // Filtrar los juegos por la categoría "zombies"
+                        games = filterGamesByCategory(gameList, "zombies");
                     } else {
                         // Usar todos los juegos si no se especifica una categoría existente
                         games = gameList;
