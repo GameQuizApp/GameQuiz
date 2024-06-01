@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -16,6 +17,8 @@ import com.kevmartal.gamequiz.R;
 
 public class RockstarDescriptionPage extends AppCompatActivity {
     private boolean switchOn= false,btn_save=false;
+    private int cnt=560;
+    private TextView textViewCounter;
     LottieAnimationView lottieSave;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,6 +41,10 @@ public class RockstarDescriptionPage extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        // Inicialización del TextView del contador
+        textViewCounter = findViewById(R.id.textViewCounter);
+        textViewCounter.setText(String.valueOf(cnt));
         //VISTA ANIMATION VIEW CLICK
         lottieSave=findViewById(R.id.save_btn);
 
@@ -48,11 +55,15 @@ public class RockstarDescriptionPage extends AppCompatActivity {
                     lottieSave.setMinAndMaxProgress(0.0f,0.0f);
                     lottieSave.playAnimation();
                     switchOn=false;
+                    cnt--;
                 }else{
                     lottieSave.setMinAndMaxProgress(0.0f,1.0f);
                     lottieSave.playAnimation();
                     switchOn=true;
+                    cnt++;
                 }
+                // Actualiza el texto del TextView con el nuevo valor del contador
+                textViewCounter.setText(String.valueOf(cnt));
             }
         });
 

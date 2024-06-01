@@ -93,12 +93,12 @@
              android:text="4.9k"
              />
          <TextView
+             android:id="@+id/textViewCounter"
              style="@style/Titulos_grandes"
              android:layout_marginStart="50dp"
              android:layout_width="wrap_content"
              android:layout_height="wrap_content"
-             android:text="800"
-             />
+             android:text="800" />
       </LinearLayout>
          <LinearLayout
              android:layout_width="match_parent"
