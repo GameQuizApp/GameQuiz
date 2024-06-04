@@ -117,8 +117,7 @@ public class FragSettings extends Fragment {
                 TextView description = (TextView) vista.findViewById(R.id.descripcion);
                 description.setText("Los desarrolladores de esta aplicación son:\n" +
                         "\uD83D\uDC68\u200D\uD83D\uDCBB Kevin Bayas: Designer.\n" +
-                        "\uD83D\uDC68\u200D\uD83D\uDCBB Alejandro Rodríguez: Cloud Master.\n" +
-                        "\uD83D\uDC68\u200D\uD83D\uDCBB Martín Guijarro: SCRUM Master.\n");
+                        "\uD83D\uDC68\u200D\uD83D\uDCBB Alejandro Rodríguez: Cloud Master.");
 
                 dialog.show();
             }
